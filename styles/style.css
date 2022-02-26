@@ -190,8 +190,8 @@ h1, h2, h3, h4, h5 {
 	padding-left: 45px;
 	padding-right: 45px;
 	margin-top: 45px;
-	margin-bottom: 45px;
-	bottom: 45px;
+	margin-bottom: 50px;
+	bottom: 50px;
 }
 
 .nav__ig,
@@ -266,6 +266,9 @@ h1, h2, h3, h4, h5 {
 	display: none;
 }
 
+.overFlowHidden {
+	overflow: hidden;
+}
 
 .showOpa100 {
 	opacity: 1;
