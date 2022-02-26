@@ -78,6 +78,8 @@ h1, h2, h3, h4, h5 {
 .nav__icon {
 	position: absolute;
 	display: inline-block;
+	left: 50%;
+	transform: translate(-50% , 0);
 	width: 45px;
 	height: 100%;
 }
@@ -124,7 +126,7 @@ h1, h2, h3, h4, h5 {
 .nav__list {
 	position: relative;
 	width: 100%;
-	height: 100vh;
+	height: 0;
 	list-style: none;
 	padding-inline-start: 0;
 	opacity: 0;
@@ -136,6 +138,7 @@ h1, h2, h3, h4, h5 {
 	margin-left: 45px;
 	margin-right: 45px;
 	margin-top: 10px;
+	text-align: center;
 	/*border-bottom-style: solid;
 	border-bottom-width: 1px;
 	border-bottom-color: #333333;*/
@@ -190,15 +193,15 @@ h1, h2, h3, h4, h5 {
 	padding-left: 45px;
 	padding-right: 45px;
 	margin-top: 45px;
-	margin-bottom: 50px;
-	bottom: 50px;
+	margin-bottom: 60px;
+	bottom: 60px;
 }
 
 .nav__ig,
 .nav__fb {
 	position: relative;
 	flex-basis: 50%;
-	max-width: 50%;
+	max-width: 25%;
 	height: 30px;
 	margin: 6px 12px;
 	line-height: 0;
@@ -252,19 +255,113 @@ h1, h2, h3, h4, h5 {
 	letter-spacing: 10px;
 }
 
+.about {
+	position: relative;
+	margin-top: 150px;
+	padding-bottom: 10px;
+	height: fit-content;
+	z-index: 10;
+	overflow: hidden;
+	transition: opacity 1s;
+}
+
+.about__cont {
+	position: relative;
+	--about__contWidth: 0.8;
+	width: calc(100% * var(--about__contWidth));
+	min-width: min-content;
+	height: 100%;
+	background-color: #C8C8C8;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	z-index: 10;
+}
+
+.about__trans {
+	position: absolute;
+	display: flex;
+	flex-wrap: wrap;
+	height: 110%;
+	width: 100%;
+	z-index: 5;
+}
+
+.about__transTop {
+	flex-basis: 100%;
+	min-height: 30%;
+}
+
+.about__transBot {
+	flex-basis: 100%;
+	min-height: 70%;
+	background-color: #2B2B2B;
+}
+
+.about__slogan {
+	position: relative;
+	padding-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align: center
+}
+
+.about__p {
+	display: inline;
+	font-family: centGothicLigth;
+	font-size: 20px;
+	line-height: 35px;
+	letter-spacing: 4px;
+	color: #333333;
+}
+
+.about__h2 {
+	display: inline;
+	font-size: 30px;
+	line-height: 35px;
+	color: #333333;
+}
+
+.about__h3 {
+	display: inline;
+	font-size: 30px;
+	line-height: 35px;
+	color: #333333;
+}
+
+.about__h3--edi {
+	display: block;
+	font-family: centGothicLigth;
+	font-size: 15px;
+	line-height: 35px;
+	letter-spacing: 4px;
+	margin-top: 10px;
+	color: #333333;
+}
+
+.about__barone {
+	margin-top: 20px;
+	line-height: 0;
+}
+
+.about__baroneImg {
+	width: 100%;
+}
+
 .pj {
 	position: relative;
 	height: 2000px;
 	width: 100%;
 	background-color: #2B2B2B;
 	z-index: 10;
+	transition: opacity 1s;
 }
 
 /* Javascrip styles and animations*/
 
-.hidden {
+/*.hidden {
 	display: none;
-}
+}*/
 
 .overFlowHidden {
 	overflow: hidden;
@@ -277,3 +374,16 @@ h1, h2, h3, h4, h5 {
 .showOpa90 {
 	opacity: 0.9;
 }
+
+.showOpa0 {
+	opacity: 0;
+}
+
+.height100vh {
+	height: 100vh;
+}
+
+/*.height0 {
+	height: 0;
+}*/
+
