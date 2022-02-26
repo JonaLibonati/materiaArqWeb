@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5 {
 
 .bg {
 	position: fixed;
-	z-index: 0;
+	z-index: 5;
 	height: 100vh;
 	width: 100%;
 	background-image: url("../images/ex-pen-jujuy/ex-pen-jujuy-aerialView.jpg");
@@ -37,11 +37,12 @@ h1, h2, h3, h4, h5 {
 }
 
 .bg__blur {
+	position: relative;
 	height: 100%;
 	width: 100%;
 	background-color: #fff;
 	opacity: 0.7;
-	z-index: 0;
+	z-index: 5;
 }
 
 .nav {
@@ -63,7 +64,8 @@ h1, h2, h3, h4, h5 {
 	width: 100%;
 	height: 100%;
 	background-color: #fff;
-	opacity: 0.6;
+	opacity: 0.7;
+	transition: opacity 1s;
 }
 
 .nav__ic {
@@ -80,6 +82,7 @@ h1, h2, h3, h4, h5 {
 	height: 100%;
 }
 
+/*
 .nav__icon--logo {
 	left: 50%;
 	transform: translate(-50%,0);
@@ -94,6 +97,7 @@ h1, h2, h3, h4, h5 {
 	right: 0;
 	margin: auto;
 }
+*/
 
 .nav__butList {
 	width: 100%;
@@ -104,27 +108,46 @@ h1, h2, h3, h4, h5 {
 
 .nav__hambur {
 	height: 30px;
+	fill: #333333;
+}
+
+.nav__curtblur {
+	position: absolute;
+	width: 100%;
+	height: calc(100vh - 45px);
+	top: 45px;
+	background-color: #fff;
+	opacity: 0;
+	transition: opacity 1s;
 }
 
 .nav__list {
-	display: none;
-	background-color: #fff;
+	position: relative;
 	width: 100%;
 	height: 100vh;
 	list-style: none;
 	padding-inline-start: 0;
-	z-index: 90;
+	opacity: 0;
+	transition: opacity 1s;
 }
 
 .nav__item {
+	position: relative;
 	margin-left: 45px;
 	margin-right: 45px;
 	margin-top: 10px;
-	border-bottom-style: solid;
+	/*border-bottom-style: solid;
 	border-bottom-width: 1px;
-	border-bottom-color: #333333;
+	border-bottom-color: #333333;*/
 }
 
+.nav__item--first {
+	position: relative;
+	padding-top: 5px;
+	margin-top: 0px;
+} 
+
+/* 
 .nav__item--first {
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -133,7 +156,8 @@ h1, h2, h3, h4, h5 {
 	border-bottom-style: solid;
 	border-bottom-width: 1px;
 	border-bottom-color: #333333;
-}
+} 
+*/
 
 .nav__title {
 	position: relative;
@@ -155,11 +179,43 @@ h1, h2, h3, h4, h5 {
 	color: #333333;
 }
 
+.nav__socMedia {
+	position: absolute;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	max-height: 100%;
+	max-width: 100%;
+	width: 100%;
+	padding-left: 45px;
+	padding-right: 45px;
+	margin-top: 45px;
+	margin-bottom: 45px;
+	bottom: 45px;
+}
+
+.nav__ig,
+.nav__fb {
+	position: relative;
+	flex-basis: 50%;
+	max-width: 50%;
+	height: 30px;
+	margin: 6px 12px;
+	line-height: 0;
+	color: #333333;
+}
+
+.nav__igIcon,
+.nav__fbIcon {
+	width: 100%;
+	height: 100%;
+}
+
 .home {
 	position: relative;
 	width: 100%;
 	height: 100vh;
-	z-index: 10;
+	z-index: 5;
 }
 
 .home__logo {
@@ -201,4 +257,20 @@ h1, h2, h3, h4, h5 {
 	height: 2000px;
 	width: 100%;
 	background-color: #2B2B2B;
+	z-index: 10;
+}
+
+/* Javascrip styles and animations*/
+
+.hidden {
+	display: none;
+}
+
+
+.showOpa100 {
+	opacity: 1;
+}
+
+.showOpa90 {
+	opacity: 0.9;
 }
