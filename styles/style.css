@@ -116,7 +116,7 @@ h1, h2, h3, h4, h5 {
 .nav__curtblur {
 	position: absolute;
 	width: 100%;
-	height: calc(100vh - 45px);
+	height: 0;
 	top: 45px;
 	background-color: #fff;
 	opacity: 0;
@@ -257,7 +257,7 @@ h1, h2, h3, h4, h5 {
 
 .about {
 	position: relative;
-	margin-top: 150px;
+	margin-top: 10vh;
 	padding-bottom: 10px;
 	height: fit-content;
 	z-index: 10;
@@ -269,6 +269,7 @@ h1, h2, h3, h4, h5 {
 	position: relative;
 	--about__contWidth: 0.8;
 	width: calc(100% * var(--about__contWidth));
+	max-width: 320px;
 	min-width: min-content;
 	height: 100%;
 	background-color: #C8C8C8;
@@ -348,13 +349,133 @@ h1, h2, h3, h4, h5 {
 	width: 100%;
 }
 
+.about__see {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 60px;
+	background-color: #101010;
+	z-index: 5;
+}
+
+.about__button {
+	position: relative;
+	display: inline-block;
+	border-style: solid;
+	border-width: 1px;
+	padding-bottom: 2px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-family: centGothicLigth;
+	font-size: 30px; 
+	color: #C8C8C8;
+	text-align: center;
+	text-decoration: none;
+	line-height: 1;
+}
+
 .pj {
 	position: relative;
-	height: 2000px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	height: auto;
 	width: 100%;
 	background-color: #2B2B2B;
 	z-index: 10;
 	transition: opacity 1s;
+}
+
+.pj__box {
+	position: relative;
+	max-width: 80%;
+	min-width: 212px;
+	height: fit-content;
+	margin-bottom: 10px;
+}
+
+.pj__box--first {
+	padding-top: 50px;
+}
+
+.pj__fig {
+	position: relative;
+	line-height: 0;
+}
+
+.pj__img {
+	position: relative;
+	min-height: 400px;
+	object-fit: cover;
+	object-position: left;
+	z-index: 0;
+}
+
+.pj__blur {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #2B2B2B;
+	opacity: 0;
+	z-index: 5;
+	transition: opacity 0.7s;
+}
+
+.pj__sensor {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 15;
+}
+
+figure.pj__fig:hover div.pj__blur {
+	opacity: 0.8;
+} 
+
+figure.pj__fig:hover figcaption.pj__textBox {
+	opacity: 0.8;
+} 
+
+.pj__textBox {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	line-height: 1.2;
+	z-index: 10;
+	opacity: 0;
+	transition: opacity 0.7s;
+}
+
+.pj__textH3 {
+	font-family: centGothicbold;
+	color: #C8C8C8;
+	text-align: center;
+	opacity: 1;
+}
+
+.pj__textP {
+	font-family: centGothicLigth;
+	color: #C8C8C8;
+	text-align: center;
+	opacity: 1;
+}
+
+.ex-pen-jujuy {
+	flex-basis: 100%;
+	order: 1;
+}
+
+.com-riv-park {
+	flex-basis: 100%;
+	order: 2;
 }
 
 /* Javascrip styles and animations*/
@@ -387,3 +508,6 @@ h1, h2, h3, h4, h5 {
 	height: 0;
 }*/
 
+.heightCurtain {
+	height: calc(100vh - 45px);
+}

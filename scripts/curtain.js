@@ -10,6 +10,7 @@ function curtain() {
 	nav__list.classList.toggle("showOpa100")
 	nav__list.classList.toggle("height100vh")
 	nav__curtblur.classList.toggle("showOpa90")
+	nav__curtblur.classList.toggle("heightCurtain")
 	nav__navblur.classList.toggle("showOpa90")
 	body.classList.toggle("overFlowHidden")
 	/*pj.classList.toggle("height0")*/
