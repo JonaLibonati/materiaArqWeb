@@ -5,6 +5,7 @@ const nav__navblur = document.getElementById("nav__blur01")
 const body = document.getElementById("body")
 const pj = document.getElementById("pj01")
 const about = document.getElementById("about01")
+const pj__link = document.getElementById("pj__link01")
 
 function curtain() {
 	nav__list.classList.toggle("showOpa100")
@@ -16,6 +17,8 @@ function curtain() {
 	/*pj.classList.toggle("height0")*/
 	pj.classList.toggle("showOpa0")
 	about.classList.toggle("showOpa0")
+	pj__link
 }
 
 hambur.addEventListener("click", curtain)
+
