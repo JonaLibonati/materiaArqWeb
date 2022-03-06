@@ -1,17 +1,34 @@
 const chevronClose = document.getElementById("pj_chevronClose01")
 const chevronOpen = document.getElementById("pj_chevronOpen01")
-const pj__descrip = document.getElementById("pj_descrip01")
+const element = document.getElementById("pj_descrip01")
 
-function close() {
-	
-	pj__descrip.classList.toggle("maxHeight100")
-}
-
-chevronClose.addEventListener("click", close)
+var elementHeight = element.scrollHeight;
 
 function open() {
-	pj__descrip.classList.toggle("maxHeight100")
+	var paddingTotalHoriz = 20+10;
+	element.style.height = elementHeight + paddingTotalHoriz + "px";
+	element.classList.remove("padding0");
 
+	element.addEventListener("transitionend", 
+		function() {
+			element.removeEventListener("transitionend", arguments.callee);
+			element.style.height = "auto";
+		}
+	);
+}
+chevronOpen.addEventListener("click", open);
+
+function close() {
+	element.style.transition = "none";
+	element.style.height = elementHeight + "px";
+
+	requestAnimationFrame (
+		function () {	
+			element.style.transition = null;
+			element.style.height = 0 + "px";
+			element.classList.toggle("padding0");
+		}
+	);
 }
 
-chevronOpen.addEventListener("click", open)
+chevronClose.addEventListener("click", close);
