@@ -620,7 +620,7 @@ figure.pj__fig:hover div.pj__chevronOpen {
 	padding-top: 20px;
 	padding-bottom: 10px;
 	background-color: #C8C8C8;
-	transition: height 2s, padding 2s;
+	transition: height 2.6s, padding 2.6s;
 } 
 
 .pj__chevronClose {
@@ -688,4 +688,8 @@ figure.pj__fig:hover div.pj__chevronOpen {
 .padding0 {
 	padding-top: 0;  
 	padding-bottom: 0;
+}
+
+.displayNone {
+	display: none;
 }
