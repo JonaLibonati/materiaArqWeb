@@ -1,51 +1,99 @@
-const chevronClose = document.getElementsByClassName("pj__chevronClose")
-const chevronOpen = document.getElementsByClassName("pj__chevronOpen")
-const element = document.getElementsByClassName("pj__descrip")
-
 const paddingTotalHoriz = 20 + 10;
 
+/*BLUR CONTROL*/
+/** events */
+
+body.addEventListener("touchmove", function() {checkPosition(0)});
+body.addEventListener("touchstart", function() {checkPosition(0)});
+/**body.addEventListener("touchmove", function() {checkPosition(1)});
+body.addEventListener("touchmove", function() {checkPosition(2)});
+body.addEventListener("touchmove", function() {checkPosition(3)});
+body.addEventListener("touchmove", function() {checkPosition(4)});
+body.addEventListener("touchmove", function() {checkPosition(5)});*/
+
+
+function checkPosition (indexElement) {
+	/**Return y element center coordinate relative to the screen  */
+	position_Y = pj__textBox[indexElement].getBoundingClientRect().top + pj__textBox[indexElement].scrollHeight / 2;
+	console.log (position_Y)
+	limitTop = (screen.availHeight - 300) / 2 ;
+	console.log (limitTop)
+	limitBottom = screen.availHeight - (screen.availHeight - 300) / 2 ;
+	console.log (limitBottom)
+	if (limitTop < position_Y && position_Y < limitBottom) {
+		pj__blur[indexElement].style.opacity = 0.8;
+		pj__textBox[indexElement].style.opacity = 0.8;
+		pj__chevronOpen[indexElement].style.height = "45px";
+		pj__chevronPhoto.style.height = "45px";
+		pj__textChevron[indexElement].style.fontSize = "16px";
+		pj__textChevron[indexElement+1].style.fontSize = "16px";
+	}
+	else{
+		pj__blur[indexElement].style.opacity = null;
+		pj__textBox[indexElement].style.opacity = null;
+		pj__chevronOpen[indexElement].style.height = null;
+		pj__chevronPhoto.style.height = null;
+		pj__textChevron[indexElement].style.fontSize = null;
+		pj__textChevron[indexElement+1].style.fontSize = null;
+	}
+}
+
+/*CURTAIN CONTROL*/
 /********************* OPEN **********************/
 /** Open events */
-chevronOpen[0].addEventListener("click", function() {open(0)});
-chevronOpen[1].addEventListener("click", function() {open(1)});
+pj__chevronOpen[0].addEventListener("click", function() {open(0)});
+pj__chevronOpen[1].addEventListener("click", function() {open(1)});
 /*
-chevronOpen[2].addEventListener("click", function() {open(2)});
-chevronOpen[3].addEventListener("click", function() {open(3)});
-chevronOpen[4].addEventListener("click", function() {open(4)});
-chevronOpen[5].addEventListener("click", function() {open(5)});
-chevronOpen[6].addEventListener("click", function() {open(6)});
-chevronOpen[7].addEventListener("click", function() {open(7)});
-chevronOpen[8].addEventListener("click", function() {open(8)});
-chevronOpen[9].addEventListener("click", function() {open(9)});
-chevronOpen[10].addEventListener("click", function() {open(10)});
-chevronOpen[11].addEventListener("click", function() {open(11)});
-chevronOpen[12].addEventListener("click", function() {open(12)});
-chevronOpen[13].addEventListener("click", function() {open(13)});
+pj__chevronOpen[2].addEventListener("click", function() {open(2)});
+pj__chevronOpen[3].addEventListener("click", function() {open(3)});
+pj__chevronOpen[4].addEventListener("click", function() {open(4)});
+pj__chevronOpen[5].addEventListener("click", function() {open(5)});
+pj__chevronOpen[6].addEventListener("click", function() {open(6)});
+pj__chevronOpen[7].addEventListener("click", function() {open(7)});
+pj__chevronOpen[8].addEventListener("click", function() {open(8)});
+pj__chevronOpen[9].addEventListener("click", function() {open(9)});
+pj__chevronOpen[10].addEventListener("click", function() {open(10)});
+pj__chevronOpen[11].addEventListener("click", function() {open(11)});
+pj__chevronOpen[12].addEventListener("click", function() {open(12)});
+pj__chevronOpen[13].addEventListener("click", function() {open(13)});
 */
-
-
-
 
 function open(indexElement) {
 	/*Hide the open chevron*/
-	chevronOpen[indexElement].classList.add("displayNone");
+	pj__chevronOpen[indexElement].classList.add("displayNone");
 	/*Remove padding0 class*/
-	element[indexElement].classList.remove("padding0");
+	pj__descrip[indexElement].classList.remove("padding0");
 	/*Determinate the element height */
-	let elementHeight = element[indexElement].scrollHeight;
+	let elementHeight = pj__descrip[indexElement].scrollHeight;
 	/*Overwrite height values passing from 0 to element height*/
-	element[indexElement].style.height = elementHeight + paddingTotalHoriz + "px";
+	pj__descrip[indexElement].style.height = elementHeight + paddingTotalHoriz + "px";
 	/*When the transition end, overwrite values passing from element height to "auto"*/
-	element[indexElement].addEventListener("transitionend", 
+	pj__descrip[indexElement].addEventListener("transitionend", 
 		function transListener() {
-			element[indexElement].style.height = "auto";
-			element[indexElement].removeEventListener("transitionend", arguments.callee);
+			pj__descrip[indexElement].style.height = "auto";
+			pj__descrip[indexElement].removeEventListener("transitionend", arguments.callee);
 		}
 	);
 }
 
 /********************* CLOSE **********************/
 /** close events */
+pj__chevronClose[0].addEventListener("click", function() {close(0)});
+pj__chevronClose[1].addEventListener("click", function() {close(1)});
+/*
+pj__chevronClose[2].addEventListener("click", function() {close(2)});
+pj__chevronClose[3].addEventListener("click", function() {close(3)});
+pj__chevronClose[4].addEventListener("click", function() {close(4)});
+pj__chevronClose[5].addEventListener("click", function() {close(5)});
+pj__chevronClose[6].addEventListener("click", function() {close(6)});
+pj__chevronClose[7].addEventListener("click", function() {close(7)});
+pj__chevronClose[8].addEventListener("click", function() {close(8)});
+pj__chevronClose[9].addEventListener("click", function() {close(9)});
+pj__chevronClose[10].addEventListener("click", function() {close(10)});
+pj__chevronClose[11].addEventListener("click", function() {close(11)});
+pj__chevronClose[12].addEventListener("click", function() {close(12)});
+pj__chevronClose[13].addEventListener("click", function() {close(13)});
+*/
 
 /*Automatic scroll*/
 function scrollUpPx (length, i) {
@@ -61,41 +109,25 @@ function scrollUpPx (length, i) {
 
 function close(indexElement) {
 	/*Determinate the element height */
-	let elementHeight = element[indexElement].scrollHeight;
+	let elementHeight = pj__descrip[indexElement].scrollHeight;
 	/*Suspend transition*/
-	element[indexElement].style.transition = "none";
+	pj__descrip[indexElement].style.transition = "none";
 	/*Overwrite height values passing from auto to element height*/
-	element[indexElement].style.height = elementHeight + "px";
+	pj__descrip[indexElement].style.height = elementHeight + "px";
 	
 	requestAnimationFrame (
 		function () {	
 			/*Active transition*/
-			element[indexElement].style.transition = null;
+			pj__descrip[indexElement].style.transition = null;
 			/*Overwrite height values passing from element height to 0*/
-			element[indexElement].style.height = 0 + "px";
+			pj__descrip[indexElement].style.height = 0 + "px";
 			/*Add padding0 class*/
-			element[indexElement].classList.add("padding0");
+			pj__descrip[indexElement].classList.add("padding0");
 		}
 	);
-	
+	/*Automatic scroll the element height*/
 	scrollUpPx(elementHeight , 0)
 	/*Display the open chevron*/
-	chevronOpen[indexElement].classList.remove("displayNone");
+	pj__chevronOpen[indexElement].classList.remove("displayNone");
 }
 
-chevronClose[0].addEventListener("click", function() {close(0)});
-chevronClose[1].addEventListener("click", function() {close(1)});
-/*
-chevronClose[2].addEventListener("click", function() {close(2)});
-chevronClose[3].addEventListener("click", function() {close(3)});
-chevronClose[4].addEventListener("click", function() {close(4)});
-chevronClose[5].addEventListener("click", function() {close(5)});
-chevronClose[6].addEventListener("click", function() {close(6)});
-chevronClose[7].addEventListener("click", function() {close(7)});
-chevronClose[8].addEventListener("click", function() {close(8)});
-chevronClose[9].addEventListener("click", function() {close(9)});
-chevronClose[10].addEventListener("click", function() {close(10)});
-chevronClose[11].addEventListener("click", function() {close(11)});
-chevronClose[12].addEventListener("click", function() {close(12)});
-chevronClose[13].addEventListener("click", function() {close(13)});
-*/
