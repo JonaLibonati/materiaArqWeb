@@ -4,13 +4,34 @@ const paddingTotalHoriz = 20 + 10;
 /** events */
 
 body.addEventListener("touchmove", function() {checkPosition(0)});
-body.addEventListener("touchstart", function() {checkPosition(0)});
-/**body.addEventListener("touchmove", function() {checkPosition(1)});
+body.addEventListener("touchmove", function() {checkPosition(1)});
 body.addEventListener("touchmove", function() {checkPosition(2)});
 body.addEventListener("touchmove", function() {checkPosition(3)});
 body.addEventListener("touchmove", function() {checkPosition(4)});
-body.addEventListener("touchmove", function() {checkPosition(5)});*/
+body.addEventListener("touchmove", function() {checkPosition(5)});
+body.addEventListener("touchmove", function() {checkPosition(6)});
+body.addEventListener("touchmove", function() {checkPosition(7)});
+body.addEventListener("touchmove", function() {checkPosition(8)});
+body.addEventListener("touchmove", function() {checkPosition(9)});
+body.addEventListener("touchmove", function() {checkPosition(10)});
+body.addEventListener("touchmove", function() {checkPosition(11)});
+body.addEventListener("touchmove", function() {checkPosition(12)});
+body.addEventListener("touchmove", function() {checkPosition(13)});
 
+body.addEventListener("touchstart", function() {checkPosition(0)});
+body.addEventListener("touchstart", function() {checkPosition(1)});
+body.addEventListener("touchstart", function() {checkPosition(2)});
+body.addEventListener("touchstart", function() {checkPosition(3)});
+body.addEventListener("touchstart", function() {checkPosition(4)});
+body.addEventListener("touchstart", function() {checkPosition(5)});
+body.addEventListener("touchstart", function() {checkPosition(6)});
+body.addEventListener("touchstart", function() {checkPosition(7)});
+body.addEventListener("touchstart", function() {checkPosition(8)});
+body.addEventListener("touchstart", function() {checkPosition(9)});
+body.addEventListener("touchstart", function() {checkPosition(10)});
+body.addEventListener("touchstart", function() {checkPosition(11)});
+body.addEventListener("touchstart", function() {checkPosition(12)});
+body.addEventListener("touchstart", function() {checkPosition(13)});
 
 function checkPosition (indexElement) {
 	/**Return y element center coordinate relative to the screen  */
@@ -24,17 +45,13 @@ function checkPosition (indexElement) {
 		pj__blur[indexElement].style.opacity = 0.8;
 		pj__textBox[indexElement].style.opacity = 0.8;
 		pj__chevronOpen[indexElement].style.height = "45px";
-		pj__chevronPhoto.style.height = "45px";
 		pj__textChevron[indexElement].style.fontSize = "16px";
-		pj__textChevron[indexElement+1].style.fontSize = "16px";
 	}
 	else{
 		pj__blur[indexElement].style.opacity = null;
 		pj__textBox[indexElement].style.opacity = null;
 		pj__chevronOpen[indexElement].style.height = null;
-		pj__chevronPhoto.style.height = null;
 		pj__textChevron[indexElement].style.fontSize = null;
-		pj__textChevron[indexElement+1].style.fontSize = null;
 	}
 }
 
@@ -43,7 +60,6 @@ function checkPosition (indexElement) {
 /** Open events */
 pj__chevronOpen[0].addEventListener("click", function() {open(0)});
 pj__chevronOpen[1].addEventListener("click", function() {open(1)});
-/*
 pj__chevronOpen[2].addEventListener("click", function() {open(2)});
 pj__chevronOpen[3].addEventListener("click", function() {open(3)});
 pj__chevronOpen[4].addEventListener("click", function() {open(4)});
@@ -56,12 +72,12 @@ pj__chevronOpen[10].addEventListener("click", function() {open(10)});
 pj__chevronOpen[11].addEventListener("click", function() {open(11)});
 pj__chevronOpen[12].addEventListener("click", function() {open(12)});
 pj__chevronOpen[13].addEventListener("click", function() {open(13)});
-*/
+
 
 function open(indexElement) {
 	/*Hide the open chevron*/
 	pj__chevronOpen[indexElement].classList.add("displayNone");
-	/*Remove padding0 class*/
+	/*Remove padding0 and font-size0 class*/
 	pj__descrip[indexElement].classList.remove("padding0");
 	/*Determinate the element height */
 	let elementHeight = pj__descrip[indexElement].scrollHeight;
@@ -80,7 +96,6 @@ function open(indexElement) {
 /** close events */
 pj__chevronClose[0].addEventListener("click", function() {close(0)});
 pj__chevronClose[1].addEventListener("click", function() {close(1)});
-/*
 pj__chevronClose[2].addEventListener("click", function() {close(2)});
 pj__chevronClose[3].addEventListener("click", function() {close(3)});
 pj__chevronClose[4].addEventListener("click", function() {close(4)});
@@ -93,7 +108,6 @@ pj__chevronClose[10].addEventListener("click", function() {close(10)});
 pj__chevronClose[11].addEventListener("click", function() {close(11)});
 pj__chevronClose[12].addEventListener("click", function() {close(12)});
 pj__chevronClose[13].addEventListener("click", function() {close(13)});
-*/
 
 /*Automatic scroll*/
 function scrollUpPx (length, i) {

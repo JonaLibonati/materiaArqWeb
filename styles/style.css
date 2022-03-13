@@ -479,6 +479,7 @@ figure.pj__fig:hover p.pj__textP--chevron {
 .pj__textH3--descrip {
 	text-align: left;
 	color: #333333;
+	transition: font-size .71s;
 }
 
 .pj__textH4 {
@@ -493,6 +494,7 @@ figure.pj__fig:hover p.pj__textP--chevron {
 .pj__textH4--descrip {
 	text-align: left;
 	color: #333333;
+	transition: font-size .71s;
 }
 
 .pj__textP {
@@ -502,6 +504,7 @@ figure.pj__fig:hover p.pj__textP--chevron {
 	line-height: 1.2;
 	text-align: justify;
 	color: #333333;
+	transition: font-size .71s;
 }
 
 .pj__textP--chevron {
@@ -523,7 +526,8 @@ figure.pj__fig:hover p.pj__textP--chevron {
 	padding-top: 20px;
 	padding-bottom: 10px;
 	background-color: #C8C8C8;
-	transition: height 2s, padding 2s;
+	transition: height 2s, padding-top 2s, padding-bottom 2s;
+	overflow: hidden;
 } 
 
 .pj__chevronClose {
@@ -773,5 +777,4 @@ figure.pj__fig:hover p.pj__textP--chevron {
 .zIndex70 {
 	z-index: 70;
 }
-
 
