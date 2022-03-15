@@ -1,8 +1,7 @@
 const paddingTotalHoriz = 20 + 10;
 
-/*BLUR CONTROL*/
+/*Touchable Screens BLUR CONTROL*/
 /** events */
-
 body.addEventListener("touchmove", function() {checkPosition(0)});
 body.addEventListener("touchmove", function() {checkPosition(1)});
 body.addEventListener("touchmove", function() {checkPosition(2)});
@@ -36,17 +35,18 @@ body.addEventListener("touchstart", function() {checkPosition(13)});
 function checkPosition (indexElement) {
 	/**Return y element center coordinate relative to the screen  */
 	position_Y = pj__textBox[indexElement].getBoundingClientRect().top + pj__textBox[indexElement].scrollHeight / 2;
-	console.log (position_Y)
+	/**Return top limit active area relative to the screen  */
 	limitTop = (screen.availHeight - 300) / 2 ;
-	console.log (limitTop)
+	/**Return bottom limit active area relative to the screen  */
 	limitBottom = screen.availHeight - (screen.availHeight - 300) / 2 ;
-	console.log (limitBottom)
+	/**Start blur */
 	if (limitTop < position_Y && position_Y < limitBottom) {
 		pj__blur[indexElement].style.opacity = 0.8;
 		pj__textBox[indexElement].style.opacity = 0.8;
 		pj__chevronOpen[indexElement].style.height = "45px";
-		pj__textChevron[indexElement].style.fontSize = "16px";
+		pj__textChevron[indexElement].style.font Size = "16px";
 	}
+	/**Non display blur */
 	else{
 		pj__blur[indexElement].style.opacity = null;
 		pj__textBox[indexElement].style.opacity = null;

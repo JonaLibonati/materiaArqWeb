@@ -434,23 +434,25 @@ h1, h2, h3, h4, h5 {
 	transition: height 0.71s;
 }
 
-figure.pj__fig:hover div.pj__blur {
-	opacity: 0.8;
-} 
+@media (pointer: fine) {
+	figure.pj__fig:hover div.pj__blur {
+		opacity: 0.8;
+	} 
 
-figure.pj__fig:hover figcaption.pj__textBox {
-	opacity: 0.8;
-} 
+	figure.pj__fig:hover figcaption.pj__textBox {
+		opacity: 0.8;
+	} 
 
-figure.pj__fig:hover div.pj__chevronOpen {
-	height: 45px;
-} 
-figure.pj__fig:hover div.pj__chevronPhoto {
-	height: 45px;
-} 
+	figure.pj__fig:hover div.pj__chevronOpen {
+		height: 45px;
+	} 
+	figure.pj__fig:hover div.pj__chevronPhoto {
+		height: 45px;
+	} 
 
-figure.pj__fig:hover p.pj__textP--chevron {
-	font-size: 16px;
+	figure.pj__fig:hover p.pj__textP--chevron {
+		font-size: 16px;
+	}
 }
 
 .pj__textBox {
