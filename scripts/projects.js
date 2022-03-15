@@ -44,7 +44,7 @@ function checkPosition (indexElement) {
 		pj__blur[indexElement].style.opacity = 0.8;
 		pj__textBox[indexElement].style.opacity = 0.8;
 		pj__chevronOpen[indexElement].style.height = "45px";
-		pj__textChevron[indexElement].style.font Size = "16px";
+		pj__textChevron[indexElement].style.fontSize = "16px";
 	}
 	/**Non display blur */
 	else{
@@ -90,6 +90,11 @@ function open(indexElement) {
 			pj__descrip[indexElement].removeEventListener("transitionend", arguments.callee);
 		}
 	);
+	/**Non display blur */
+	pj__blur[indexElement].style.opacity = null;
+	pj__textBox[indexElement].style.opacity = null;
+	pj__chevronOpen[indexElement].style.height = null;
+	pj__textChevron[indexElement].style.fontSize = null;
 }
 
 /********************* CLOSE **********************/

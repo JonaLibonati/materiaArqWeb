@@ -1,3 +1,5 @@
+/**Close Gallery */
+
 close_x.addEventListener("click", closePhoto)
 
 function closePhoto () {
@@ -9,7 +11,8 @@ function closePhoto () {
 	about.classList.toggle("showOpa0")
 }
 
-pj__chevronPhoto.addEventListener("click", openPhoto)
+/**Open Gallery */
+pj__buttonPhoto.addEventListener("click", openPhoto)
 
 function openPhoto () {
     nav.classList.toggle("displayNone")
@@ -19,3 +22,7 @@ function openPhoto () {
 	pj.classList.toggle("showOpa0")
 	about.classList.toggle("showOpa0")
 }
+
+/**Next photo */
+
+/**Previus photo */

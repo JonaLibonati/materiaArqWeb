@@ -19,9 +19,9 @@ const pj__chevronClose = document.getElementsByClassName("pj__chevronClose")
 const pj__chevronOpen = document.getElementsByClassName("pj__chevronOpen")
 const pj__textChevron = document.getElementsByClassName("pj__textP--chevron")
 const pj__Text1 = document.getElementsByClassName("pj__Text1")
+const pj__buttonPhoto = document.getElementsByClassName("pj__buttonPhoto")[0]
 
 
 const ph = document.getElementsByClassName("ph")[0]
 const close_x = document.getElementsByClassName("ph__close")[0]
 
-const pj__chevronPhoto = document.getElementsByClassName("pj__chevronPhoto")[0]
