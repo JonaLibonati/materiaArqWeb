@@ -90,11 +90,6 @@ function open(indexElement) {
 			pj__descrip[indexElement].removeEventListener("transitionend", arguments.callee);
 		}
 	);
-	/**Non display blur */
-	pj__blur[indexElement].style.opacity = null;
-	pj__textBox[indexElement].style.opacity = null;
-	pj__chevronOpen[indexElement].style.height = null;
-	pj__textChevron[indexElement].style.fontSize = null;
 }
 
 /********************* CLOSE **********************/
