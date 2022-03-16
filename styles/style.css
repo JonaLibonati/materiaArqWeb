@@ -602,6 +602,10 @@ h1, h2, h3, h4, h5 {
 	flex-basis: 100%;
 	order: 4;	
 }
+
+.pj__img--olympic {
+	object-position: center;
+}
 /********************/
 .lacar-coast {
 	flex-basis: 100%;
@@ -654,7 +658,7 @@ h1, h2, h3, h4, h5 {
 	min-height: 250px;
 }
 /********************/
-.playa-coleg {
+.pla-coleg {
 	flex-basis: 100%;
 	order: 11;
 }
@@ -681,6 +685,78 @@ h1, h2, h3, h4, h5 {
 
 .pj__img--argPav {
 	min-height: 350px;
+}
+/********************/
+.salg-coast {
+	flex-basis: 100%;
+	order: 14;
+}
+
+.pj__img--salgero{
+	object-position: center;
+}
+/********************/
+.parq-patri {
+	flex-basis: 100%;
+	order: 15;
+}
+
+.pj__img--patricios{
+	object-position: center;
+}
+/********************/
+.marq-pav {
+	flex-basis: 100%;
+	order: 16;
+}
+
+.pj__img--marq-pav {
+	object-position: center;
+}
+/********************/
+.est-eco {
+	flex-basis: 100%;
+	order: 17;
+}
+
+.pj__img--est-eco {
+	object-position: center;
+}
+/********************/
+.alsina {
+	flex-basis: 100%;
+	order: 18;
+}
+
+.pj__img--alsina {
+	object-position: center;
+}
+/********************/
+.prs-build {
+	flex-basis: 100%;
+	order: 19;
+}
+
+.pj__img--prs-build {
+	object-position: center;
+}
+/********************/
+.ld-build {
+	flex-basis: 100%;
+	order: 20;
+}
+
+.pj__img--ld-build {
+	object-position: center;
+}
+/********************/
+.sv-house {
+	flex-basis: 100%;
+	order: 21;
+}
+
+.pj__img--sv-house {
+	object-position: center;
 }
 /********************/
 
@@ -715,7 +791,61 @@ h1, h2, h3, h4, h5 {
 	width: 25px; 
 	background-color: #000;
 	color:#fff;
-	opacity: 0.8;
+	opacity: 0.4;
+}
+
+.ph__next {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	height: 50px;
+	width: 50px;
+	cursor: pointer;
+	z-index: 10;
+}
+
+.ph__nextIcon {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	height: 35px;
+	width: 25px; 
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #000;
+	color:#fff;
+	opacity: 0.4;
+}
+
+.ph__previous {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	height: 50px;
+	width: 50px;
+	cursor: pointer;
+	z-index: 10;
+}
+
+.ph__previousIcon {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	height: 35px;
+	width: 25px; 
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #000;
+	color:#fff;
+	opacity: 0.4;
 }
 
 .ph__figure {

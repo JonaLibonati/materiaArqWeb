@@ -16,6 +16,13 @@ body.addEventListener("touchmove", function() {checkPosition(10)});
 body.addEventListener("touchmove", function() {checkPosition(11)});
 body.addEventListener("touchmove", function() {checkPosition(12)});
 body.addEventListener("touchmove", function() {checkPosition(13)});
+body.addEventListener("touchmove", function() {checkPosition(14)});
+body.addEventListener("touchmove", function() {checkPosition(15)});
+body.addEventListener("touchmove", function() {checkPosition(16)});
+body.addEventListener("touchmove", function() {checkPosition(17)});
+body.addEventListener("touchmove", function() {checkPosition(18)});
+body.addEventListener("touchmove", function() {checkPosition(19)});
+body.addEventListener("touchmove", function() {checkPosition(20)});
 
 body.addEventListener("touchstart", function() {checkPosition(0)});
 body.addEventListener("touchstart", function() {checkPosition(1)});
@@ -31,6 +38,13 @@ body.addEventListener("touchstart", function() {checkPosition(10)});
 body.addEventListener("touchstart", function() {checkPosition(11)});
 body.addEventListener("touchstart", function() {checkPosition(12)});
 body.addEventListener("touchstart", function() {checkPosition(13)});
+body.addEventListener("touchstart", function() {checkPosition(14)});
+body.addEventListener("touchstart", function() {checkPosition(15)});
+body.addEventListener("touchstart", function() {checkPosition(16)});
+body.addEventListener("touchstart", function() {checkPosition(17)});
+body.addEventListener("touchstart", function() {checkPosition(18)});
+body.addEventListener("touchstart", function() {checkPosition(19)});
+body.addEventListener("touchstart", function() {checkPosition(20)});
 
 function checkPosition (indexElement) {
 	/**Return y element center coordinate relative to the screen  */
@@ -72,6 +86,14 @@ pj__chevronOpen[10].addEventListener("click", function() {open(10)});
 pj__chevronOpen[11].addEventListener("click", function() {open(11)});
 pj__chevronOpen[12].addEventListener("click", function() {open(12)});
 pj__chevronOpen[13].addEventListener("click", function() {open(13)});
+pj__chevronOpen[14].addEventListener("click", function() {open(14)});
+pj__chevronOpen[15].addEventListener("click", function() {open(15)});
+pj__chevronOpen[16].addEventListener("click", function() {open(16)});
+pj__chevronOpen[17].addEventListener("click", function() {open(17)});
+pj__chevronOpen[18].addEventListener("click", function() {open(18)});
+pj__chevronOpen[19].addEventListener("click", function() {open(19)});
+pj__chevronOpen[20].addEventListener("click", function() {open(20)});
+
 
 
 function open(indexElement) {
@@ -108,6 +130,14 @@ pj__chevronClose[10].addEventListener("click", function() {close(10)});
 pj__chevronClose[11].addEventListener("click", function() {close(11)});
 pj__chevronClose[12].addEventListener("click", function() {close(12)});
 pj__chevronClose[13].addEventListener("click", function() {close(13)});
+pj__chevronClose[14].addEventListener("click", function() {close(14)});
+pj__chevronClose[15].addEventListener("click", function() {close(15)});
+pj__chevronClose[16].addEventListener("click", function() {close(16)});
+pj__chevronClose[17].addEventListener("click", function() {close(17)});
+pj__chevronClose[18].addEventListener("click", function() {close(18)});
+pj__chevronClose[19].addEventListener("click", function() {close(19)});
+pj__chevronClose[20].addEventListener("click", function() {close(20)});
+
 
 /*Automatic scroll*/
 function scrollUpPx (length, i) {
