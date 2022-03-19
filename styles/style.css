@@ -270,7 +270,7 @@ h1, h2, h3, h4, h5 {
 	position: relative;
 	--about__contWidth: 0.8;
 	width: calc(100% * var(--about__contWidth));
-	max-width: 340px;
+	max-width: 380px;
 	min-width: min-content;
 	height: 100%;
 	background-color: #C8C8C8;
@@ -405,13 +405,13 @@ h1, h2, h3, h4, h5 {
 	left: 0;
 	right: 0;
 	margin: auto;
-	max-width: 340px;
+	max-width: 380px;
 	line-height: 0;
 }
 
 .pj__img {
 	position: relative;
-	height: 240px;
+	height: 270px;
 	object-fit: cover;
 	object-position: left;
 	z-index: 0;
@@ -436,27 +436,6 @@ h1, h2, h3, h4, h5 {
 	height: 0;
 	z-index: 15;
 	transition: height 0.71s;
-}
-
-@media (pointer: fine) {
-	figure.pj__fig:hover div.pj__blur {
-		opacity: 0.8;
-	} 
-
-	figure.pj__fig:hover figcaption.pj__textBox {
-		opacity: 0.8;
-	} 
-
-	figure.pj__fig:hover div.pj__chevronOpen {
-		height: 45px;
-	} 
-	figure.pj__fig:hover div.pj__chevronPhoto {
-		height: 45px;
-	} 
-
-	figure.pj__fig:hover p.pj__textP--chevron {
-		font-size: 16px;
-	}
 }
 
 .pj__textBox {
@@ -525,7 +504,7 @@ h1, h2, h3, h4, h5 {
 
 .pj__descrip {
 	position: relative;
-	max-width: 340px;
+	max-width: 380px;
 	height: 0;
 	left: 0;
 	right: 0;
@@ -922,3 +901,47 @@ h1, h2, h3, h4, h5 {
 	z-index: 70;
 }
 
+/*Viewports*/
+
+/*Tablets portrait*/
+
+@media only screen and (orientation: portrait) and (min-width: 600px) {
+	.about__cont {
+		max-width: 550px;
+	}
+
+	.pj__fig {
+		max-width: 550px;
+	}
+
+	.pj__img {
+		height: 390px;
+	}
+
+	.pj__descrip {
+		max-width: 550px;
+	} 
+}
+
+/*Desktop*/
+
+@media (pointer: fine) {
+	figure.pj__fig:hover div.pj__blur {
+		opacity: 0.8;
+	} 
+
+	figure.pj__fig:hover figcaption.pj__textBox {
+		opacity: 0.8;
+	} 
+
+	figure.pj__fig:hover div.pj__chevronOpen {
+		height: 45px;
+	} 
+	figure.pj__fig:hover div.pj__chevronPhoto {
+		height: 45px;
+	} 
+
+	figure.pj__fig:hover p.pj__textP--chevron {
+		font-size: 16px;
+	}
+}
