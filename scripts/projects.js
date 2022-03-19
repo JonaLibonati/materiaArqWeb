@@ -50,9 +50,9 @@ function checkPosition (indexElement) {
 	/**Return y element center coordinate relative to the screen  */
 	position_Y = pj__textBox[indexElement].getBoundingClientRect().top + pj__textBox[indexElement].scrollHeight / 2;
 	/**Return top limit active area relative to the screen  */
-	limitTop = (screen.availHeight - 300) / 2 ;
+	limitTop = (screen.availHeight - 250) / 2 ;
 	/**Return bottom limit active area relative to the screen  */
-	limitBottom = screen.availHeight - (screen.availHeight - 300) / 2 ;
+	limitBottom = screen.availHeight - (screen.availHeight - 250) / 2 ;
 	/**Start blur */
 	if (limitTop < position_Y && position_Y < limitBottom) {
 		pj__blur[indexElement].style.opacity = 0.8;

@@ -270,7 +270,7 @@ h1, h2, h3, h4, h5 {
 	position: relative;
 	--about__contWidth: 0.8;
 	width: calc(100% * var(--about__contWidth));
-	max-width: 320px;
+	max-width: 340px;
 	min-width: min-content;
 	height: 100%;
 	background-color: #C8C8C8;
@@ -402,12 +402,16 @@ h1, h2, h3, h4, h5 {
 
 .pj__fig {
 	position: relative;
+	left: 0;
+	right: 0;
+	margin: auto;
+	max-width: 340px;
 	line-height: 0;
 }
 
 .pj__img {
 	position: relative;
-	height: 350px;
+	height: 240px;
 	object-fit: cover;
 	object-position: left;
 	z-index: 0;
@@ -521,7 +525,11 @@ h1, h2, h3, h4, h5 {
 
 .pj__descrip {
 	position: relative;
+	max-width: 340px;
 	height: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
 	padding-left: 20px;
 	padding-right: 20px;
     /*You must set up the padding in project.js*/
@@ -580,7 +588,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .pj__img--penJujuy {
-	min-height: 350px;
+	min-height: 240px;
 }
 /********************/
 .com-riv-park {
@@ -595,7 +603,7 @@ h1, h2, h3, h4, h5 {
 
 .pj__img--plaFerCab {
 	object-position: center;
-	min-height: 300px;
+	min-height: 240px;
 }
 /********************/
 .olympic-vill {
@@ -613,7 +621,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .pj__img--lacar {
-	min-height: 300px;
+	min-height: 240px;
 }
 /********************/
 .centen-pav {
@@ -640,7 +648,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .pj__img--chanar {
-	min-height: 350px;
+	min-height: 240px;
 }
 /********************/
 .educ-build {
@@ -655,7 +663,7 @@ h1, h2, h3, h4, h5 {
 
 .pj__img--vlHouse {
 	object-position: center;
-	min-height: 250px;
+	min-height: 240px;
 }
 /********************/
 .pla-coleg {
@@ -665,7 +673,7 @@ h1, h2, h3, h4, h5 {
 
 .pj__img--coleg {
 	object-position: center;
-	min-height: 350px;
+	min-height: 240px;
 }
 /********************/
 .beraz_complex {
@@ -675,7 +683,7 @@ h1, h2, h3, h4, h5 {
 
 .pj__img--berazComplex {
 	object-position: center;
-	min-height: 300px;
+	min-height: 240px;
 }
 /********************/
 .arg-pav {
@@ -684,7 +692,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .pj__img--argPav {
-	min-height: 350px;
+	min-height: 240px;
 }
 /********************/
 .salg-coast {
