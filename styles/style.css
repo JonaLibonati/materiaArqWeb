@@ -302,7 +302,8 @@ h1, h2, h3, h4, h5 {
 
 .about__slogan {
 	position: relative;
-	padding-top: 10px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	margin-left: 10px;
 	margin-right: 10px;
 	text-align: center
@@ -747,6 +748,101 @@ h1, h2, h3, h4, h5 {
 }
 /********************/
 
+.contact {
+	position: relative;
+	padding-top: 10vh;
+	padding-bottom: 10px;
+	height: fit-content;
+	z-index: 10;
+	overflow: hidden;
+	transition: opacity 1s;
+	background-color: #2B2B2B;
+}
+
+.contact__cont {
+	position: relative;
+	--about__contWidth: 0.8;
+	width: calc(100% * var(--about__contWidth));
+	max-width: 380px;
+	min-width: min-content;
+	height: 100%;
+	background-color: #C8C8C8;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	z-index: 50;
+}
+
+.contact__trans {
+	position: absolute;
+	display: flex;
+	flex-wrap: wrap;
+	height: 110%;
+	width: 100%;
+	z-index: 5;
+}
+
+.contact__transTop {
+	flex-basis: 100%;
+	min-height: 30%;
+	background-color: #2B2B2B;
+}
+
+.contact__transBot {
+	flex-basis: 100%;
+	min-height: 70%;
+	background-color: #000;
+}
+
+.contact__form {
+	position: relative;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align: center
+}
+
+.contact__label {
+	font-family: centGothicLigth;
+	font-size: 16px;
+	letter-spacing: 2px;
+	color: #333333;
+}
+
+.contact__input, .contact__textarea {
+	width: 100%; /* Full width */
+	padding: 12px; /* Some padding */ 
+	border: 1px solid #C8C8C8; /* Gray border */
+	box-sizing: border-box; /* Make sure that padding and width stays in place */
+	margin-top: 6px; /* Add a top margin */
+	margin-bottom: 16px; /* Bottom margin */
+	resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+	font-family: centGothicLigth;
+	font-size: 16px;
+	letter-spacing: 2px;
+	color: #333333;
+}
+  
+.contact__textarea {
+	height: 200px;
+}
+
+.contact__submit {
+	background-color: #2B2B2B;
+	color: #C8C8C8;
+	padding: 12px 20px;
+	border: none;
+	cursor: pointer;
+	font-family: centGothicLigth;
+	font-size: 16px;
+	letter-spacing: 2px;
+}
+  
+.contact__submit:hover {
+	background-color: #45a049;
+}
+
 .ph {
 	position: fixed;
 	width: 100vw;
@@ -901,6 +997,7 @@ h1, h2, h3, h4, h5 {
 	z-index: 70;
 }
 
+
 /*Viewports*/
 
 /*Tablets portrait*/
@@ -921,6 +1018,10 @@ h1, h2, h3, h4, h5 {
 	.pj__descrip {
 		max-width: 550px;
 	} 
+
+	.contact__cont {
+		max-width: 550px;
+	}
 }
 
 /*Desktop*/

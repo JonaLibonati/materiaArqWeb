@@ -367,15 +367,15 @@ const ldBuild4 = "images/LD-building/05-ld-detail.jpg"
 const ldBuild = [ldBuild0, ldBuild1, ldBuild2, ldBuild3, ldBuild4]
 
 /**SV house Images Arrays */
-const svHouse0 = "images/SV-house/01-csv-view01"
-const svHouse1 = "images/SV-house/02-csv-view02"
-const svHouse2 = "images/SV-house/03-csv-view03"
-const svHouse3 = "images/SV-house/04-csv-view04"
-const svHouse4 = "images/SV-house/05-csv-view05"
-const svHouse5 = "images/SV-house/08-csv-detail01"
-const svHouse6 = "images/SV-house/09-csv-detail02"
-const svHouse7 = "images/SV-house/10-csv-detail03"
-const svHouse8 = "images/SV-house/06-csv-floor01"
-const svHouse9 = "images/SV-house/07-csv-floor02"
+const svHouse0 = "images/SV-house/01-csv-view01.jpg"
+const svHouse1 = "images/SV-house/02-csv-view02.jpg"
+const svHouse2 = "images/SV-house/03-csv-view03.jpg"
+const svHouse3 = "images/SV-house/04-csv-view04.jpg"
+const svHouse4 = "images/SV-house/05-csv-view05.jpg"
+const svHouse5 = "images/SV-house/08-csv-detail01.jpg"
+const svHouse6 = "images/SV-house/09-csv-detail02.jpg"
+const svHouse7 = "images/SV-house/10-csv-detail03.jpg"
+const svHouse8 = "images/SV-house/06-csv-floor01.jpg"
+const svHouse9 = "images/SV-house/07-csv-floor02.jpg"
 
 const svHouse = [svHouse0, svHouse1, svHouse2, svHouse3, svHouse4, svHouse5, svHouse6, svHouse7, svHouse8, svHouse9]
