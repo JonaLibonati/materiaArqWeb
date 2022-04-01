@@ -259,7 +259,6 @@ h1, h2, h3, h4, h5 {
 .about {
 	position: relative;
 	margin-top: 10vh;
-	padding-bottom: 10px;
 	height: fit-content;
 	z-index: 10;
 	overflow: hidden;
@@ -268,12 +267,11 @@ h1, h2, h3, h4, h5 {
 
 .about__cont {
 	position: relative;
-	--about__contWidth: 0.8;
-	width: calc(100% * var(--about__contWidth));
-	max-width: 380px;
 	min-width: min-content;
+	max-width: 440px;
 	height: 100%;
-	background-color: #C8C8C8;
+	padding-right: 30px;
+	padding-left: 30px;
 	left: 0;
 	right: 0;
 	margin: 0 auto;
@@ -304,9 +302,18 @@ h1, h2, h3, h4, h5 {
 	position: relative;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	margin-left: 10px;
-	margin-right: 10px;
-	text-align: center
+	padding-right: 5px;
+	padding-left: 5px;
+	text-align: center;
+	background-color: #C8C8C8;
+}
+
+.about__title {
+	font-size: 50px;
+	line-height: 1;
+	padding-bottom: 20px;
+	text-align: center;
+	color: #fff;
 }
 
 .about__p {
@@ -338,6 +345,7 @@ h1, h2, h3, h4, h5 {
 	font-size: 15px;
 	line-height: 35px;
 	letter-spacing: 4px;
+	padding-bottom: 20px;
 	margin-top: 10px;
 	color: #333333;
 }
@@ -379,26 +387,56 @@ h1, h2, h3, h4, h5 {
 
 .pj {
 	position: relative;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	height: auto;
 	width: 100%;
+	padding-left: 30px;
+	padding-right: 30px;
 	background-color: #2B2B2B;
 	z-index:50;
 	transition: opacity 1s;
 }
 
+/*
+.pj__titleContainer {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+} */
+
+.pj__title {
+	width: 95%;
+	left: 0;
+	right: 0;
+	margin: auto;
+	font-size: 50px;
+	padding-top: 10px;
+	line-height: 50px;
+	text-align: center;
+	color: #fff;
+	border-color: #fff;
+	border-top-style: solid;
+	border-width: 1px;
+}
+
+.pj__flexContainer {
+	max-width: 380px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding-top: 10px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+
 .pj__box {
 	position: relative;
-	max-width: 80%;
+	flex-basis: 100%;
 	min-width: 212px;
 	height: fit-content;
 	margin-bottom: 10px;
-}
-
-.pj__box--first {
-	padding-top: 50px;
 }
 
 .pj__fig {
@@ -563,7 +601,6 @@ h1, h2, h3, h4, h5 {
 
 /********************/
 .ex-pen-jujuy {
-	flex-basis: 100%;
 	order: 1;
 }
 
@@ -572,12 +609,10 @@ h1, h2, h3, h4, h5 {
 }
 /********************/
 .com-riv-park {
-	flex-basis: 100%;
 	order: 2;
 }
 /********************/
 .pla-fer-cab {
-	flex-basis: 100%;
 	order: 3;
 }
 
@@ -587,7 +622,6 @@ h1, h2, h3, h4, h5 {
 }
 /********************/
 .olympic-vill {
-	flex-basis: 100%;
 	order: 4;	
 }
 
@@ -596,7 +630,6 @@ h1, h2, h3, h4, h5 {
 }
 /********************/
 .lacar-coast {
-	flex-basis: 100%;
 	order: 5;
 }
 
@@ -605,7 +638,6 @@ h1, h2, h3, h4, h5 {
 }
 /********************/
 .centen-pav {
-	flex-basis: 100%;
 	order: 6;
 }
 
@@ -614,7 +646,6 @@ h1, h2, h3, h4, h5 {
 }
 /********************/
 .acindar {
-	flex-basis: 100%;
 	order: 7;
 }
 
@@ -623,7 +654,6 @@ h1, h2, h3, h4, h5 {
 }
 /********************/
 .chanar-park {
-	flex-basis: 100%;
 	order: 8;
 }
 
@@ -632,12 +662,10 @@ h1, h2, h3, h4, h5 {
 }
 /********************/
 .educ-build {
-	flex-basis: 100%;
 	order: 9;
 }
 /********************/
 .vl-house {
-	flex-basis: 100%;
 	order: 10;
 }
 
@@ -647,7 +675,6 @@ h1, h2, h3, h4, h5 {
 }
 /********************/
 .pla-coleg {
-	flex-basis: 100%;
 	order: 11;
 }
 
@@ -657,7 +684,6 @@ h1, h2, h3, h4, h5 {
 }
 /********************/
 .beraz_complex {
-	flex-basis: 100%;
 	order: 12;
 }
 
@@ -667,7 +693,6 @@ h1, h2, h3, h4, h5 {
 }
 /********************/
 .arg-pav {
-	flex-basis: 100%;
 	order: 13;
 }
 
@@ -676,7 +701,6 @@ h1, h2, h3, h4, h5 {
 }
 /********************/
 .salg-coast {
-	flex-basis: 100%;
 	order: 14;
 }
 
@@ -685,7 +709,6 @@ h1, h2, h3, h4, h5 {
 }
 /********************/
 .parq-patri {
-	flex-basis: 100%;
 	order: 15;
 }
 
@@ -694,7 +717,6 @@ h1, h2, h3, h4, h5 {
 }
 /********************/
 .marq-pav {
-	flex-basis: 100%;
 	order: 16;
 }
 
@@ -703,7 +725,6 @@ h1, h2, h3, h4, h5 {
 }
 /********************/
 .est-eco {
-	flex-basis: 100%;
 	order: 17;
 }
 
@@ -712,7 +733,6 @@ h1, h2, h3, h4, h5 {
 }
 /********************/
 .alsina {
-	flex-basis: 100%;
 	order: 18;
 }
 
@@ -721,7 +741,6 @@ h1, h2, h3, h4, h5 {
 }
 /********************/
 .prs-build {
-	flex-basis: 100%;
 	order: 19;
 }
 
@@ -730,7 +749,6 @@ h1, h2, h3, h4, h5 {
 }
 /********************/
 .ld-build {
-	flex-basis: 100%;
 	order: 20;
 }
 
@@ -739,7 +757,6 @@ h1, h2, h3, h4, h5 {
 }
 /********************/
 .sv-house {
-	flex-basis: 100%;
 	order: 21;
 }
 
@@ -750,7 +767,6 @@ h1, h2, h3, h4, h5 {
 
 .contact {
 	position: relative;
-	padding-top: 10vh;
 	padding-bottom: 10px;
 	height: fit-content;
 	z-index: 10;
@@ -761,12 +777,11 @@ h1, h2, h3, h4, h5 {
 
 .contact__cont {
 	position: relative;
-	--about__contWidth: 0.8;
-	width: calc(100% * var(--about__contWidth));
-	max-width: 380px;
 	min-width: min-content;
+	max-width: 440px;
 	height: 100%;
-	background-color: #C8C8C8;
+	padding-right: 30px;
+	padding-left: 30px;
 	left: 0;
 	right: 0;
 	margin: 0 auto;
@@ -794,13 +809,22 @@ h1, h2, h3, h4, h5 {
 	background-color: #000;
 }
 
+.contact__title {
+	font-size: 50px;
+	line-height: 1;
+	padding-bottom: 20px;
+	text-align: center;
+	color: #fff;
+}
+
 .contact__form {
 	position: relative;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	margin-left: 10px;
-	margin-right: 10px;
-	text-align: center
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: center;
+	background-color: #C8C8C8;
 }
 
 .contact__label {
@@ -1000,10 +1024,145 @@ h1, h2, h3, h4, h5 {
 
 /*Viewports*/
 
+/*Desktop*/
+
+@media only screen and (min-width: 1300px) {
+	.about__cont {
+		max-width: 1700px;
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+
+	.about__slogan {
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+	
+
+	.pj {
+		padding-left: 45px;
+		padding-right: 45px;
+	}
+
+	.pj__flexContainer {
+		max-width: 1610px;
+	}
+
+	.pj__box {
+		flex-basis: 33.333333333333%;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+	.pj__fig {
+		max-width: 550px;
+	}
+
+	.pj__img {
+		height: 100%;
+		min-height: 390px;
+	}
+
+	.pj__descrip {
+		max-width: 550px;
+	} 
+
+	.contact__cont {
+		max-width: 1700px;
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+
+	.contact__input, .contact__textarea {
+		display: block;
+		width: 100%;
+		max-width: 600px; 
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+/*Desktop an tablet Landspace*/
+
+@media only screen and (min-width: 950px) and (max-width: 1299px) {
+	.about__cont {
+		max-width: 1200px;
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+
+	.about__slogan {
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+
+	.pj {
+		padding-left: 45px;
+		padding-right: 45px;
+	}
+	
+	.pj__flexContainer {
+		max-width: 1110px;
+	}
+
+	.pj__box {
+		flex-basis: 50%;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+	.pj__fig {
+		max-width: 550px;
+	}
+
+	.pj__img {
+		height: 100%;
+		min-height: 390px;
+	}
+
+	.pj__descrip {
+		max-width: 550px;
+	} 
+
+	.contact__cont {
+		max-width: 1200px;
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+
+	.contact__input, .contact__textarea {
+		display: block;
+		width: 100%;
+		max-width: 600px; 
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
 /*Tablets portrait*/
 
-@media only screen and (orientation: portrait) and (min-width: 600px) {
+@media only screen and (orientation: portrait) and (min-width: 600px) and (max-width: 999px){
 	.about__cont {
+		max-width: 650px;
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+
+	.about__slogan {
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+
+	.pj {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	
+	.pj__flexContainer {
 		max-width: 550px;
 	}
 
@@ -1019,12 +1178,12 @@ h1, h2, h3, h4, h5 {
 		max-width: 550px;
 	} 
 
-	.contact__cont {
-		max-width: 550px;
+	.about__cont {
+		max-width: 650px;
+		padding-left: 50px;
+		padding-right: 50px;
 	}
 }
-
-/*Desktop*/
 
 @media (pointer: fine) {
 	figure.pj__fig:hover div.pj__blur {
