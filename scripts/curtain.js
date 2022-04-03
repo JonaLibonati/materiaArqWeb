@@ -4,6 +4,7 @@ function curtain() {
 	nav__item[1].classList.toggle("displayNone")
 	nav__item[2].classList.toggle("displayNone")
 	nav__item[3].classList.toggle("displayNone")
+	nav__socMedia.classList.toggle("displayNone")
 	nav__list.classList.toggle("showOpa100")
 	nav__list.classList.toggle("height100vh")
 	nav__list.classList.toggle("zIndex70")
@@ -13,8 +14,12 @@ function curtain() {
 	body.classList.toggle("overFlowHidden")
 	pj.classList.toggle("showOpa0")
 	about.classList.toggle("showOpa0")
+	contact.classList.toggle("showOpa0")
 	
 }
 
 nav__butList.addEventListener("click", curtain)
-
+nav__link[0].addEventListener("click", curtain)
+nav__link[1].addEventListener("click", curtain)
+nav__link[2].addEventListener("click", curtain)
+nav__link[3].addEventListener("click", curtain)

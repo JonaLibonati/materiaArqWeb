@@ -140,6 +140,7 @@ h1, h2, h3, h4, h5 {
 	margin-right: 45px;
 	margin-top: 10px;
 	text-align: center;
+	transition: opacity 1s;
 	/*border-bottom-style: solid;
 	border-bottom-width: 1px;
 	border-bottom-color: #333333;*/
@@ -150,7 +151,24 @@ h1, h2, h3, h4, h5 {
 	padding-top: 5px;
 	margin-top: 0px;
 } 
+/*
+.nav__listDesk {
+	display: none;
+	display: flex;
+	list-style: none;
+	padding-inline-start: 0;
+	width: 100%;
+	height: 45px;
+}
 
+.nav__itemDesk {
+	display: flex;
+	flex-basis: 25%;
+	align-items: center;
+	justify-content: center;
+
+}
+*/
 /* 
 .nav__item--first {
 	padding-top: 5px;
@@ -183,26 +201,43 @@ h1, h2, h3, h4, h5 {
 	color: #333333;
 }
 
+/* unvisited link */
+.nav__link:link {
+	color: #2B2B2B;
+	text-decoration: none;
+  }
+  
+/* visited link */
+.nav__link:visited {
+	color: #2B2B2B;
+	text-decoration: none;
+  }
+  
+/* mouse over link */
+.nav__link:hover {
+	text-decoration: none;
+  }
+  
+/* selected link */
+.nav__link:active {
+	text-decoration: none;
+  }
+
 .nav__socMedia {
-	position: absolute;
+	position: relative;
 	display: flex;
-	align-items: flex-end;
 	justify-content: center;
-	max-height: 100%;
-	max-width: 100%;
 	width: 100%;
 	padding-left: 45px;
 	padding-right: 45px;
 	margin-top: 45px;
 	margin-bottom: 60px;
-	bottom: 60px;
 }
 
 .nav__ig,
 .nav__fb {
 	position: relative;
-	flex-basis: 50%;
-	max-width: 25%;
+	flex-basis: 70px;
 	height: 30px;
 	margin: 6px 12px;
 	line-height: 0;
@@ -254,6 +289,33 @@ h1, h2, h3, h4, h5 {
 	font-family: centGothicLigth;
 	font-size: 25px;
 	letter-spacing: 10px;
+}
+
+.home__socMedia {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	padding-left: 45px;
+	padding-right: 45px;
+	margin-top: 45px;
+	margin-bottom: 60px;
+}
+
+.home__ig,
+.home__fb {
+	position: relative;
+	flex-basis: 70px;
+	height: 30px;
+	margin: 6px 12px;
+	line-height: 0;
+	color: #333333;
+}
+
+.home__igIcon,
+.home__fbIcon {
+	width: 100%;
+	height: 100%;
 }
 
 .about {
@@ -867,6 +929,111 @@ h1, h2, h3, h4, h5 {
 	background-color: #45a049;
 }
 
+.footer__list {
+	position: relative;
+	width: 100%;
+	list-style: none;
+	padding-inline-start: 0;
+	background-color: #000;
+	z-index: 50;
+}
+
+.footer__item {
+	position: relative;
+	padding-top: 15px;
+	text-align: center;
+}
+
+.footer__item--first {
+	padding-top: 40px;
+}
+
+.footer__title {
+	position: relative;
+	font-size: 34px;
+	color: #fff;
+}
+
+.footer__title--arq {
+	font-family: centGothicLigth;
+	font-size: 17px;
+	letter-spacing: 4px;
+}
+
+.footer__h2 {
+	position: relative;
+	font-family: centGothicLigth;
+	font-size: 25px;
+	color: #fff;
+}
+
+.footer__p {
+	position: relative;
+	font-family: centGothicLigth;
+	font-size: 12px;
+	color: #fff;
+}
+
+.footer__h4 {
+	position: relative;
+	font-family: centGothicLigth;
+	font-size: 12px;
+	text-decoration: solid;
+	color: #888888;
+	padding-top: 20px;
+	padding-bottom: 40px;
+}
+
+/* unvisited link */
+.footer__link:link {
+	color: #fff;
+	text-decoration: none;
+}
+  
+/* visited link */
+.footer__link:visited {
+	color: #fff;
+	text-decoration: none;
+}
+  
+/* mouse over link */
+.footer__link:hover {
+	text-decoration: none;
+}
+  
+/* selected link */
+.footer__link:active {
+	text-decoration: none;
+}
+
+.footer__socMedia {
+	position: relative;
+	display: flex;
+	background-color: #000;
+	justify-content: center;
+	width: 100%;
+	padding-top: 10px;
+	padding-left: 45px;
+	padding-right: 45px;
+	z-index: 50;
+}
+
+.footer__ig,
+.footer__fb {
+	position: relative;
+	flex-basis: 50px;
+	height: 25px;
+	margin: 6px 12px;
+	line-height: 0;
+	color: #fff;
+}
+
+.footer__igIcon,
+.footer__fbIcon {
+	width: 100%;
+	height: 100%;
+}
+
 .ph {
 	position: fixed;
 	width: 100vw;
@@ -1027,6 +1194,15 @@ h1, h2, h3, h4, h5 {
 /*Desktop*/
 
 @media only screen and (min-width: 1300px) {
+	/*
+	.nav__ic {
+		display: none;
+	}
+
+	.nav__list {
+		display: none;
+	}
+	*/
 	.about__cont {
 		max-width: 1700px;
 		padding-left: 50px;
@@ -1087,6 +1263,16 @@ h1, h2, h3, h4, h5 {
 /*Desktop an tablet Landspace*/
 
 @media only screen and (min-width: 950px) and (max-width: 1299px) {
+	/*
+	.nav__ic {
+		display: none;
+	}
+
+	.nav__list {
+		display: none;
+	}
+	*/
+	
 	.about__cont {
 		max-width: 1200px;
 		padding-left: 50px;

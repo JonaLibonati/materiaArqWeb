@@ -7,6 +7,8 @@ const nav__curtain = document.getElementsByClassName("nav__curtain")[0]
 const nav__blur = document.getElementsByClassName("nav__blur")[0]
 const nav__item = document.getElementsByClassName("nav__item")
 const nav__itemFirst = document.getElementsByClassName("nav__item--first")[0]
+const nav__socMedia = document.getElementsByClassName("nav__socMedia")[0]
+const nav__link = document.getElementsByClassName("nav__link")
 
 const about = document.getElementsByClassName("about")[0]
 
@@ -21,6 +23,7 @@ const pj__textChevron = document.getElementsByClassName("pj__textP--chevron")
 const pj__Text1 = document.getElementsByClassName("pj__Text1")
 const pj__buttonPhoto = document.getElementsByClassName("pj__buttonPhoto")
 
+const contact = document.getElementsByClassName("contact")[0]
 
 const ph = document.getElementsByClassName("ph")[0]
 const ph__img = document.getElementsByClassName("ph__img")[0]
