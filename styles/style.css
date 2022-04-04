@@ -254,7 +254,7 @@ h1, h2, h3, h4, h5 {
 	position: relative;
 	width: 100%;
 	height: 100vh;
-	z-index: 5;
+	z-index: 50;
 }
 
 .home__logo {
@@ -932,8 +932,6 @@ h1, h2, h3, h4, h5 {
 .footer__list {
 	position: relative;
 	width: 100%;
-	list-style: none;
-	padding-inline-start: 0;
 	background-color: #000;
 	z-index: 50;
 }
@@ -1004,6 +1002,10 @@ h1, h2, h3, h4, h5 {
 /* selected link */
 .footer__link:active {
 	text-decoration: none;
+}
+
+.footer__link--jona:hover {
+	text-decoration: underline;
 }
 
 .footer__socMedia {
@@ -1258,6 +1260,37 @@ h1, h2, h3, h4, h5 {
 		margin-left: auto;
 		margin-right: auto;
 	}
+
+	.footer__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.footer__menu {
+		display: flex;
+	}
+	
+	.footer__item--second,
+	.footer__item--third,
+	.footer__item--fourth,
+	.footer__item--fiveth {
+		flex-basis: fit-content;
+		width: fit-content;
+	}
+
+	.footer__item--second,
+	.footer__item--third,
+	.footer__item--fourth {
+		margin-right: 40px;
+	}
+
+	.footer__item--first,
+	.footer__item--sixth,
+	.footer__item--eighth,
+	.footer__item--ninth {
+		flex-basis: 100%;
+	}
 }
 
 /*Desktop an tablet Landspace*/
@@ -1326,6 +1359,37 @@ h1, h2, h3, h4, h5 {
 		right: 0;
 		margin-left: auto;
 		margin-right: auto;
+	}
+
+	.footer__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.footer__menu {
+		display: flex;
+	}
+	
+	.footer__item--second,
+	.footer__item--third,
+	.footer__item--fourth,
+	.footer__item--fiveth {
+		flex-basis: fit-content;
+		width: fit-content;
+	}
+
+	.footer__item--second,
+	.footer__item--third,
+	.footer__item--fourth {
+		margin-right: 40px;
+	}
+
+	.footer__item--first,
+	.footer__item--sixth,
+	.footer__item--eighth,
+	.footer__item--ninth {
+		flex-basis: 100%;
 	}
 }
 
