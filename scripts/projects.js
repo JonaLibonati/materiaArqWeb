@@ -93,6 +93,9 @@ pj__chevronOpen[17].addEventListener("click", function() {open(17)});
 pj__chevronOpen[18].addEventListener("click", function() {open(18)});
 pj__chevronOpen[19].addEventListener("click", function() {open(19)});
 pj__chevronOpen[20].addEventListener("click", function() {open(20)});
+pj__chevronOpen[21].addEventListener("click", function() {open(21)});
+pj__chevronOpen[22].addEventListener("click", function() {open(22)});
+pj__chevronOpen[23].addEventListener("click", function() {open(23)});
 
 
 
@@ -137,17 +140,24 @@ pj__chevronClose[17].addEventListener("click", function() {close(17)});
 pj__chevronClose[18].addEventListener("click", function() {close(18)});
 pj__chevronClose[19].addEventListener("click", function() {close(19)});
 pj__chevronClose[20].addEventListener("click", function() {close(20)});
+pj__chevronClose[21].addEventListener("click", function() {close(21)});
+pj__chevronClose[22].addEventListener("click", function() {close(22)});
+pj__chevronClose[23].addEventListener("click", function() {close(23)});
 
 
 /*Automatic scroll*/
+
 function scrollUpPx (length, i) {
-	window.scrollBy(0 , -10)
-	if (i >= length ) {
-		/*Exit*/
-	} else {
-		/*Repeat*/
-		i = i + 10
-		setTimeout(scrollUpPx, 10 , length , i); 
+	let mobile = window.matchMedia("(max-width: 999px) and (orientation: portrait)")
+	if (mobile.matches) {
+		window.scrollBy(0 , -10)
+		if (i >= length ) {
+			/*Exit*/
+		} else {
+			/*Repeat*/
+			i = i + 10
+			setTimeout(scrollUpPx, 10 , length , i); 
+		}
 	}
 }
 

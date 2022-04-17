@@ -31,7 +31,6 @@ h1, h2, h3, h4, h5 {
 	z-index: 5;
 	height: 100vh;
 	width: 100%;
-	/*background-image: url("../images/ex-pen-jujuy/ex-pen-jujuy-aerialView.jpg");*/
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -340,26 +339,6 @@ h1, h2, h3, h4, h5 {
 	z-index: 10;
 }
 
-.about__trans {
-	position: absolute;
-	display: flex;
-	flex-wrap: wrap;
-	height: 110%;
-	width: 100%;
-	z-index: 5;
-}
-
-.about__transTop {
-	flex-basis: 100%;
-	min-height: 30%;
-}
-
-.about__transBot {
-	flex-basis: 100%;
-	min-height: 70%;
-	/*background-color: #2B2B2B;*/
-}
-
 .about__slogan {
 	position: relative;
 	padding-top: 50px;
@@ -452,7 +431,6 @@ h1, h2, h3, h4, h5 {
 	width: 100%;
 	padding-left: 30px;
 	padding-right: 30px;
-	/*background-color: #2B2B2B;*/
 	z-index:50;
 	transition: opacity 1s;
 }
@@ -675,8 +653,16 @@ h1, h2, h3, h4, h5 {
 	order: 2;
 }
 /********************/
+.olympic-vill {
+	order: 3;	
+}
+
+.pj__img--olympic {
+	object-position: center;
+}
+/********************/
 .pla-fer-cab {
-	order: 3;
+	order: 4;
 }
 
 .pj__img--plaFerCab {
@@ -684,16 +670,16 @@ h1, h2, h3, h4, h5 {
 	min-height: 240px;
 }
 /********************/
-.olympic-vill {
-	order: 4;	
+.football-museum {
+	order: 5;
 }
-
-.pj__img--olympic {
-	object-position: center;
+/********************/
+.luro-terminal {
+	order: 6;
 }
 /********************/
 .lacar-coast {
-	order: 5;
+	order: 7;
 }
 
 .pj__img--lacar {
@@ -701,7 +687,7 @@ h1, h2, h3, h4, h5 {
 }
 /********************/
 .centen-pav {
-	order: 6;
+	order: 8;
 }
 
 .pj__img--centen {
@@ -709,7 +695,7 @@ h1, h2, h3, h4, h5 {
 }
 /********************/
 .acindar {
-	order: 7;
+	order: 9;
 }
 
 .pj__img--acindar {
@@ -717,37 +703,15 @@ h1, h2, h3, h4, h5 {
 }
 /********************/
 .chanar-park {
-	order: 8;
+	order: 10;
 }
 
 .pj__img--chanar {
 	min-height: 240px;
 }
 /********************/
-.educ-build {
-	order: 9;
-}
-/********************/
-.vl-house {
-	order: 10;
-}
-
-.pj__img--vlHouse {
-	object-position: center;
-	min-height: 240px;
-}
-/********************/
-.pla-coleg {
-	order: 11;
-}
-
-.pj__img--coleg {
-	object-position: center;
-	min-height: 240px;
-}
-/********************/
 .beraz_complex {
-	order: 12;
+	order: 11;
 }
 
 .pj__img--berazComplex {
@@ -755,43 +719,48 @@ h1, h2, h3, h4, h5 {
 	min-height: 240px;
 }
 /********************/
-.arg-pav {
-	order: 13;
-}
-
-.pj__img--argPav {
-	min-height: 240px;
-}
-/********************/
-.salg-coast {
-	order: 14;
-}
-
-.pj__img--salgero{
-	object-position: center;
-}
-/********************/
 .parq-patri {
-	order: 15;
+	order: 12;
 }
 
 .pj__img--patricios{
 	object-position: center;
 }
 /********************/
-.marq-pav {
-	order: 16;
+.educ-build {
+	order: 13;
+}
+/********************/
+.vl-house {
+	order: 14;
 }
 
-.pj__img--marq-pav {
+.pj__img--vlHouse {
+	object-position: center;
+	min-height: 240px;
+}
+/********************/
+.sv-house {
+	order: 15;
+}
+
+.pj__img--sv-house {
 	object-position: center;
 }
 /********************/
-.est-eco {
+.prs-build {
+	order: 16;
+}
+
+.pj__img--prs-build {
+	object-position: center;
+}
+/********************/
+.ld-build {
 	order: 17;
 }
 
-.pj__img--est-eco {
+.pj__img--ld-build {
 	object-position: center;
 }
 /********************/
@@ -803,27 +772,48 @@ h1, h2, h3, h4, h5 {
 	object-position: center;
 }
 /********************/
-.prs-build {
+.brd-build {
 	order: 19;
 }
-
-.pj__img--prs-build {
-	object-position: center;
-}
 /********************/
-.ld-build {
+.est-eco {
 	order: 20;
 }
 
-.pj__img--ld-build {
+.pj__img--est-eco {
 	object-position: center;
 }
 /********************/
-.sv-house {
+.pla-coleg {
 	order: 21;
 }
 
-.pj__img--sv-house {
+.pj__img--coleg {
+	object-position: center;
+	min-height: 240px;
+}
+/********************/
+.arg-pav {
+	order: 22;
+}
+
+.pj__img--argPav {
+	min-height: 240px;
+}
+/********************/
+.salg-coast {
+	order: 23;
+}
+
+.pj__img--salgero{
+	object-position: center;
+}
+/********************/
+.marq-pav {
+	order: 24;
+}
+
+.pj__img--marq-pav {
 	object-position: center;
 }
 /********************/
@@ -835,7 +825,7 @@ h1, h2, h3, h4, h5 {
 	z-index: 10;
 	overflow: hidden;
 	transition: opacity 1s;
-	background-color: #2B2B2B;
+	background-color: #fff;
 }
 
 .contact__cont {
@@ -849,27 +839,6 @@ h1, h2, h3, h4, h5 {
 	right: 0;
 	margin: 0 auto;
 	z-index: 50;
-}
-
-.contact__trans {
-	position: absolute;
-	display: flex;
-	flex-wrap: wrap;
-	height: 110%;
-	width: 100%;
-	z-index: 5;
-}
-
-.contact__transTop {
-	flex-basis: 100%;
-	min-height: 30%;
-	background-color: #fff;
-}
-
-.contact__transBot {
-	flex-basis: 100%;
-	min-height: 70%;
-	background-color: #fff;
 }
 
 .contact__title {

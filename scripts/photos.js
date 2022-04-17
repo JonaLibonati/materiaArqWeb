@@ -13,25 +13,28 @@ function closePhoto () {
 /**Open Gallery */
 pj__buttonPhoto [0].addEventListener("click", function() {openPhoto(penJujuy)})
 pj__buttonPhoto [1].addEventListener("click", function() {openPhoto(comRivPark)})
-pj__buttonPhoto [2].addEventListener("click", function() {openPhoto(plaFerCab)})
-pj__buttonPhoto [3].addEventListener("click", function() {openPhoto(olympicVill)})
-pj__buttonPhoto [4].addEventListener("click", function() {openPhoto(lacarCoast)})
-pj__buttonPhoto [5].addEventListener("click", function() {openPhoto(centenPav)})
-pj__buttonPhoto [6].addEventListener("click", function() {openPhoto(acindar)})
-pj__buttonPhoto [7].addEventListener("click", function() {openPhoto(chanarPark)})
-pj__buttonPhoto [8].addEventListener("click", function() {openPhoto(educBuild)})
-pj__buttonPhoto [9].addEventListener("click", function() {openPhoto(vlHouse)})
-pj__buttonPhoto [10].addEventListener("click", function() {openPhoto(plaColeg)})
-pj__buttonPhoto [11].addEventListener("click", function() {openPhoto(berazcomplex)})
-pj__buttonPhoto [12].addEventListener("click", function() {openPhoto(argPav)})
-pj__buttonPhoto [13].addEventListener("click", function() {openPhoto(salgCoast)})
-pj__buttonPhoto [14].addEventListener("click", function() {openPhoto(parqPatri)})
-pj__buttonPhoto [15].addEventListener("click", function() {openPhoto(marqPav)})
-pj__buttonPhoto [16].addEventListener("click", function() {openPhoto(estEco)})
+pj__buttonPhoto [2].addEventListener("click", function() {openPhoto(olympicVill)})
+pj__buttonPhoto [3].addEventListener("click", function() {openPhoto(plaFerCab)})
+pj__buttonPhoto [4].addEventListener("click", function() {openPhoto(footballMuseum)})
+pj__buttonPhoto [5].addEventListener("click", function() {openPhoto(luroTerminal)})
+pj__buttonPhoto [6].addEventListener("click", function() {openPhoto(lacarCoast)})
+pj__buttonPhoto [7].addEventListener("click", function() {openPhoto(centenPav)})
+pj__buttonPhoto [8].addEventListener("click", function() {openPhoto(acindar)})
+pj__buttonPhoto [9].addEventListener("click", function() {openPhoto(chanarPark)})
+pj__buttonPhoto [10].addEventListener("click", function() {openPhoto(berazcomplex)})
+pj__buttonPhoto [11].addEventListener("click", function() {openPhoto(parqPatri)})
+pj__buttonPhoto [12].addEventListener("click", function() {openPhoto(educBuild)})
+pj__buttonPhoto [13].addEventListener("click", function() {openPhoto(vlHouse)})
+pj__buttonPhoto [14].addEventListener("click", function() {openPhoto(svHouse)})
+pj__buttonPhoto [15].addEventListener("click", function() {openPhoto(prsBuild)})
+pj__buttonPhoto [16].addEventListener("click", function() {openPhoto(ldBuild)})
 pj__buttonPhoto [17].addEventListener("click", function() {openPhoto(alsina)})
-pj__buttonPhoto [18].addEventListener("click", function() {openPhoto(prsBuild)})
-pj__buttonPhoto [19].addEventListener("click", function() {openPhoto(ldBuild)})
-pj__buttonPhoto [20].addEventListener("click", function() {openPhoto(svHouse)})
+pj__buttonPhoto [18].addEventListener("click", function() {openPhoto(brdBuild)})
+pj__buttonPhoto [19].addEventListener("click", function() {openPhoto(estEco)})
+pj__buttonPhoto [20].addEventListener("click", function() {openPhoto(plaColeg)})
+pj__buttonPhoto [21].addEventListener("click", function() {openPhoto(argPav)})
+pj__buttonPhoto [22].addEventListener("click", function() {openPhoto(salgCoast)})
+pj__buttonPhoto [23].addEventListener("click", function() {openPhoto(marqPav)})
 
 let array = [];
 
@@ -230,20 +233,28 @@ const educBuild8 = "images/educ-fut-building/09-educ-fut-detail.jpg"
 const educBuild = [educBuild0, educBuild1, educBuild2, educBuild3, educBuild4, educBuild5, educBuild6, educBuild7, educBuild8]
 
 /**VL house Images Arrays */
-const vlHouse0 = "images/VL-house/01-cvl-view01.jpg"
-const vlHouse1 = "images/VL-house/02-cvl-view02.jpg"
-const vlHouse2 = "images/VL-house/04-cvl-view04.jpg"
-const vlHouse3 = "images/VL-house/03-cvl-view03.jpg"
-const vlHouse4 = "images/VL-house/05-cvl-stair01.jpg"
-const vlHouse5 = "images/VL-house/06-cvl-stair02.jpg"
-const vlHouse6 = "images/VL-house/07-cvl-stair03.jpg"
-const vlHouse7 = "images/VL-house/10-cvl-detail02.jpg"
-const vlHouse8 = "images/VL-house/11-cvl-detail03.jpg"
-const vlHouse9 = "images/VL-house/09-cvl-detail01.jpg"
-const vlHouse10 = "images/VL-house/08-cvl-floor.jpg"
+const vlHouse0 = "images/VL-house/vl-outSide01.jpg"
+const vlHouse1 = "images/VL-house/vl-outSide02.jpg"
+const vlHouse2 = "images/VL-house/vl-outSide03.jpg"
+const vlHouse3 = "images/VL-house/vl-outSide04.jpg"
+const vlHouse4 = "images/VL-house/vl-outSide05.jpg"
+const vlHouse5 = "images/VL-house/vl-outSide06.jpg"
+const vlHouse6 = "images/VL-house/vl-outSide07.jpg"
+const vlHouse7 = "images/VL-house/vl-outSide08.jpg"
+const vlHouse8 = "images/VL-house/vl-outSide09.jpg"
+const vlHouse9 = "images/VL-house/vl-outSide10.jpg"
+const vlHouse10 = "images/VL-house/vl-outSide11.jpg"
+const vlHouse11 = "images/VL-house/vl-stair02.jpg"
+const vlHouse12 = "images/VL-house/vl-stair03.jpg"
+const vlHouse13 = "images/VL-house/vl-inSide01.jpg"
+const vlHouse14 = "images/VL-house/vl-inSide02.jpg"
+const vlHouse15 = "images/VL-house/vl-detail02.jpg"
+const vlHouse16 = "images/VL-house/vl-detail03.jpg"
+const vlHouse17 = "images/VL-house/vl-floor.jpg"
+const vlHouse18 = "images/VL-house/vl-detail01.jpg"
 
-const vlHouse = [vlHouse0, vlHouse1, vlHouse2, vlHouse3, vlHouse4, vlHouse5, vlHouse6, vlHouse7, vlHouse8, vlHouse9, vlHouse10]
-/**Playa Colegiales Images Arrays */.jpg
+const vlHouse = [vlHouse0, vlHouse1, vlHouse2, vlHouse3, vlHouse4, vlHouse5, vlHouse6, vlHouse7, vlHouse8, vlHouse9, vlHouse10, vlHouse11, vlHouse12, vlHouse13, vlHouse14, vlHouse15, vlHouse16, vlHouse17, vlHouse18]
+/**Playa Colegiales Images Arrays */
 const plaColeg0 = "images/playa-colegiales/04-colegiales-aerialView02.jpg"
 const plaColeg1 = "images/playa-colegiales/00-colegiales-aerialView00.jpg"
 const plaColeg2 = "images/playa-colegiales/06-colegiales-walkView02.jpg"
@@ -379,3 +390,45 @@ const svHouse8 = "images/SV-house/06-csv-floor01.jpg"
 const svHouse9 = "images/SV-house/07-csv-floor02.jpg"
 
 const svHouse = [svHouse0, svHouse1, svHouse2, svHouse3, svHouse4, svHouse5, svHouse6, svHouse7, svHouse8, svHouse9]
+
+/**Football museum Images Arrays */
+const footballMuseum0 = "images/football-museum/football-museum-aerialView01.jpg"
+const footballMuseum1 = "images/football-museum/football-museum-aerialView02.jpg"
+const footballMuseum2 = "images/football-museum/football-museum-aerialView03.jpg"
+const footballMuseum3 = "images/football-museum/football-museum-aerialView04.jpg"
+const footballMuseum4 = "images/football-museum/football-museum-aerialView05.jpg"
+const footballMuseum5 = "images/football-museum/football-museum-walkView01.jpg"
+const footballMuseum6 = "images/football-museum/football-museum-walkView02.jpg"
+const footballMuseum7 = "images/football-museum/football-museum-walkView03.jpg"
+const footballMuseum8 = "images/football-museum/football-museum-walkView04.jpg"
+const footballMuseum9 = "images/football-museum/football-museum-walkView05.jpg"
+const footballMuseum10 = "images/football-museum/football-museum-walkView06.jpg"
+const footballMuseum11 = "images/football-museum/football-museum-walkView07.jpg"
+const footballMuseum12 = "images/football-museum/football-museum-walkView08.jpg"
+const footballMuseum13 = "images/football-museum/football-museum-walkView09.jpg"
+const footballMuseum14 = "images/football-museum/football-museum-walkView10.jpg"
+const footballMuseum15 = "images/football-museum/football-museum-walkView11.jpg"
+
+const footballMuseum = [footballMuseum0, footballMuseum1, footballMuseum2, footballMuseum3, footballMuseum4, footballMuseum5, footballMuseum6, footballMuseum7, footballMuseum8, footballMuseum9, footballMuseum10, footballMuseum11, footballMuseum12, footballMuseum13, footballMuseum14, footballMuseum15]
+
+/**Luro terminal Images Arrays */
+const luroTerminal0 = "images/luro-terminal/luro-terminal-aerialView02.jpg"
+const luroTerminal1 = "images/luro-terminal/luro-terminal-aerialView01.jpg"
+const luroTerminal2 = "images/luro-terminal/luro-terminal-walkView01.jpg"
+const luroTerminal3 = "images/luro-terminal/luro-terminal-walkView02.jpg"
+const luroTerminal4 = "images/luro-terminal/luro-terminal-walkView03.jpg"
+const luroTerminal5 = "images/luro-terminal/luro-terminal-walkView04.jpg"
+const luroTerminal6 = "images/luro-terminal/luro-terminal-walkView05.jpg"
+const luroTerminal7 = "images/luro-terminal/luro-terminal-walkView06.jpg"
+const luroTerminal8 = "images/luro-terminal/luro-terminal-walkView07.jpg"
+const luroTerminal9 = "images/luro-terminal/luro-terminal-walkView08.jpg"
+
+const luroTerminal = [luroTerminal0, luroTerminal1, luroTerminal2, luroTerminal3, luroTerminal4, luroTerminal5, luroTerminal6, luroTerminal7, luroTerminal8, luroTerminal9]
+
+/**BRD building Images Arrays */
+const brdBuild0 = "images/BRD-building/brd-inSide01.jpg"
+const brdBuild1 = "images/BRD-building/brd-inSide02.jpg"
+const brdBuild2 = "images/BRD-building/brd-outSide01.jpg"
+const brdBuild3 = "images/BRD-building/brd-outSide02.jpg"
+
+const brdBuild = [brdBuild0, brdBuild1, brdBuild2, brdBuild3]
