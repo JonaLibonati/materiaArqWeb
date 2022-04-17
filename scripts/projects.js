@@ -2,49 +2,37 @@ const paddingTotalHoriz = 20 + 10;
 
 /*Touchable Screens BLUR CONTROL*/
 /** events */
-body.addEventListener("touchmove", function() {checkPosition(0)});
-body.addEventListener("touchmove", function() {checkPosition(1)});
-body.addEventListener("touchmove", function() {checkPosition(2)});
-body.addEventListener("touchmove", function() {checkPosition(3)});
-body.addEventListener("touchmove", function() {checkPosition(4)});
-body.addEventListener("touchmove", function() {checkPosition(5)});
-body.addEventListener("touchmove", function() {checkPosition(6)});
-body.addEventListener("touchmove", function() {checkPosition(7)});
-body.addEventListener("touchmove", function() {checkPosition(8)});
-body.addEventListener("touchmove", function() {checkPosition(9)});
-body.addEventListener("touchmove", function() {checkPosition(10)});
-body.addEventListener("touchmove", function() {checkPosition(11)});
-body.addEventListener("touchmove", function() {checkPosition(12)});
-body.addEventListener("touchmove", function() {checkPosition(13)});
-body.addEventListener("touchmove", function() {checkPosition(14)});
-body.addEventListener("touchmove", function() {checkPosition(15)});
-body.addEventListener("touchmove", function() {checkPosition(16)});
-body.addEventListener("touchmove", function() {checkPosition(17)});
-body.addEventListener("touchmove", function() {checkPosition(18)});
-body.addEventListener("touchmove", function() {checkPosition(19)});
-body.addEventListener("touchmove", function() {checkPosition(20)});
+window.onscroll = function() {scrolled()};
 
-body.addEventListener("touchstart", function() {checkPosition(0)});
-body.addEventListener("touchstart", function() {checkPosition(1)});
-body.addEventListener("touchstart", function() {checkPosition(2)});
-body.addEventListener("touchstart", function() {checkPosition(3)});
-body.addEventListener("touchstart", function() {checkPosition(4)});
-body.addEventListener("touchstart", function() {checkPosition(5)});
-body.addEventListener("touchstart", function() {checkPosition(6)});
-body.addEventListener("touchstart", function() {checkPosition(7)});
-body.addEventListener("touchstart", function() {checkPosition(8)});
-body.addEventListener("touchstart", function() {checkPosition(9)});
-body.addEventListener("touchstart", function() {checkPosition(10)});
-body.addEventListener("touchstart", function() {checkPosition(11)});
-body.addEventListener("touchstart", function() {checkPosition(12)});
-body.addEventListener("touchstart", function() {checkPosition(13)});
-body.addEventListener("touchstart", function() {checkPosition(14)});
-body.addEventListener("touchstart", function() {checkPosition(15)});
-body.addEventListener("touchstart", function() {checkPosition(16)});
-body.addEventListener("touchstart", function() {checkPosition(17)});
-body.addEventListener("touchstart", function() {checkPosition(18)});
-body.addEventListener("touchstart", function() {checkPosition(19)});
-body.addEventListener("touchstart", function() {checkPosition(20)});
+function scrolled() {
+	let pointer = window.matchMedia("(pointer: fine)")
+	if (pointer.matches == false) {
+		checkPosition(0)
+		checkPosition(1)
+		checkPosition(2)
+		checkPosition(3)
+		checkPosition(4)
+		checkPosition(5)
+		checkPosition(6)
+		checkPosition(7)
+		checkPosition(8)
+		checkPosition(9)
+		checkPosition(10)
+		checkPosition(11)
+		checkPosition(12)
+		checkPosition(13)
+		checkPosition(14)
+		checkPosition(15)
+		checkPosition(16)
+		checkPosition(17)
+		checkPosition(18)
+		checkPosition(19)
+		checkPosition(20)
+		checkPosition(21)
+		checkPosition(22)
+		checkPosition(23)
+	}
+}
 
 function checkPosition (indexElement) {
 	/**Return y element center coordinate relative to the screen  */
