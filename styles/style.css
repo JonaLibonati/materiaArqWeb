@@ -548,7 +548,6 @@ h1, h2, h3, h4, h5 {
 }
 
 .pj__textP {
-	padding-bottom: 40px;
 	font-family: centGothicLigth;
 	font-size: 16px;
 	letter-spacing: 2px;
@@ -556,6 +555,10 @@ h1, h2, h3, h4, h5 {
 	text-align: justify;
 	color: #333333;
 	transition: font-size .71s;
+}
+
+.pj__textBox--descrip {
+	padding-bottom: 40px;
 }
 
 .pj__textP--chevron {
