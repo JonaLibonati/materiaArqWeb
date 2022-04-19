@@ -22,6 +22,7 @@ const pj__chevronOpen = document.getElementsByClassName("pj__chevronOpen")
 const pj__textChevron = document.getElementsByClassName("pj__textP--chevron")
 const pj__Text1 = document.getElementsByClassName("pj__Text1")
 const pj__buttonPhoto = document.getElementsByClassName("pj__buttonPhoto")
+const pj__flexContainer = document.getElementsByClassName("pj__flexContainer")
 
 const contact = document.getElementsByClassName("contact")[0]
 

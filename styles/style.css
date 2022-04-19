@@ -251,20 +251,25 @@ h1, h2, h3, h4, h5 {
 
 .home {
 	position: relative;
+	display: flex;
+	justify-content: center;
+	align-content: center;
 	width: 100%;
 	height: 100vh;
 	z-index: 50;
 }
 
+.home__container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+}
+
 .home__logo {
-	position: absolute;
+	position: relative;
 	width: 250px;
 	height: fit-content;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	margin: auto;
 }
 
 .home__circles {
@@ -291,14 +296,13 @@ h1, h2, h3, h4, h5 {
 }
 
 .home__socMedia {
-	position: absolute;
+	position: relative;
 	display: flex;
 	justify-content: center;
 	width: 100%;
 	padding-left: 45px;
 	padding-right: 45px;
 	margin-top: 45px;
-	margin-bottom: 60px;
 }
 
 .home__ig,
@@ -346,15 +350,7 @@ h1, h2, h3, h4, h5 {
 	padding-right: 15px;
 	padding-left: 15px;
 	text-align: center;
-	background-color: #e4e4e4;
-}
-
-.about__title {
-	font-size: 50px;
-	line-height: 1;
-	padding-bottom: 20px;
-	text-align: center;
-	color: #fff;
+	background-color: #fff;
 }
 
 .about__p {
@@ -428,55 +424,43 @@ h1, h2, h3, h4, h5 {
 
 .pj {
 	position: relative;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
 	width: 100%;
 	padding-left: 30px;
 	padding-right: 30px;
 	z-index:50;
 	transition: opacity 1s;
-}
-
-/*
-.pj__titleContainer {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	left: 0;
 	right: 0;
-	margin: 0 auto;
-} */
-
-.pj__title {
-	width: 95%;
 	left: 0;
-	right: 0;
 	margin: auto;
-	font-size: 50px;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	line-height: 50px;
-	text-align: center;
-	color: #2B2B2B;
-	border-color: #fff;
-	border-top-style: solid;
-	border-width: 1px;
 }
 
 .pj__flexContainer {
+	position: relative;
+	flex-basis: 100%;
 	max-width: 380px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	align-content: flex-start;
 	padding-top: 10px;
-	left: 0;
-	right: 0;
-	margin: 0 auto;
+}
+
+.pj__flexContainer--second {
+	display: none;
+}
+
+.pj__flexContainer--thirth {
+	display: none;
 }
 
 .pj__box {
+	vertical-align: baseline;
 	position: relative;
 	flex-basis: 100%;
 	min-width: 212px;
-	height: fit-content;
 	margin-bottom: 10px;
 }
 
@@ -600,7 +584,11 @@ h1, h2, h3, h4, h5 {
 } 
 
 .pj__chevronClose {
-	height: 40px;
+	position: absolute;
+	width: calc(100% - 40px);
+	height: 0px;
+	bottom: 10px;
+	transition: height 2s;
 }
 
 .pj__buttonPhoto {
@@ -820,9 +808,8 @@ h1, h2, h3, h4, h5 {
 
 .contact {
 	position: relative;
-	padding-bottom: 10px;
 	height: fit-content;
-	z-index: 10;
+	z-index: 50;
 	overflow: hidden;
 	transition: opacity 1s;
 	background-color: #fff;
@@ -838,42 +825,28 @@ h1, h2, h3, h4, h5 {
 	left: 0;
 	right: 0;
 	margin: 0 auto;
-	z-index: 50;
-}
-
-.contact__title {
-	font-size: 50px;
-	line-height: 1;
-	padding-bottom: 20px;
-	text-align: center;
-	color: #fff;
 }
 
 .contact__form {
+	display: flex;
+	flex-wrap: wrap;
 	position: relative;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	padding-left: 20px;
-	padding-right: 20px;
 	text-align: center;
-	background-color: #e4e4e4; /*C8C8C8*/
+	background-color: #fff; /*C8C8C8*/
 }
 
-.contact__label {
-	font-family: centGothicLigth;
-	font-size: 16px;
-	letter-spacing: 2px;
-	color: #333333;
+.contact__flexItem {
+	flex-basis: 100%;
 }
 
 .contact__input, .contact__textarea {
 	width: 100%; /* Full width */
+	height: 46px;
 	padding: 12px; /* Some padding */ 
-	background-color: #e4e4e4;
+	background-color: #fff;
 	border: 1px solid #a3a3a3; /* Gray border */
 	box-sizing: border-box; /* Make sure that padding and width stays in place */
-	margin-top: 6px; /* Add a top margin */
-	margin-bottom: 16px; /* Bottom margin */
+	margin-bottom: 10px; /* Bottom margin */
 	resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
 	font-family: centGothicLigth;
 	font-size: 16px;
@@ -890,8 +863,11 @@ h1, h2, h3, h4, h5 {
 }
 
 .contact__submit {
-	background-color: #2B2B2B;
-	color: #e4e4e4;
+	width: 100%;
+	height: 46px;
+	margin-bottom: 10px;
+	background-color: #e4e4e4;
+	color: #2B2B2B;
 	padding: 12px 20px;
 	border: none;
 	cursor: pointer;
@@ -901,7 +877,7 @@ h1, h2, h3, h4, h5 {
 }
   
 .contact__submit:hover {
-	background-color: #e4e4e4;
+	background-color: #cccccc;
 }
 
 .footer__list {
@@ -1174,16 +1150,7 @@ h1, h2, h3, h4, h5 {
 	.noShowLarge {
 		display: none;
 	}
-	
-	/*
-	.nav__ic {
-		display: none;
-	}
 
-	.nav__list {
-		display: none;
-	}
-	*/
 	.about__cont {
 		max-width: 1700px;
 		padding-left: 50px;
@@ -1195,18 +1162,19 @@ h1, h2, h3, h4, h5 {
 		padding-left: 10px;
 	}
 	
-
 	.pj {
+		position: relative;
 		padding-left: 45px;
 		padding-right: 45px;
+		max-width: 1700px;
 	}
 
 	.pj__flexContainer {
+		display: flex;
 		max-width: 1610px;
+		flex-basis: 33.33333333%;
 	}
-
 	.pj__box {
-		flex-basis: 33.333333333333%;
 		padding-left: 5px;
 		padding-right: 5px;
 	}
@@ -1224,10 +1192,149 @@ h1, h2, h3, h4, h5 {
 		max-width: 550px;
 	} 
 
+	/********************/
+	.ex-pen-jujuy-two,
+	.ex-pen-jujuy-three {
+		display: none;
+	}
+	/********************/
+	.com-riv-park-one,
+	.com-riv-park-three {
+		display: none;
+	}
+	/********************/
+	.olympic-vill-one,
+	.olympic-vill-two {
+		display: none;	
+	}
+	/********************/
+	.pla-fer-cab-two,
+	.pla-fer-cab-three {
+		display: none;
+	}
+	/********************/
+	.football-museum-one,
+	.football-museum-three {
+		display: none;
+	}
+	/********************/
+	.luro-terminal-one,
+	.luro-terminal-two {
+		display: none;
+	}
+	/********************/
+	.lacar-coast-two,
+	.lacar-coast-three {
+		display: none;
+	}
+	/********************/
+	.centen-pav-one,
+	.centen-pav-three {
+		display: none;
+	}
+	/********************/
+	.acindar-one,
+	.acindar-two {
+		display: none;
+	}
+	/********************/
+	.chanar-park-two,
+	.chanar-park-three {
+		display: none;
+	}
+	/********************/
+	.beraz_complex-one,
+	.beraz_complex-three {
+		display: none;
+	}
+	/********************/
+	.parq-patri-one,
+	.parq-patri-two {
+		display: none;
+	}
+	/********************/
+	.educ-build-two,
+	.educ-build-three {
+		display: none;
+	}
+	/********************/
+	.vl-house-one,
+	.vl-house-three {
+		display: none;
+	}
+	/********************/
+	.sv-house-one,
+	.sv-house-two {
+		display: none;
+	}
+	/********************/
+	.prs-build-two,
+	.prs-build-three {
+		display: none;
+	}
+	/********************/
+	.ld-build-one,
+	.ld-build-three {
+		display: none;
+	}
+	/********************/
+	.alsina-one,
+	.alsina-two {
+		display: none;
+	}
+	/********************/
+	.brd-build-two,
+	.brd-build-three {
+		display: none;
+	}
+	/********************/
+	.est-eco-one,
+	.est-eco-three {
+		display: none;
+	}
+	/********************/
+	.pla-coleg-one,
+	.pla-coleg-two {
+		display: none;
+	}
+	/********************/
+	.arg-pav-two,
+	.arg-pav-three {
+		display: none;
+	}
+	/********************/
+	.salg-coast-one,
+	.salg-coast-three {
+		display: none;
+	}
+	/********************/
+	.marq-pav-one,
+	.marq-pav-two {
+		display: none;
+	}
+	/********************/
+
 	.contact__cont {
 		max-width: 1700px;
 		padding-left: 50px;
 		padding-right: 50px;
+	}
+
+	.contact__form{
+		flex-wrap: nowrap;
+	}
+
+	.contact__flexItem {
+		flex-basis: 33.13%;
+		max-width: 33.13%;
+		margin-right: 5px;
+	}
+
+	.contact__flexItem--second {
+		flex-basis: 66.87%;
+		max-width: 66.87%;
+		margin-right: 0px;
+		margin-left: 5px;
 	}
 
 	.contact__input, .contact__textarea {
@@ -1238,6 +1345,11 @@ h1, h2, h3, h4, h5 {
 		right: 0;
 		margin-left: auto;
 		margin-right: auto;
+	}
+
+	.contact__textarea {
+		max-height: 158px;
+		max-width: 1200px;
 	}
 
 	.footer__list {
@@ -1278,16 +1390,7 @@ h1, h2, h3, h4, h5 {
 	.noShowMedium {
 		display: none;
 	}
-	/*
-	.nav__ic {
-		display: none;
-	}
 
-	.nav__list {
-		display: none;
-	}
-	*/
-	
 	.about__cont {
 		max-width: 1200px;
 		padding-left: 50px;
@@ -1300,16 +1403,22 @@ h1, h2, h3, h4, h5 {
 	}
 
 	.pj {
+		max-width: 1200px;
 		padding-left: 45px;
 		padding-right: 45px;
 	}
 	
 	.pj__flexContainer {
+		display: flex;
 		max-width: 1110px;
 	}
 
+	.pj__flexContainer--thirth {
+		display: none;
+	}
+
 	.pj__box {
-		flex-basis: 50%;
+		flex-basis: 100%;
 		padding-left: 5px;
 		padding-right: 5px;
 	}
@@ -1327,20 +1436,133 @@ h1, h2, h3, h4, h5 {
 		max-width: 550px;
 	} 
 
+	/********************/
+	.ex-pen-jujuy-two{
+		display: none;
+	}
+	/********************/
+	.com-riv-park-one{
+		display: none;
+	}
+	/********************/
+	.olympic-vill-two {
+		display: none;	
+	}
+	/********************/
+	.pla-fer-cab-one {
+		display: none;
+	}
+	/********************/
+	.football-museum-two {
+		display: none;
+	}
+	/********************/
+	.luro-terminal-one {
+		display: none;
+	}
+	/********************/
+	.lacar-coast-two {
+		display: none;
+	}
+	/********************/
+	.centen-pav-one {
+		display: none;
+	}
+	/********************/
+	.acindar-two {
+		display: none;
+	}
+	/********************/
+	.chanar-park-one {
+		display: none;
+	}
+	/********************/
+	.beraz_complex-two {
+		display: none;
+	}
+	/********************/
+	.parq-patri-one {
+		display: none;
+	}
+	/********************/
+	.educ-build-two {
+		display: none;
+	}
+	/********************/
+	.vl-house-one {
+		display: none;
+	}
+	/********************/
+	.sv-house-two {
+		display: none;
+	}
+	/********************/
+	.prs-build-one {
+		display: none;
+	}
+	/********************/
+	.ld-build-two {
+		display: none;
+	}
+	/********************/
+	.alsina-one {
+		display: none;
+	}
+	/********************/
+	.brd-build-two {
+		display: none;
+	}
+	/********************/
+	.est-eco-one {
+		display: none;
+	}
+	/********************/
+	.pla-coleg-two {
+		display: none;
+	}
+	/********************/
+	.arg-pav-one {
+		display: none;
+	}
+	/********************/
+	.salg-coast-two {
+		display: none;
+	}
+	/********************/
+	.marq-pav-one {
+		display: none;
+	}
+	/********************/
+
 	.contact__cont {
 		max-width: 1200px;
 		padding-left: 50px;
 		padding-right: 50px;
 	}
 
+	.contact__form{
+		flex-wrap: nowrap;
+	}
+
+	.contact__flexItem {
+		flex-basis: 50%;
+		max-width: 50%;
+		margin-right: 5px;
+	}
+
+	.contact__flexItem--second {
+		margin-right: 0px;
+		margin-left: 5px;
+	}
+
 	.contact__input, .contact__textarea {
 		display: block;
 		width: 100%;
 		max-width: 600px; 
-		left: 0;
-		right: 0;
-		margin-left: auto;
-		margin-right: auto;
+	}
+
+	.contact__textarea {
+		max-height: 158px;
 	}
 
 	.footer__list {
@@ -1415,7 +1637,7 @@ h1, h2, h3, h4, h5 {
 		max-width: 550px;
 	} 
 
-	.about__cont {
+	.contact__cont {
 		max-width: 650px;
 		padding-left: 50px;
 		padding-right: 50px;
