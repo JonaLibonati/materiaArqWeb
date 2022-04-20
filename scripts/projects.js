@@ -354,3 +354,106 @@ function close(indexElement) {
 	}
 }
 
+/*Close when scrolling*/
+/** events */
+window.onscroll = function() {scrolledTwo()};
+
+function scrolledTwo() {
+	/**If there are two or more columns*/
+	let mobile = window.matchMedia("(max-width: 999px) and (orientation: portrait)")
+	if (mobile.matches == false) {
+		checkPositionClose(0)
+		checkPositionClose(1)
+		checkPositionClose(2)
+		checkPositionClose(3)
+		checkPositionClose(4)
+		checkPositionClose(5)
+		checkPositionClose(6)
+		checkPositionClose(7)
+		checkPositionClose(8)
+		checkPositionClose(9)
+		checkPositionClose(10)
+		checkPositionClose(11)
+		checkPositionClose(12)
+		checkPositionClose(13)
+		checkPositionClose(14)
+		checkPositionClose(15)
+		checkPositionClose(16)
+		checkPositionClose(17)
+		checkPositionClose(18)
+		checkPositionClose(19)
+		checkPositionClose(20)
+		checkPositionClose(21)
+		checkPositionClose(22)
+		checkPositionClose(23)
+
+		checkPositionClose(24)
+		checkPositionClose(25)
+		checkPositionClose(26)
+		checkPositionClose(27)
+		checkPositionClose(28)
+		checkPositionClose(29)
+		checkPositionClose(30)
+		checkPositionClose(31)
+		checkPositionClose(32)
+		checkPositionClose(33)
+		checkPositionClose(34)
+		checkPositionClose(35)
+		checkPositionClose(36)
+		checkPositionClose(37)
+		checkPositionClose(38)
+		checkPositionClose(39)
+		checkPositionClose(40)
+		checkPositionClose(41)
+		checkPositionClose(42)
+		checkPositionClose(43)
+		checkPositionClose(44)
+		checkPositionClose(45)
+		checkPositionClose(46)
+		checkPositionClose(47)
+
+		checkPositionClose(48)
+		checkPositionClose(49)
+		checkPositionClose(50)
+		checkPositionClose(51)
+		checkPositionClose(52)
+		checkPositionClose(53)
+		checkPositionClose(54)
+		checkPositionClose(55)
+		checkPositionClose(56)
+		checkPositionClose(57)
+		checkPositionClose(58)
+		checkPositionClose(59)
+		checkPositionClose(60)
+		checkPositionClose(61)
+		checkPositionClose(62)
+		checkPositionClose(63)
+		checkPositionClose(64)
+		checkPositionClose(65)
+		checkPositionClose(66)
+		checkPositionClose(67)
+		checkPositionClose(68)
+		checkPositionClose(69)
+		checkPositionClose(70)
+		checkPositionClose(71)
+	}
+}
+
+function checkPositionClose (indexElement) {
+	/*Check if pj__descrip is open*/
+	let status = pj__descrip[indexElement].getAttribute("status")
+	if (status == "open") { 
+		/**Return y element center coordinate relative to the screen  */
+		position_Y = pj__textBox[indexElement].getBoundingClientRect().top + pj__textBox[indexElement].scrollHeight / 2;
+		/**Return top limit active area relative to the screen  */
+		limitTop = 0 ;
+		/**Return bottom limit active area relative to the screen  */
+		limitBottom = screen.availHeight;
+		/**Start blur */
+		if (limitTop > position_Y || position_Y > limitBottom) {
+			close(indexElement)
+		}
+	}
+	
+}
+
