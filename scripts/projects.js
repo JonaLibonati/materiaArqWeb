@@ -61,7 +61,7 @@ function checkPositionClose (indexElement) {
 		/**Return y element center coordinate relative to the screen  */
 		position_Y = pj__textBox[indexElement].getBoundingClientRect().top + pj__textBox[indexElement].scrollHeight / 2;
 		/**Return top limit active area relative to the screen  */
-		limitTop = 0 ;
+		limitTop = -400 * 0.25;
 		/**Return bottom limit active area relative to the screen  */
 		limitBottom = screen.availHeight;
 		/**Close*/

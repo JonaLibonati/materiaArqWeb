@@ -31,30 +31,6 @@ let pos = 0;
 /**Next photo */
 ph__next.addEventListener("click", nextPhoto)
 
-let touchStartX = 0
-let touchEndX = 0
-
-function touchStart (event) {
-    touchStartX = event.touches[0].clientX
-    console.log(touchStartX)
-}
-
-function touchMove (event) {
-    touchEndX = event.touches[0].clientX
-    console.log(touchEndX)
-}
-
-function touchEnd () {
-    let moveX = touchEndX - touchStartX
-    console.log(moveX)
-    if (moveX > 20) {
-        nextPhoto (); 
-    }
-    if (moveX < -20) {
-        previousPhoto (); 
-    }
-}
-
 function nextPhoto () {
     if (pos < array.length - 1) {
         pos++; 
@@ -73,6 +49,28 @@ function previousPhoto () {
         pos = array.length - 1;
     }
     ph__img.getAttributeNode("src").value = array[pos];
+}
+
+/**Touchable slide photo */
+let touchStartX = 0
+let touchEndX = 0
+
+function touchStart (event) {
+    touchStartX = event.touches[0].clientX
+}
+
+function touchMove (event) {
+    touchEndX = event.touches[0].clientX
+}
+
+function touchEnd () {
+    let moveX = touchEndX - touchStartX
+    if (moveX > 20) {
+        nextPhoto (); 
+    }
+    if (moveX < -20) {
+        previousPhoto (); 
+    }
 }
 
 pj__buttonPhoto [0].addEventListener("click", function() {openPhoto(penJujuy)})
@@ -287,13 +285,10 @@ const chanarPark6 = "images/san-patricio-park/san-patricio-walkView06.jpg"
 const chanarPark7 = "images/san-patricio-park/san-patricio-walkView07.jpg"
 const chanarPark8 = "images/san-patricio-park/san-patricio-walkView08.jpg"
 const chanarPark9 = "images/san-patricio-park/san-patricio-walkView09.jpg"
-const chanarPark10 = "images/san-patricio-park/san-patricio-walkView10.jpg"
-const chanarPark11 = "images/san-patricio-park/san-patricio-walkView11.jpg"
-const chanarPark12 = "images/san-patricio-park/san-patricio-walkView12.jpg"
-const chanarPark13 = "images/san-patricio-park/san-patricio-floor01.jpg"
-const chanarPark14 = "images/san-patricio-park/san-patricio-floor02.jpg"
+const chanarPark10 = "images/san-patricio-park/san-patricio-floor01.jpg"
+const chanarPark11 = "images/san-patricio-park/san-patricio-floor02.jpg"
 
-const chanarPark = [chanarPark0, chanarPark1, chanarPark2, chanarPark3, chanarPark4, chanarPark5, chanarPark6, chanarPark7, chanarPark8, chanarPark9, chanarPark10, chanarPark11, chanarPark12, chanarPark13, chanarPark14]
+const chanarPark = [chanarPark0, chanarPark1, chanarPark2, chanarPark3, chanarPark4, chanarPark5, chanarPark6, chanarPark7, chanarPark8, chanarPark9, chanarPark10, chanarPark11]
 
 /**Education building Images Arrays */
 const educBuild0 = "images/educ-fut-building/01-educ-fut-walkView01.jpg"
@@ -320,16 +315,13 @@ const vlHouse7 = "images/VL-house/vl-outSide08.jpg"
 const vlHouse8 = "images/VL-house/vl-outSide09.jpg"
 const vlHouse9 = "images/VL-house/vl-outSide10.jpg"
 const vlHouse10 = "images/VL-house/vl-outSide11.jpg"
-const vlHouse11 = "images/VL-house/vl-stair02.jpg"
-const vlHouse12 = "images/VL-house/vl-stair03.jpg"
-const vlHouse13 = "images/VL-house/vl-inSide01.jpg"
-const vlHouse14 = "images/VL-house/vl-inSide02.jpg"
-const vlHouse15 = "images/VL-house/vl-detail02.jpg"
-const vlHouse16 = "images/VL-house/vl-detail03.jpg"
-const vlHouse17 = "images/VL-house/vl-floor.jpg"
-const vlHouse18 = "images/VL-house/vl-detail01.jpg"
+const vlHouse11 = "images/VL-house/vl-inSide01.jpg"
+const vlHouse12 = "images/VL-house/vl-inSide02.jpg"
+const vlHouse13 = "images/VL-house/vl-stair01.jpg"
+const vlHouse14 = "images/VL-house/vl-stair02.jpg"
 
-const vlHouse = [vlHouse0, vlHouse1, vlHouse2, vlHouse3, vlHouse4, vlHouse5, vlHouse6, vlHouse7, vlHouse8, vlHouse9, vlHouse10, vlHouse11, vlHouse12, vlHouse13, vlHouse14, vlHouse15, vlHouse16, vlHouse17, vlHouse18]
+
+const vlHouse = [vlHouse0, vlHouse1, vlHouse2, vlHouse3, vlHouse4, vlHouse5, vlHouse6, vlHouse7, vlHouse8, vlHouse9, vlHouse10, vlHouse11, vlHouse12, vlHouse13, vlHouse14]
 /**Playa Colegiales Images Arrays */
 const plaColeg0 = "images/playa-colegiales/04-colegiales-aerialView02.jpg"
 const plaColeg1 = "images/playa-colegiales/00-colegiales-aerialView00.jpg"
@@ -483,9 +475,8 @@ const footballMuseum11 = "images/football-museum/football-museum-walkView07.jpg"
 const footballMuseum12 = "images/football-museum/football-museum-walkView08.jpg"
 const footballMuseum13 = "images/football-museum/football-museum-walkView09.jpg"
 const footballMuseum14 = "images/football-museum/football-museum-walkView10.jpg"
-const footballMuseum15 = "images/football-museum/football-museum-walkView11.jpg"
 
-const footballMuseum = [footballMuseum0, footballMuseum1, footballMuseum2, footballMuseum3, footballMuseum4, footballMuseum5, footballMuseum6, footballMuseum7, footballMuseum8, footballMuseum9, footballMuseum10, footballMuseum11, footballMuseum12, footballMuseum13, footballMuseum14, footballMuseum15]
+const footballMuseum = [footballMuseum0, footballMuseum1, footballMuseum2, footballMuseum3, footballMuseum4, footballMuseum5, footballMuseum6, footballMuseum7, footballMuseum8, footballMuseum9, footballMuseum10, footballMuseum11, footballMuseum12, footballMuseum13, footballMuseum14]
 
 /**Luro terminal Images Arrays */
 const luroTerminal0 = "images/luro-terminal/luro-terminal-aerialView02.jpg"

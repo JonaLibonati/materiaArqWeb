@@ -668,9 +668,17 @@ h1, h2, h3, h4, h5 {
 .football-museum {
 	order: 5;
 }
+
+.pj__img--football {
+	object-position: center;
+}
 /********************/
 .luro-terminal {
 	order: 6;
+}
+
+.pj__img--luro{
+	object-position: center;
 }
 /********************/
 .lacar-coast {
