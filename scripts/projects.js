@@ -1,64 +1,24 @@
 const paddingTotalHoriz = 20 + 10;
 
-/*Touchable Screens BLUR CONTROL*/
-/** events */
+/** Scroll Events */
 window.onscroll = function() {scrolled()};
 
 function scrolled() {
 	let pointer = window.matchMedia("(pointer: fine)")
 	if (pointer.matches == false) {
-		checkPosition(0)
-		checkPosition(1)
-		checkPosition(2)
-		checkPosition(3)
-		checkPosition(4)
-		checkPosition(5)
-		checkPosition(6)
-		checkPosition(7)
-		checkPosition(8)
-		checkPosition(9)
-		checkPosition(10)
-		checkPosition(11)
-		checkPosition(12)
-		checkPosition(13)
-		checkPosition(14)
-		checkPosition(15)
-		checkPosition(16)
-		checkPosition(17)
-		checkPosition(18)
-		checkPosition(19)
-		checkPosition(20)
-		checkPosition(21)
-		checkPosition(22)
-		checkPosition(23)
+		for (i = 0; i <  pj__descrip.length; ++i) {
+			checkPosition(i)
+		}
+	}
 
-		checkPosition(24)
-		checkPosition(25)
-		checkPosition(26)
-		checkPosition(27)
-		checkPosition(28)
-		checkPosition(29)
-		checkPosition(30)
-		checkPosition(31)
-		checkPosition(32)
-		checkPosition(33)
-		checkPosition(34)
-		checkPosition(35)
-		checkPosition(36)
-		checkPosition(37)
-		checkPosition(38)
-		checkPosition(39)
-		checkPosition(40)
-		checkPosition(41)
-		checkPosition(42)
-		checkPosition(43)
-		checkPosition(44)
-		checkPosition(45)
-		checkPosition(46)
-		checkPosition(47)
+	let mobile = window.matchMedia("(max-width: 999px) and (orientation: portrait)")
+	if (mobile.matches == false) {
+		for (i = 0; i <  pj__descrip.length; ++i) {
+			checkPositionClose(i)
+		}
 	}
 }
-
+/*Touchable Screens BLUR CONTROL*/
 function checkPosition (indexElement) {
 	/*Check if pj__descrip is already open*/
 	let status = pj__descrip[indexElement].getAttribute("status")
@@ -93,6 +53,23 @@ function checkPosition (indexElement) {
 	}
 }
 
+/*Close when scrolling*/
+function checkPositionClose (indexElement) {
+	/*Check if pj__descrip is open*/
+	let status = pj__descrip[indexElement].getAttribute("status")
+	if (status == "open") { 
+		/**Return y element center coordinate relative to the screen  */
+		position_Y = pj__textBox[indexElement].getBoundingClientRect().top + pj__textBox[indexElement].scrollHeight / 2;
+		/**Return top limit active area relative to the screen  */
+		limitTop = 0 ;
+		/**Return bottom limit active area relative to the screen  */
+		limitBottom = screen.availHeight;
+		/**Close*/
+		if (limitTop > position_Y || position_Y > limitBottom) {
+			close(indexElement)
+		}
+	}
+}
 /*CURTAIN CONTROL*/
 /********************* OPEN **********************/
 /** Open events */
@@ -354,106 +331,5 @@ function close(indexElement) {
 	}
 }
 
-/*Close when scrolling*/
-/** events */
-window.onscroll = function() {scrolledTwo()};
 
-function scrolledTwo() {
-	/**If there are two or more columns*/
-	let mobile = window.matchMedia("(max-width: 999px) and (orientation: portrait)")
-	if (mobile.matches == false) {
-		checkPositionClose(0)
-		checkPositionClose(1)
-		checkPositionClose(2)
-		checkPositionClose(3)
-		checkPositionClose(4)
-		checkPositionClose(5)
-		checkPositionClose(6)
-		checkPositionClose(7)
-		checkPositionClose(8)
-		checkPositionClose(9)
-		checkPositionClose(10)
-		checkPositionClose(11)
-		checkPositionClose(12)
-		checkPositionClose(13)
-		checkPositionClose(14)
-		checkPositionClose(15)
-		checkPositionClose(16)
-		checkPositionClose(17)
-		checkPositionClose(18)
-		checkPositionClose(19)
-		checkPositionClose(20)
-		checkPositionClose(21)
-		checkPositionClose(22)
-		checkPositionClose(23)
-
-		checkPositionClose(24)
-		checkPositionClose(25)
-		checkPositionClose(26)
-		checkPositionClose(27)
-		checkPositionClose(28)
-		checkPositionClose(29)
-		checkPositionClose(30)
-		checkPositionClose(31)
-		checkPositionClose(32)
-		checkPositionClose(33)
-		checkPositionClose(34)
-		checkPositionClose(35)
-		checkPositionClose(36)
-		checkPositionClose(37)
-		checkPositionClose(38)
-		checkPositionClose(39)
-		checkPositionClose(40)
-		checkPositionClose(41)
-		checkPositionClose(42)
-		checkPositionClose(43)
-		checkPositionClose(44)
-		checkPositionClose(45)
-		checkPositionClose(46)
-		checkPositionClose(47)
-
-		checkPositionClose(48)
-		checkPositionClose(49)
-		checkPositionClose(50)
-		checkPositionClose(51)
-		checkPositionClose(52)
-		checkPositionClose(53)
-		checkPositionClose(54)
-		checkPositionClose(55)
-		checkPositionClose(56)
-		checkPositionClose(57)
-		checkPositionClose(58)
-		checkPositionClose(59)
-		checkPositionClose(60)
-		checkPositionClose(61)
-		checkPositionClose(62)
-		checkPositionClose(63)
-		checkPositionClose(64)
-		checkPositionClose(65)
-		checkPositionClose(66)
-		checkPositionClose(67)
-		checkPositionClose(68)
-		checkPositionClose(69)
-		checkPositionClose(70)
-		checkPositionClose(71)
-	}
-}
-
-function checkPositionClose (indexElement) {
-	/*Check if pj__descrip is open*/
-	let status = pj__descrip[indexElement].getAttribute("status")
-	if (status == "open") { 
-		/**Return y element center coordinate relative to the screen  */
-		position_Y = pj__textBox[indexElement].getBoundingClientRect().top + pj__textBox[indexElement].scrollHeight / 2;
-		/**Return top limit active area relative to the screen  */
-		limitTop = 0 ;
-		/**Return bottom limit active area relative to the screen  */
-		limitBottom = screen.availHeight;
-		/**Start blur */
-		if (limitTop > position_Y || position_Y > limitBottom) {
-			close(indexElement)
-		}
-	}
-	
-}
 
