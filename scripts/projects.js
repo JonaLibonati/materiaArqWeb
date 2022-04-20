@@ -73,80 +73,10 @@ function checkPositionClose (indexElement) {
 /*CURTAIN CONTROL*/
 /********************* OPEN **********************/
 /** Open events */
-pj__textBox[0].addEventListener("click", function() {open(0)});
-pj__textBox[1].addEventListener("click", function() {open(1)});
-pj__textBox[2].addEventListener("click", function() {open(2)});
-pj__textBox[3].addEventListener("click", function() {open(3)});
-pj__textBox[4].addEventListener("click", function() {open(4)});
-pj__textBox[5].addEventListener("click", function() {open(5)});
-pj__textBox[6].addEventListener("click", function() {open(6)});
-pj__textBox[7].addEventListener("click", function() {open(7)});
-pj__textBox[8].addEventListener("click", function() {open(8)});
-pj__textBox[9].addEventListener("click", function() {open(9)});
-pj__textBox[10].addEventListener("click", function() {open(10)});
-pj__textBox[11].addEventListener("click", function() {open(11)});
-pj__textBox[12].addEventListener("click", function() {open(12)});
-pj__textBox[13].addEventListener("click", function() {open(13)});
-pj__textBox[14].addEventListener("click", function() {open(14)});
-pj__textBox[15].addEventListener("click", function() {open(15)});
-pj__textBox[16].addEventListener("click", function() {open(16)});
-pj__textBox[17].addEventListener("click", function() {open(17)});
-pj__textBox[18].addEventListener("click", function() {open(18)});
-pj__textBox[19].addEventListener("click", function() {open(19)});
-pj__textBox[20].addEventListener("click", function() {open(20)});
-pj__textBox[21].addEventListener("click", function() {open(21)});
-pj__textBox[22].addEventListener("click", function() {open(22)});
-pj__textBox[23].addEventListener("click", function() {open(23)});
-
-pj__textBox[24].addEventListener("click", function() {open(24)});
-pj__textBox[25].addEventListener("click", function() {open(25)});
-pj__textBox[26].addEventListener("click", function() {open(26)});
-pj__textBox[27].addEventListener("click", function() {open(27)});
-pj__textBox[28].addEventListener("click", function() {open(28)});
-pj__textBox[29].addEventListener("click", function() {open(29)});
-pj__textBox[30].addEventListener("click", function() {open(30)});
-pj__textBox[31].addEventListener("click", function() {open(31)});
-pj__textBox[32].addEventListener("click", function() {open(32)});
-pj__textBox[33].addEventListener("click", function() {open(33)});
-pj__textBox[34].addEventListener("click", function() {open(34)});
-pj__textBox[35].addEventListener("click", function() {open(35)});
-pj__textBox[36].addEventListener("click", function() {open(36)});
-pj__textBox[37].addEventListener("click", function() {open(37)});
-pj__textBox[38].addEventListener("click", function() {open(38)});
-pj__textBox[39].addEventListener("click", function() {open(39)});
-pj__textBox[40].addEventListener("click", function() {open(40)});
-pj__textBox[41].addEventListener("click", function() {open(41)});
-pj__textBox[42].addEventListener("click", function() {open(42)});
-pj__textBox[43].addEventListener("click", function() {open(43)});
-pj__textBox[44].addEventListener("click", function() {open(44)});
-pj__textBox[45].addEventListener("click", function() {open(45)});
-pj__textBox[46].addEventListener("click", function() {open(46)});
-pj__textBox[47].addEventListener("click", function() {open(47)});
-
-pj__textBox[48].addEventListener("click", function() {open(48)});
-pj__textBox[49].addEventListener("click", function() {open(49)});
-pj__textBox[50].addEventListener("click", function() {open(50)});
-pj__textBox[51].addEventListener("click", function() {open(51)});
-pj__textBox[52].addEventListener("click", function() {open(52)});
-pj__textBox[53].addEventListener("click", function() {open(53)});
-pj__textBox[54].addEventListener("click", function() {open(54)});
-pj__textBox[55].addEventListener("click", function() {open(55)});
-pj__textBox[56].addEventListener("click", function() {open(56)});
-pj__textBox[57].addEventListener("click", function() {open(57)});
-pj__textBox[58].addEventListener("click", function() {open(58)});
-pj__textBox[59].addEventListener("click", function() {open(59)});
-pj__textBox[60].addEventListener("click", function() {open(60)});
-pj__textBox[61].addEventListener("click", function() {open(61)});
-pj__textBox[62].addEventListener("click", function() {open(62)});
-pj__textBox[63].addEventListener("click", function() {open(63)});
-pj__textBox[64].addEventListener("click", function() {open(64)});
-pj__textBox[65].addEventListener("click", function() {open(65)});
-pj__textBox[66].addEventListener("click", function() {open(66)});
-pj__textBox[67].addEventListener("click", function() {open(67)});
-pj__textBox[68].addEventListener("click", function() {open(68)});
-pj__textBox[69].addEventListener("click", function() {open(69)});
-pj__textBox[70].addEventListener("click", function() {open(70)});
-pj__textBox[71].addEventListener("click", function() {open(71)});
+for (i = 0; i <  pj__descrip.length; ++i) {	
+	let a = i
+	pj__textBox[a].addEventListener("click", function() {open(a)});
+}
 
 function open(indexElement) {
 	/*Check if pj__descrip is already open*/
@@ -203,84 +133,11 @@ function open(indexElement) {
 
 /********************* CLOSE **********************/
 /** close events */
-/** 1er column */
-pj__chevronClose[0].addEventListener("click", function() {close(0)});
-pj__chevronClose[1].addEventListener("click", function() {close(1)});
-pj__chevronClose[2].addEventListener("click", function() {close(2)});
-pj__chevronClose[3].addEventListener("click", function() {close(3)});
-pj__chevronClose[4].addEventListener("click", function() {close(4)});
-pj__chevronClose[5].addEventListener("click", function() {close(5)});
-pj__chevronClose[6].addEventListener("click", function() {close(6)});
-pj__chevronClose[7].addEventListener("click", function() {close(7)});
-pj__chevronClose[8].addEventListener("click", function() {close(8)});
-pj__chevronClose[9].addEventListener("click", function() {close(9)});
-pj__chevronClose[10].addEventListener("click", function() {close(10)});
-pj__chevronClose[11].addEventListener("click", function() {close(11)});
-pj__chevronClose[12].addEventListener("click", function() {close(12)});
-pj__chevronClose[13].addEventListener("click", function() {close(13)});
-pj__chevronClose[14].addEventListener("click", function() {close(14)});
-pj__chevronClose[15].addEventListener("click", function() {close(15)});
-pj__chevronClose[16].addEventListener("click", function() {close(16)});
-pj__chevronClose[17].addEventListener("click", function() {close(17)});
-pj__chevronClose[18].addEventListener("click", function() {close(18)});
-pj__chevronClose[19].addEventListener("click", function() {close(19)});
-pj__chevronClose[20].addEventListener("click", function() {close(20)});
-pj__chevronClose[21].addEventListener("click", function() {close(21)});
-pj__chevronClose[22].addEventListener("click", function() {close(22)});
-pj__chevronClose[23].addEventListener("click", function() {close(23)});
 
-/** 2er column */
-pj__chevronClose[24].addEventListener("click", function() {close(24)});
-pj__chevronClose[25].addEventListener("click", function() {close(25)});
-pj__chevronClose[26].addEventListener("click", function() {close(26)});
-pj__chevronClose[27].addEventListener("click", function() {close(27)});
-pj__chevronClose[28].addEventListener("click", function() {close(28)});
-pj__chevronClose[29].addEventListener("click", function() {close(29)});
-pj__chevronClose[30].addEventListener("click", function() {close(30)});
-pj__chevronClose[31].addEventListener("click", function() {close(31)});
-pj__chevronClose[32].addEventListener("click", function() {close(32)});
-pj__chevronClose[33].addEventListener("click", function() {close(33)});
-pj__chevronClose[34].addEventListener("click", function() {close(34)});
-pj__chevronClose[35].addEventListener("click", function() {close(35)});
-pj__chevronClose[36].addEventListener("click", function() {close(36)});
-pj__chevronClose[37].addEventListener("click", function() {close(37)});
-pj__chevronClose[38].addEventListener("click", function() {close(38)});
-pj__chevronClose[39].addEventListener("click", function() {close(39)});
-pj__chevronClose[40].addEventListener("click", function() {close(40)});
-pj__chevronClose[41].addEventListener("click", function() {close(41)});
-pj__chevronClose[42].addEventListener("click", function() {close(42)});
-pj__chevronClose[43].addEventListener("click", function() {close(43)});
-pj__chevronClose[44].addEventListener("click", function() {close(44)});
-pj__chevronClose[45].addEventListener("click", function() {close(45)});
-pj__chevronClose[46].addEventListener("click", function() {close(46)});
-pj__chevronClose[47].addEventListener("click", function() {close(47)});
-
-/** 3er column */
-pj__chevronClose[48].addEventListener("click", function() {close(48)});
-pj__chevronClose[49].addEventListener("click", function() {close(49)});
-pj__chevronClose[50].addEventListener("click", function() {close(50)});
-pj__chevronClose[51].addEventListener("click", function() {close(51)});
-pj__chevronClose[52].addEventListener("click", function() {close(52)});
-pj__chevronClose[53].addEventListener("click", function() {close(53)});
-pj__chevronClose[54].addEventListener("click", function() {close(54)});
-pj__chevronClose[55].addEventListener("click", function() {close(55)});
-pj__chevronClose[56].addEventListener("click", function() {close(56)});
-pj__chevronClose[57].addEventListener("click", function() {close(57)});
-pj__chevronClose[58].addEventListener("click", function() {close(58)});
-pj__chevronClose[59].addEventListener("click", function() {close(59)});
-pj__chevronClose[60].addEventListener("click", function() {close(60)});
-pj__chevronClose[61].addEventListener("click", function() {close(61)});
-pj__chevronClose[62].addEventListener("click", function() {close(62)});
-pj__chevronClose[63].addEventListener("click", function() {close(63)});
-pj__chevronClose[64].addEventListener("click", function() {close(64)});
-pj__chevronClose[65].addEventListener("click", function() {close(65)});
-pj__chevronClose[66].addEventListener("click", function() {close(66)});
-pj__chevronClose[67].addEventListener("click", function() {close(67)});
-pj__chevronClose[68].addEventListener("click", function() {close(68)});
-pj__chevronClose[69].addEventListener("click", function() {close(69)});
-pj__chevronClose[70].addEventListener("click", function() {close(70)});
-pj__chevronClose[71].addEventListener("click", function() {close(71)});
-
+for (i = 0; i <  pj__descrip.length; ++i) {	
+	let a = i
+	pj__chevronClose[a].addEventListener("click", function() {close(a)});
+}
 
 /*Automatic scroll*/
 /*
@@ -330,6 +187,3 @@ function close(indexElement) {
 		pj__descrip[indexElement].setAttribute("status" , "close")
 	}
 }
-
-
-

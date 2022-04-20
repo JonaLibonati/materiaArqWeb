@@ -11,6 +11,70 @@ function closePhoto () {
 }
 
 /**Open Gallery */
+
+let array = [];
+
+function openPhoto (imgArray) {
+    array = imgArray;
+    nav.classList.toggle("displayNone");
+    ph.classList.toggle("showOpa100");
+    ph.classList.toggle("zIndex70");
+	body.classList.toggle("overFlowHidden");
+	pj.classList.toggle("showOpa0");
+	about.classList.toggle("showOpa0");
+    ph__img.getAttributeNode("src").value = imgArray[0];
+    pos = 0;
+}
+
+/**Actual photo */
+let pos = 0;
+/**Next photo */
+ph__next.addEventListener("click", nextPhoto)
+
+let touchStartX = 0
+let touchEndX = 0
+
+function touchStart (event) {
+    touchStartX = event.touches[0].clientX
+    console.log(touchStartX)
+}
+
+function touchMove (event) {
+    touchEndX = event.touches[0].clientX
+    console.log(touchEndX)
+}
+
+function touchEnd () {
+    let moveX = touchEndX - touchStartX
+    console.log(moveX)
+    if (moveX > 20) {
+        nextPhoto (); 
+    }
+    if (moveX < -20) {
+        previousPhoto (); 
+    }
+}
+
+function nextPhoto () {
+    if (pos < array.length - 1) {
+        pos++; 
+    } else {
+        pos = 0;
+    }
+    ph__img.getAttributeNode("src").value = array[pos];
+}
+/**Previus photo */
+ph__previous.addEventListener("click", previousPhoto)
+
+function previousPhoto () {
+    if (pos > 0) {
+        pos--; 
+    } else {
+        pos = array.length - 1;
+    }
+    ph__img.getAttributeNode("src").value = array[pos];
+}
+
 pj__buttonPhoto [0].addEventListener("click", function() {openPhoto(penJujuy)})
 pj__buttonPhoto [1].addEventListener("click", function() {openPhoto(comRivPark)})
 pj__buttonPhoto [2].addEventListener("click", function() {openPhoto(olympicVill)})
@@ -86,44 +150,6 @@ pj__buttonPhoto [69].addEventListener("click", function() {openPhoto(argPav)})
 pj__buttonPhoto [70].addEventListener("click", function() {openPhoto(salgCoast)})
 pj__buttonPhoto [71].addEventListener("click", function() {openPhoto(marqPav)})
 
-let array = [];
-
-function openPhoto (imgArray) {
-    array = imgArray;
-    nav.classList.toggle("displayNone");
-    ph.classList.toggle("showOpa100");
-    ph.classList.toggle("zIndex70");
-	body.classList.toggle("overFlowHidden");
-	pj.classList.toggle("showOpa0");
-	about.classList.toggle("showOpa0");
-    ph__img.getAttributeNode("src").value = imgArray[0];
-    pos = 0;
-}
-
-/**Actual photo */
-let pos = 0;
-/**Next photo */
-ph__next.addEventListener("click", nextPhoto)
-
-function nextPhoto () {
-    if (pos < array.length - 1) {
-        pos++; 
-    } else {
-        pos = 0;
-    }
-    ph__img.getAttributeNode("src").value = array[pos];
-}
-/**Previus photo */
-ph__previous.addEventListener("click", previousPhoto)
-
-function previousPhoto () {
-    if (pos > 0) {
-        pos--; 
-    } else {
-        pos = array.length - 1;
-    }
-    ph__img.getAttributeNode("src").value = array[pos];
-}
 
 /**Penintenciaria Jujuy Images Arrays */
 const penJujuy0 = "images/ex-pen-jujuy/ex-pen-jujuy-aerialView.jpg";
