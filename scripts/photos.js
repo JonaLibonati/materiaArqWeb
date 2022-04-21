@@ -200,29 +200,23 @@ const plaFerCab10 = "images/playa-caballito/01-caballito-aerialView01.jpg"
 const plaFerCab = [plaFerCab0, plaFerCab1, plaFerCab2, plaFerCab3, plaFerCab4, plaFerCab5, plaFerCab6, plaFerCab7, plaFerCab8, plaFerCab9, plaFerCab10]
 
 /**Olympic village Images Arrays */
-const olympicVill0 = "images/olimpic-village/olympic-walkView10.jpg"
-const olympicVill1 = "images/olimpic-village/olympic-walkView01.jpg"
-const olympicVill2 = "images/olimpic-village/olympic-walkView09.jpg"
-const olympicVill3 = "images/olimpic-village/olympic-walkView12.jpg"
-const olympicVill4 = "images/olimpic-village/olympic-walkView14.jpg"
-const olympicVill5 = "images/olimpic-village/olympic-walkView04.jpg"
-const olympicVill6 = "images/olimpic-village/olympic-walkView02.jpg"
-const olympicVill7 = "images/olimpic-village/olympic-walkView03.jpg"
-const olympicVill8 = "images/olimpic-village/olympic-walkView08.jpg"
-const olympicVill9 = "images/olimpic-village/olympic-walkView07.jpg"
-const olympicVill10 = "images/olimpic-village/olympic-walkView15.jpg"
-const olympicVill11 = "images/olimpic-village/olympic-walkView16.jpg"
-const olympicVill12 = "images/olimpic-village/olympic-walkView05.jpg"
-const olympicVill13 = "images/olimpic-village/olympic-walkView13.jpg"
-const olympicVill14 = "images/olimpic-village/olympic-walkView11.jpg"
-const olympicVill15 = "images/olimpic-village/olympic-walkView17.jpg"
-const olympicVill16 = "images/olimpic-village/olympic-walkView26.jpg"
-const olympicVill17 = "images/olimpic-village/olympic-walkView19.jpg"
-const olympicVill18 = "images/olimpic-village/olympic-walkView20.jpg"
-const olympicVill19 = "images/olimpic-village/olympic-walkView23.jpg"
-const olympicVill20 = "images/olimpic-village/olympic-walkView24.jpg"
+const olympicVill0 = "images/olimpic-village/olympic-walkView01.jpg"
+const olympicVill1 = "images/olimpic-village/olympic-walkView02.jpg"
+const olympicVill2 = "images/olimpic-village/olympic-walkView03.jpg"
+const olympicVill3 = "images/olimpic-village/olympic-walkView04.jpg"
+const olympicVill4 = "images/olimpic-village/olympic-walkView05.jpg"
+const olympicVill5 = "images/olimpic-village/olympic-walkView06.jpg"
+const olympicVill6 = "images/olimpic-village/olympic-walkView07.jpg"
+const olympicVill7 = "images/olimpic-village/olympic-walkView08.jpg"
+const olympicVill8 = "images/olimpic-village/olympic-walkView09.jpg"
+const olympicVill9 = "images/olimpic-village/olympic-walkView10.jpg"
+const olympicVill10 = "images/olimpic-village/olympic-walkView11.jpg"
+const olympicVill11 = "images/olimpic-village/olympic-walkView12.jpg"
+const olympicVill12 = "images/olimpic-village/olympic-walkView13.jpg"
+const olympicVill13 = "images/olimpic-village/olympic-walkView14.jpg"
 
-const olympicVill = [olympicVill0, olympicVill1, olympicVill2, olympicVill3, olympicVill4, olympicVill5, olympicVill6, olympicVill7, olympicVill8, olympicVill9, olympicVill10, olympicVill11, olympicVill12, olympicVill13, olympicVill14, olympicVill15, olympicVill16, olympicVill17, olympicVill18, olympicVill19, olympicVill20]
+
+const olympicVill = [olympicVill0, olympicVill1, olympicVill2, olympicVill3, olympicVill4, olympicVill5, olympicVill6, olympicVill7, olympicVill8, olympicVill9, olympicVill10, olympicVill11, olympicVill12, olympicVill13]
 
 /** Lacar coast Images Arrays */
 const lacarCoast0 = "images/lago-lacar-coast/lacar-aerialView01.jpg"
