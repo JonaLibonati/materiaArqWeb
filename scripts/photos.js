@@ -487,9 +487,9 @@ const luroTerminal9 = "images/luro-terminal/luro-terminal-walkView08.jpg"
 const luroTerminal = [luroTerminal0, luroTerminal1, luroTerminal2, luroTerminal3, luroTerminal4, luroTerminal5, luroTerminal6, luroTerminal7, luroTerminal8, luroTerminal9]
 
 /**BRD building Images Arrays */
-const brdBuild0 = "images/BRD-building/brd-inSide01.jpg"
+const brdBuild0 = "images/BRD-building/brd-outSide01.jpg"
 const brdBuild1 = "images/BRD-building/brd-inSide02.jpg"
-const brdBuild2 = "images/BRD-building/brd-outSide01.jpg"
+const brdBuild2 = "images/BRD-building/brd-inSide01.jpg"
 const brdBuild3 = "images/BRD-building/brd-outSide02.jpg"
 
 const brdBuild = [brdBuild0, brdBuild1, brdBuild2, brdBuild3]
