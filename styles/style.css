@@ -15,7 +15,7 @@ html {
 .body {
 	width: 100%;
 	height: 100%;
-	overflow: scroll;
+	overflow-y: scroll;
 }
 
 h1, h2, h3, h4, h5 {
@@ -24,25 +24,6 @@ h1, h2, h3, h4, h5 {
 
 .letter-spacing-0 {
 	letter-spacing: 0;
-}
-
-.bg {
-	position: fixed;
-	z-index: 5;
-	height: 100vh;
-	width: 100%;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-}
-
-.bg__blur {
-	position: relative;
-	height: 100%;
-	width: 100%;
-	background-color: #fff;
-	opacity: 0.7;
-	z-index: 5;
 }
 
 .nav {
@@ -84,23 +65,6 @@ h1, h2, h3, h4, h5 {
 	height: 100%;
 }
 
-/*
-.nav__icon--logo {
-	left: 50%;
-	transform: translate(-50%,0);
-	height: 100%;
-}
-
-.nav__logo {
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	margin: auto;
-}
-*/
-
 .nav__butList {
 	width: 100%;
 	height: 100%;
@@ -111,6 +75,11 @@ h1, h2, h3, h4, h5 {
 .nav__hambur {
 	height: 30px;
 	fill: #333333;
+}
+
+.nav__hamburIcon {
+	height: 30px;
+	width: 30px;
 }
 
 .nav__curtain {
@@ -140,9 +109,6 @@ h1, h2, h3, h4, h5 {
 	margin-top: 10px;
 	text-align: center;
 	transition: opacity 1s;
-	/*border-bottom-style: solid;
-	border-bottom-width: 1px;
-	border-bottom-color: #333333;*/
 }
 
 .nav__item--first {
@@ -150,35 +116,6 @@ h1, h2, h3, h4, h5 {
 	padding-top: 5px;
 	margin-top: 0px;
 } 
-/*
-.nav__listDesk {
-	display: none;
-	display: flex;
-	list-style: none;
-	padding-inline-start: 0;
-	width: 100%;
-	height: 45px;
-}
-
-.nav__itemDesk {
-	display: flex;
-	flex-basis: 25%;
-	align-items: center;
-	justify-content: center;
-
-}
-*/
-/* 
-.nav__item--first {
-	padding-top: 5px;
-	padding-bottom: 5px;
-	margin-left: 5px;
-	margin-right: 5px;
-	border-bottom-style: solid;
-	border-bottom-width: 1px;
-	border-bottom-color: #333333;
-} 
-*/
 
 .nav__title {
 	position: relative;
@@ -1121,10 +1058,6 @@ h1, h2, h3, h4, h5 {
 
 /* Javascrip styles and animations*/
  
-/*.hidden {
-	display: none;
-}*/
-
 .overFlowHidden {
 	overflow: hidden;
 }
@@ -1168,7 +1101,7 @@ h1, h2, h3, h4, h5 {
 }
 
 
-/*Viewports*/
+/*********** Viewports *******************/
 
 /*Desktop*/
 
