@@ -476,6 +476,7 @@ h1, h2, h3, h4, h5 {
 .pj__img {
 	position: relative;
 	height: 270px;
+	max-height: 270px;
 	object-fit: cover;
 	object-position: left;
 	z-index: 0;
@@ -1209,7 +1210,7 @@ h1, h2, h3, h4, h5 {
 	}
 
 	.pj__img {
-		height: 100%;
+		height: 390px;
 		max-height: 390px;
 	}
 
@@ -1453,7 +1454,7 @@ h1, h2, h3, h4, h5 {
 	}
 
 	.pj__img {
-		height: 100%;
+		height: 390px;
 		max-height: 390px;
 	}
 
@@ -1656,6 +1657,7 @@ h1, h2, h3, h4, h5 {
 
 	.pj__img {
 		height: 390px;
+		max-height: 390px;
 	}
 
 	.pj__descrip {
