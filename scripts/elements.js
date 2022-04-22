@@ -10,6 +10,8 @@ const nav__itemFirst = document.getElementsByClassName("nav__item--first")[0]
 const nav__socMedia = document.getElementsByClassName("nav__socMedia")[0]
 const nav__link = document.getElementsByClassName("nav__link")
 
+const home__mail = document.getElementsByClassName("home__mail")[0]
+
 const about = document.getElementsByClassName("about")[0]
 
 const pj = document.getElementsByClassName("pj")[0]
