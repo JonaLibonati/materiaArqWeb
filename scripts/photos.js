@@ -73,81 +73,22 @@ function touchEnd () {
     }
 }
 
-pj__buttonPhoto [0].addEventListener("click", function() {openPhoto(penJujuy)})
-pj__buttonPhoto [1].addEventListener("click", function() {openPhoto(comRivPark)})
-pj__buttonPhoto [2].addEventListener("click", function() {openPhoto(olympicVill)})
-pj__buttonPhoto [3].addEventListener("click", function() {openPhoto(plaFerCab)})
-pj__buttonPhoto [4].addEventListener("click", function() {openPhoto(footballMuseum)})
-pj__buttonPhoto [5].addEventListener("click", function() {openPhoto(luroTerminal)})
-pj__buttonPhoto [6].addEventListener("click", function() {openPhoto(lacarCoast)})
-pj__buttonPhoto [7].addEventListener("click", function() {openPhoto(centenPav)})
-pj__buttonPhoto [8].addEventListener("click", function() {openPhoto(acindar)})
-pj__buttonPhoto [9].addEventListener("click", function() {openPhoto(chanarPark)})
-pj__buttonPhoto [10].addEventListener("click", function() {openPhoto(berazcomplex)})
-pj__buttonPhoto [11].addEventListener("click", function() {openPhoto(parqPatri)})
-pj__buttonPhoto [12].addEventListener("click", function() {openPhoto(educBuild)})
-pj__buttonPhoto [13].addEventListener("click", function() {openPhoto(vlHouse)})
-pj__buttonPhoto [14].addEventListener("click", function() {openPhoto(svHouse)})
-pj__buttonPhoto [15].addEventListener("click", function() {openPhoto(prsBuild)})
-pj__buttonPhoto [16].addEventListener("click", function() {openPhoto(ldBuild)})
-pj__buttonPhoto [17].addEventListener("click", function() {openPhoto(alsina)})
-pj__buttonPhoto [18].addEventListener("click", function() {openPhoto(brdBuild)})
-pj__buttonPhoto [19].addEventListener("click", function() {openPhoto(estEco)})
-pj__buttonPhoto [20].addEventListener("click", function() {openPhoto(plaColeg)})
-pj__buttonPhoto [21].addEventListener("click", function() {openPhoto(argPav)})
-pj__buttonPhoto [22].addEventListener("click", function() {openPhoto(salgCoast)})
-pj__buttonPhoto [23].addEventListener("click", function() {openPhoto(marqPav)})
-
-pj__buttonPhoto [24].addEventListener("click", function() {openPhoto(penJujuy)})
-pj__buttonPhoto [25].addEventListener("click", function() {openPhoto(comRivPark)})
-pj__buttonPhoto [26].addEventListener("click", function() {openPhoto(olympicVill)})
-pj__buttonPhoto [27].addEventListener("click", function() {openPhoto(plaFerCab)})
-pj__buttonPhoto [28].addEventListener("click", function() {openPhoto(footballMuseum)})
-pj__buttonPhoto [29].addEventListener("click", function() {openPhoto(luroTerminal)})
-pj__buttonPhoto [30].addEventListener("click", function() {openPhoto(lacarCoast)})
-pj__buttonPhoto [31].addEventListener("click", function() {openPhoto(centenPav)})
-pj__buttonPhoto [32].addEventListener("click", function() {openPhoto(acindar)})
-pj__buttonPhoto [33].addEventListener("click", function() {openPhoto(chanarPark)})
-pj__buttonPhoto [34].addEventListener("click", function() {openPhoto(berazcomplex)})
-pj__buttonPhoto [35].addEventListener("click", function() {openPhoto(parqPatri)})
-pj__buttonPhoto [36].addEventListener("click", function() {openPhoto(educBuild)})
-pj__buttonPhoto [37].addEventListener("click", function() {openPhoto(vlHouse)})
-pj__buttonPhoto [38].addEventListener("click", function() {openPhoto(svHouse)})
-pj__buttonPhoto [39].addEventListener("click", function() {openPhoto(prsBuild)})
-pj__buttonPhoto [40].addEventListener("click", function() {openPhoto(ldBuild)})
-pj__buttonPhoto [41].addEventListener("click", function() {openPhoto(alsina)})
-pj__buttonPhoto [42].addEventListener("click", function() {openPhoto(brdBuild)})
-pj__buttonPhoto [43].addEventListener("click", function() {openPhoto(estEco)})
-pj__buttonPhoto [44].addEventListener("click", function() {openPhoto(plaColeg)})
-pj__buttonPhoto [45].addEventListener("click", function() {openPhoto(argPav)})
-pj__buttonPhoto [46].addEventListener("click", function() {openPhoto(salgCoast)})
-pj__buttonPhoto [47].addEventListener("click", function() {openPhoto(marqPav)})
-
-pj__buttonPhoto [48].addEventListener("click", function() {openPhoto(penJujuy)})
-pj__buttonPhoto [49].addEventListener("click", function() {openPhoto(comRivPark)})
-pj__buttonPhoto [50].addEventListener("click", function() {openPhoto(olympicVill)})
-pj__buttonPhoto [51].addEventListener("click", function() {openPhoto(plaFerCab)})
-pj__buttonPhoto [52].addEventListener("click", function() {openPhoto(footballMuseum)})
-pj__buttonPhoto [53].addEventListener("click", function() {openPhoto(luroTerminal)})
-pj__buttonPhoto [54].addEventListener("click", function() {openPhoto(lacarCoast)})
-pj__buttonPhoto [55].addEventListener("click", function() {openPhoto(centenPav)})
-pj__buttonPhoto [56].addEventListener("click", function() {openPhoto(acindar)})
-pj__buttonPhoto [57].addEventListener("click", function() {openPhoto(chanarPark)})
-pj__buttonPhoto [58].addEventListener("click", function() {openPhoto(berazcomplex)})
-pj__buttonPhoto [59].addEventListener("click", function() {openPhoto(parqPatri)})
-pj__buttonPhoto [60].addEventListener("click", function() {openPhoto(educBuild)})
-pj__buttonPhoto [61].addEventListener("click", function() {openPhoto(vlHouse)})
-pj__buttonPhoto [62].addEventListener("click", function() {openPhoto(svHouse)})
-pj__buttonPhoto [63].addEventListener("click", function() {openPhoto(prsBuild)})
-pj__buttonPhoto [64].addEventListener("click", function() {openPhoto(ldBuild)})
-pj__buttonPhoto [65].addEventListener("click", function() {openPhoto(alsina)})
-pj__buttonPhoto [66].addEventListener("click", function() {openPhoto(brdBuild)})
-pj__buttonPhoto [67].addEventListener("click", function() {openPhoto(estEco)})
-pj__buttonPhoto [68].addEventListener("click", function() {openPhoto(plaColeg)})
-pj__buttonPhoto [69].addEventListener("click", function() {openPhoto(argPav)})
-pj__buttonPhoto [70].addEventListener("click", function() {openPhoto(salgCoast)})
-pj__buttonPhoto [71].addEventListener("click", function() {openPhoto(marqPav)})
-
+/** Photo button events */
+for (i = 0; i <  pj__descrip.length; ++i) {	
+	let a = i
+    let b = 0
+    if (a <= 23) {
+        pj__buttonPhoto [a].addEventListener("click", function() {openPhoto(projects[a])})
+    }
+    if (a > 23 && a <= 47) {
+        b = a - (pj__descrip.length / 3)
+        pj__buttonPhoto [a].addEventListener("click", function() {openPhoto(projects[(b)])})
+    }
+    if (a > 47) {
+        b = a - (pj__descrip.length * 2 / 3)
+        pj__buttonPhoto [a].addEventListener("click", function() {openPhoto(projects[(b)])})
+    }
+}
 
 /**Penintenciaria Jujuy Images Arrays */
 const penJujuy0 = "images/ex-pen-jujuy/ex-pen-jujuy-aerialView.jpg";
@@ -493,3 +434,6 @@ const brdBuild2 = "images/BRD-building/brd-inSide01.jpg"
 const brdBuild3 = "images/BRD-building/brd-outSide02.jpg"
 
 const brdBuild = [brdBuild0, brdBuild1, brdBuild2, brdBuild3]
+
+/**Array of proyects*/
+const projects = [penJujuy, comRivPark, olympicVill, plaFerCab, footballMuseum, luroTerminal, lacarCoast, centenPav, acindar, chanarPark, berazcomplex, parqPatri, educBuild, vlHouse, svHouse, prsBuild, ldBuild, alsina, brdBuild, estEco, plaColeg, argPav, salgCoast, marqPav]
