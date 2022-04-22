@@ -26,6 +26,8 @@ const pj__flexContainer = document.getElementsByClassName("pj__flexContainer")
 
 const contact = document.getElementsByClassName("contact")[0]
 
+const footer__mail = document.getElementsByClassName("footer__mail")[0]
+
 const ph = document.getElementsByClassName("ph")[0]
 const ph__img = document.getElementsByClassName("ph__img")[0]
 const ph__close = document.getElementsByClassName("ph__close")[0]

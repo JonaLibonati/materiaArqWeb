@@ -237,15 +237,15 @@ h1, h2, h3, h4, h5 {
 	display: flex;
 	justify-content: center;
 	width: 100%;
-	padding-left: 45px;
-	padding-right: 45px;
 	margin-top: 45px;
 }
 
 .home__ig,
-.home__fb {
+.home__fb,
+.home__wpp,
+.home__mail {
 	position: relative;
-	flex-basis: 70px;
+	flex-basis: 35px;
 	height: 30px;
 	margin: 6px 12px;
 	line-height: 0;
@@ -253,9 +253,15 @@ h1, h2, h3, h4, h5 {
 }
 
 .home__igIcon,
-.home__fbIcon {
+.home__fbIcon,
+.home__wppIcon,
+.home__mailIcon {
 	width: 100%;
 	height: 100%;
+}
+
+.home__mail {
+	cursor: pointer;
 }
 
 .about {
@@ -935,7 +941,9 @@ h1, h2, h3, h4, h5 {
 }
 
 .footer__ig,
-.footer__fb {
+.footer__fb,
+.footer__wpp,
+.footer__mail {
 	position: relative;
 	flex-basis: 50px;
 	height: 25px;
@@ -945,9 +953,15 @@ h1, h2, h3, h4, h5 {
 }
 
 .footer__igIcon,
-.footer__fbIcon {
+.footer__fbIcon,
+.footer__wppIcon,
+.footer__mailIcon {
 	width: 100%;
 	height: 100%;
+}
+
+.footer__mail {
+	cursor: pointer;
 }
 
 .ph {
