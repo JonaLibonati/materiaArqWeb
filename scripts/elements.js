@@ -4,9 +4,9 @@ const nav = document.getElementsByClassName("nav")[0]
 const nav__list = document.getElementsByClassName("nav__list")[0]
 const nav__butList = document.getElementsByClassName("nav__butList")[0]
 const nav__curtain = document.getElementsByClassName("nav__curtain")[0]
+const nav__curtainBlur = document.getElementsByClassName("nav__curtainBlur")[0]
 const nav__blur = document.getElementsByClassName("nav__blur")[0]
 const nav__item = document.getElementsByClassName("nav__item")
-const nav__itemFirst = document.getElementsByClassName("nav__item--first")[0]
 const nav__socMedia = document.getElementsByClassName("nav__socMedia")[0]
 const nav__link = document.getElementsByClassName("nav__link")
 

@@ -3,19 +3,30 @@ const paddingTotalHoriz = 20 + 10;
 /** Scroll Events */
 window.onscroll = function() {scrolled()};
 
+let previousScroll = 0 
+console.log(previousScroll)
+
 function scrolled() {
+	/*Blur control on scroll*/
 	let pointer = window.matchMedia("(pointer: fine)")
 	if (pointer.matches == false) {
 		for (i = 0; i <  pj__descrip.length; ++i) {
 			checkPosition(i)
 		}
 	}
-
+	/*Close pj-descrip on scroll*/
 	let mobile = window.matchMedia("(max-width: 999px) and (orientation: portrait)")
 	if (mobile.matches == false) {
 		for (i = 0; i <  pj__descrip.length; ++i) {
 			checkPositionClose(i)
 		}
+	}
+	/*Close nav on scroll*/
+	let relativeScroll = window.scrollY + positionNav
+	let status = nav__curtain.getAttribute("status")
+	if ((relativeScroll < -180 || relativeScroll > 180) && status == "open") {
+		curtain() /*curtain.js*/
+		nav__curtain.setAttribute("status" , "close")
 	}
 }
 /*Touchable Screens BLUR CONTROL*/
@@ -53,7 +64,7 @@ function checkPosition (indexElement) {
 	}
 }
 
-/*Close when scrolling*/
+/*Close pj-descrip on scroll*/
 function checkPositionClose (indexElement) {
 	/*Check if pj__descrip is open*/
 	let status = pj__descrip[indexElement].getAttribute("status")
@@ -70,7 +81,8 @@ function checkPositionClose (indexElement) {
 		}
 	}
 }
-/*CURTAIN CONTROL*/
+
+/*pj-descrip CURTAIN CONTROL*/
 /********************* OPEN **********************/
 /** Open events */
 for (i = 0; i <  pj__descrip.length; ++i) {	

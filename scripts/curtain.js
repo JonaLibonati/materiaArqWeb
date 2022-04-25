@@ -1,21 +1,22 @@
+let positionNav = 0
+
 function curtain() {
-	nav__itemFirst.classList.toggle("displayNone")
-	nav__item[0].classList.toggle("displayNone")
-	nav__item[1].classList.toggle("displayNone")
-	nav__item[2].classList.toggle("displayNone")
-	nav__item[3].classList.toggle("displayNone")
-	nav__socMedia.classList.toggle("displayNone")
 	nav__list.classList.toggle("showOpa100")
-	nav__list.classList.toggle("height100vh")
-	nav__list.classList.toggle("zIndex70")
-	nav__curtain.classList.toggle("showOpa90")
-	nav__curtain.classList.toggle("heightCurtain")
+	nav__item[0].classList.toggle("showOpa100")
+	nav__item[1].classList.toggle("showOpa100")
+	nav__item[2].classList.toggle("showOpa100")
+	nav__item[3].classList.toggle("showOpa100")
+	nav__curtain.classList.toggle("zIndex70")
+	nav__curtainBlur.classList.toggle("showOpa90")
 	nav__blur.classList.toggle("showOpa90")
-	body.classList.toggle("overFlowHidden")
-	pj.classList.toggle("showOpa0")
-	about.classList.toggle("showOpa0")
-	contact.classList.toggle("showOpa0")
-	
+	positionNav = body.getBoundingClientRect().top
+	let status = nav__curtain.getAttribute("status")
+	if (status == "open") {
+		nav__curtain.setAttribute("status" , "close")
+	}
+	if (status == "close") {
+		nav__curtain.setAttribute("status" , "open")
+	}
 }
 
 nav__butList.addEventListener("click", curtain)

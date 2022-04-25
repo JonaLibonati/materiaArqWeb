@@ -10,6 +10,7 @@
 
 html {
 	line-height: 1;
+	scroll-behavior: smooth;
 }
 
 .body {
@@ -26,6 +27,27 @@ h1, h2, h3, h4, h5 {
 	letter-spacing: 0;
 }
 
+/* Scroll bar */
+/* width */
+::-webkit-scrollbar {
+	width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+	background: #fcfcfc;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background: #cccccc;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: #555;
+  }
+
 .nav {
 	position: fixed;
 	width:  100%;
@@ -37,7 +59,7 @@ h1, h2, h3, h4, h5 {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	z-index: 40;
+	z-index: 60;
 }
 
 .nav__blur {
@@ -46,7 +68,7 @@ h1, h2, h3, h4, h5 {
 	height: 100%;
 	background-color: #fff;
 	opacity: 0.7;
-	transition: opacity 1s;
+	transition: opacity 0.5s;
 }
 
 .nav__ic {
@@ -75,21 +97,28 @@ h1, h2, h3, h4, h5 {
 .nav__hambur {
 	height: 30px;
 	fill: #333333;
+	cursor: pointer;
 }
 
 .nav__hamburIcon {
 	height: 30px;
 	width: 30px;
 }
-
 .nav__curtain {
+	height: fit-content;
+	top: 45px;
+	z-index: 49;
+	transition: z-index 1s;
+}
+
+.nav__curtainBlur {
 	position: absolute;
 	width: 100%;
-	height: 0;
-	top: 45px;
+	height: 180px;
 	background-color: #fff;
 	opacity: 0;
 	transition: opacity 1s;
+	z-index: 5;
 }
 
 .nav__list {
@@ -100,22 +129,18 @@ h1, h2, h3, h4, h5 {
 	padding-inline-start: 0;
 	opacity: 0;
 	transition: opacity 1s;
+	z-index: 10;
 }
 
 .nav__item {
 	position: relative;
+	height: fit-content;
 	margin-left: 45px;
 	margin-right: 45px;
-	margin-top: 10px;
+	padding-top: 10px;
 	text-align: center;
-	transition: opacity 1s;
+	transition: opacity 2s;
 }
-
-.nav__item--first {
-	position: relative;
-	padding-top: 5px;
-	margin-top: 0px;
-} 
 
 .nav__title {
 	position: relative;
@@ -132,58 +157,42 @@ h1, h2, h3, h4, h5 {
 
 .nav__h2 {
 	position: relative;
+	display: inline;
 	font-size: 25px;
 	line-height: 30px;
 	color: #333333;
+	font-family: centGothicBold;
+	transition: font-size 3s;
+}
+
+.nav__h2--about {
+	letter-spacing: 1.6px;
+}
+
+.nav__h2--contact {
+	letter-spacing: 1.6px;
 }
 
 /* unvisited link */
 .nav__link:link {
 	color: #2B2B2B;
 	text-decoration: none;
-  }
+}
   
 /* visited link */
 .nav__link:visited {
 	color: #2B2B2B;
 	text-decoration: none;
-  }
+}
   
 /* mouse over link */
 .nav__link:hover {
 	text-decoration: none;
-  }
+}
   
 /* selected link */
 .nav__link:active {
 	text-decoration: none;
-  }
-
-.nav__socMedia {
-	position: relative;
-	display: flex;
-	justify-content: center;
-	width: 100%;
-	padding-left: 45px;
-	padding-right: 45px;
-	margin-top: 45px;
-	margin-bottom: 60px;
-}
-
-.nav__ig,
-.nav__fb {
-	position: relative;
-	flex-basis: 70px;
-	height: 30px;
-	margin: 6px 12px;
-	line-height: 0;
-	color: #333333;
-}
-
-.nav__igIcon,
-.nav__fbIcon {
-	width: 100%;
-	height: 100%;
 }
 
 .home {
@@ -245,7 +254,7 @@ h1, h2, h3, h4, h5 {
 .home__wpp,
 .home__mail {
 	position: relative;
-	flex-basis: 35px;
+	flex-basis: 30px;
 	height: 30px;
 	margin: 6px 12px;
 	line-height: 0;
@@ -268,7 +277,7 @@ h1, h2, h3, h4, h5 {
 	position: relative;
 	margin-top: 10vh;
 	height: fit-content;
-	z-index: 10;
+	z-index: 50;
 	overflow: hidden;
 	transition: opacity 1s;
 }
@@ -344,25 +353,31 @@ h1, h2, h3, h4, h5 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 60px;
-	background-color: #101010;
+	height: fit-content;
 	z-index: 5;
 }
 
 .about__button {
 	position: relative;
 	display: inline-block;
-	border-style: solid;
-	border-width: 1px;
-	padding-bottom: 2px;
-	padding-left: 10px;
-	padding-right: 10px;
+	padding-bottom: 4px;
 	font-family: centGothicLigth;
-	font-size: 30px; 
-	color: #C8C8C8;
-	text-align: center;
-	text-decoration: none;
+	font-size: 15px;
+	line-height: 15px;
+	letter-spacing: 4px;
 	line-height: 1;
+	color: #333333;
+	text-decoration: none;
+}
+
+.about__button:hover{
+	text-decoration: underline;
+}
+
+.about__chevron {
+	display: inline;
+	color: #333333;
+	height: 10px;
 }
 
 .pj {
@@ -979,7 +994,7 @@ h1, h2, h3, h4, h5 {
 .ph__close {
 	position: absolute;
 	top: 0;
-	left: 0;
+	right: 0;
 	height: 50px;
 	width: 50px;
 	cursor: pointer;
@@ -989,7 +1004,7 @@ h1, h2, h3, h4, h5 {
 .ph__closeIcon {
 	position: absolute;
 	top: 0;
-	left: 0;
+	right: 0;
 	padding: 5px;
 	height: 35px;
 	width: 35px; 
@@ -1098,9 +1113,13 @@ h1, h2, h3, h4, h5 {
 }
 
 .heightCurtain {
+	height: 180px;
+}
+/*
+.heightCurtain {
 	height: calc(100vh - 45px);
 }
-
+*/
 .padding0 {
 	padding-top: 0;  
 	padding-bottom: 0;
@@ -1112,6 +1131,10 @@ h1, h2, h3, h4, h5 {
 
 .zIndex70 {
 	z-index: 70;
+}
+
+.fontSize0 {
+	font-size: 0;
 }
 
 
@@ -1355,6 +1378,14 @@ h1, h2, h3, h4, h5 {
 	.footer__item--ninth {
 		flex-basis: 100%;
 	}
+
+	.ph__close {
+		left: 0;
+	}
+
+	.ph__closeIcon {
+		left: 0;
+	}
 }
 
 /*Desktop an tablet Landspace*/
@@ -1567,6 +1598,14 @@ h1, h2, h3, h4, h5 {
 	.footer__item--eighth,
 	.footer__item--ninth {
 		flex-basis: 100%;
+	}
+
+	.ph__close {
+		left: 0;
+	}
+
+	.ph__closeIcon {
+		left: 0;
 	}
 }
 
