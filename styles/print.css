@@ -1,0 +1,208 @@
+@font-face{
+  font-family: "centGothicBold";
+  src: url("../fonts/centGothicBold.otf") format("truetype");
+ }
+
+@font-face{
+  font-family: "centGothicLigth";
+  src: url("../fonts/centGothicLigth.otf") format("truetype");
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: centGothicBold;
+}
+
+b {
+	font-family: centGothicBold;
+}
+
+.body {
+	height: 296.5mm;
+    width: 210mm;
+}
+
+.letter-spacing-0 {
+	letter-spacing: 0;
+}
+
+/* Scroll bar */
+/* width */
+::-webkit-scrollbar {
+	width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+	background: #fcfcfc;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background: #cccccc;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: #555;
+  }
+
+a {
+	color: #333333;
+	text-decoration: none;
+}
+
+.cv__address {
+	font-family: centGothicLigth;
+	font-size: 16px;
+	letter-spacing: 2px;
+	line-height: 1.2;
+	text-align: left;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	color: #333333;
+}
+
+.info__fig {
+	width: 250px;
+	margin-left: 30px;
+	padding-bottom: 10px;
+	float: right;
+	background-color: #e4e4e4;
+}
+
+.info {
+	position: relative;
+    height: 296.5mm;
+    width: 210mm;
+    max-height: 296.5mm;
+    max-width: 296.5mm;
+    overflow: hidden;
+	padding-top: 5mm;
+	padding-bottom: 5mm;
+	padding-left: 5mm;
+    padding-right: 5mm;
+}
+
+.info__art {
+	display: block;
+}
+
+.info__list {
+	flex-basis: 100%;
+}
+
+.info__item {
+	font-family: centGothicLigth;
+	font-size: 16px;
+	letter-spacing: 2px;
+	line-height: 1.2;
+	text-align: left;
+	color: #333333;
+}
+
+.info__H1 {
+	margin-bottom: 0px;
+	flex-basis: 100%;
+	font-size: 20px;
+	line-height: 1;
+	color: #333333;
+}
+
+.info__H2 {
+	padding-bottom: 5px;
+	flex-basis: 100%;
+	font-size: 16px;
+	line-height: 1;
+	color: #333333;
+}
+
+.info__H3 {
+	flex-basis: 100%;
+	font-family: centGothicLigth;
+	font-size: 16px;
+	line-height: 1;
+	color: #333333;
+}
+
+.info__p {
+	flex-basis: 100%;
+	font-family: centGothicLigth;
+	font-size: 16px;
+	letter-spacing: 2px;
+	line-height: 1;
+	text-align: justify;
+	color: #333333;
+	padding-top: 5px;
+}
+
+.info__p--mat {
+	padding-bottom: 20px;
+}
+
+.info__p--Edg {
+	order: 4;
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+
+.info__H2--rest {
+	order: 7;
+}
+
+.info__H3--rest {
+	order: 7;
+	padding-bottom: 10px;
+}
+
+.info__H3--restFirst {
+	padding-top: 20px;
+}
+
+.info__p--rest {
+	order: 7;
+	padding-bottom: 15px;
+}
+
+.info__p--list {
+	text-align: left;
+}
+
+.info__b {
+	font-size: 12px;
+}
+
+.info__cv {
+	position: relative;
+	display: flex;
+	align-content: center;
+	padding-top: 15px;
+	height: fit-content;
+	z-index: 5;
+	order: 3;
+}
+
+.info__button {
+	position: relative;
+	display: inline-block;
+	padding-bottom: 4px;
+	font-family: centGothicLigth;
+	font-size: 15px;
+	line-height: 15px;
+	letter-spacing: 4px;
+	line-height: 1;
+	color: #333333;
+	text-decoration: none;
+}
+
+.info__button:hover{
+	text-decoration: underline;
+}
+
+.info__chevron {
+	display: inline;
+	color: #333333;
+	height: 15px;
+	padding-left: 3px;
+	padding-top: 2px;
+}

@@ -1,4 +1,3 @@
-home__mail.addEventListener("click", copy)
 footer__mail.addEventListener("click", copy)
 
 function copy () {
