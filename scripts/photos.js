@@ -23,13 +23,8 @@ let array = [];
 
 function openPhoto (imgArray) {
     array = imgArray;
-    /**Pre load of images in cache */
-    for (i = 0; i <  imgArray.length; ++i) {	
-        let a = i
-        ph__img.getAttributeNode("src").value = imgArray[a];
-    }
     /**Set first image*/
-    ph__img.getAttributeNode("src").value = imgArray[0];
+    ph__img.src = imgArray[0];
     pos = 0;
     /**Full screen mode*/
     if (ph.requestFullscreen) {
@@ -60,7 +55,7 @@ function nextPhoto () {
     } else {
         pos = 0;
     }
-    ph__img.getAttributeNode("src").value = array[pos];
+    ph__img.src = array[pos];
 }
 
 /**Previus photo */
@@ -72,7 +67,7 @@ function previousPhoto () {
     } else {
         pos = array.length - 1;
     }
-    ph__img.getAttributeNode("src").value = array[pos];
+    ph__img.src = array[pos];
 }
 
 /**Key control photo */
