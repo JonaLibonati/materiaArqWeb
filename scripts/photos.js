@@ -8,26 +8,49 @@ function closePhoto () {
 	body.classList.toggle("overFlowHidden");
 	pj.classList.toggle("showOpa0");
 	about.classList.toggle("showOpa0");
+    ph.setAttribute("status" , "close");
+    /**Close Full screen mode*/
+    if (document.exitFullscreen) {
+        document.exitFullscreen();
+    }
+    if (document.webkitExitFullscreen) { /* Safari */
+        document.webkitExitFullscreen();
+    }
 }
 
 /**Open Gallery */
-
 let array = [];
 
 function openPhoto (imgArray) {
     array = imgArray;
+    /**Pre load of images in cache */
+    for (i = 0; i <  imgArray.length; ++i) {	
+        let a = i
+        ph__img.getAttributeNode("src").value = imgArray[a];
+    }
+    /**Set first image*/
+    ph__img.getAttributeNode("src").value = imgArray[0];
+    pos = 0;
+    /**Full screen mode*/
+    if (ph.requestFullscreen) {
+        ph.requestFullscreen();
+    } 
+    if (ph.webkitRequestFullscreen) { /* Safari */
+        ph.webkitRequestFullscreen();
+    }
+    /**open photo display*/
     nav.classList.toggle("displayNone");
     ph.classList.toggle("showOpa100");
     ph.classList.toggle("zIndex70");
 	body.classList.toggle("overFlowHidden");
 	pj.classList.toggle("showOpa0");
 	about.classList.toggle("showOpa0");
-    ph__img.getAttributeNode("src").value = imgArray[0];
-    pos = 0;
+    ph.setAttribute("status" , "open");
 }
 
 /**Actual photo */
 let pos = 0;
+
 /**Next photo */
 ph__next.addEventListener("click", nextPhoto)
 
@@ -39,6 +62,7 @@ function nextPhoto () {
     }
     ph__img.getAttributeNode("src").value = array[pos];
 }
+
 /**Previus photo */
 ph__previous.addEventListener("click", previousPhoto)
 
@@ -49,6 +73,28 @@ function previousPhoto () {
         pos = array.length - 1;
     }
     ph__img.getAttributeNode("src").value = array[pos];
+}
+
+/**Key control photo */
+function keyEventPhoto(event) {
+    let status = ph.getAttribute("status")
+    if (status == "open") {
+        let key = event.code
+        switch(key) {
+            case "ArrowLeft":
+                previousPhoto ()
+            break;
+            case "ArrowRight":
+                nextPhoto ()
+            break;
+            case "ArrowRight":
+                nextPhoto ()
+            break;
+            case "Escape":
+                closePhoto ()
+            break;
+        }
+    }
 }
 
 /**Touchable slide photo */
@@ -66,10 +112,10 @@ function touchMove (event) {
 function touchEnd () {
     let moveX = touchEndX - touchStartX
     if (moveX > 20) {
-        nextPhoto (); 
+        previousPhoto (); 
     }
     if (moveX < -20) {
-        previousPhoto (); 
+        nextPhoto (); 
     }
 }
 
