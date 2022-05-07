@@ -133,9 +133,9 @@ for (i = 0; i <  pj__descrip.length; ++i) {
 
 /**Penintenciaria Jujuy Images Arrays */
 
-const penJujuy0 = "images/ex-pen-jujuy/ex-pen-jujuy-floor.jpg";
-const penJujuy1 = "images/ex-pen-jujuy/ex-pen-jujuy-floor01.jpg";
-const penJujuy2 = "images/ex-pen-jujuy/ex-pen-jujuy-floor02.jpg";
+const penJujuy0 = "images/ex-pen-jujuy/ex-pen-jujuy-floor01.jpg";
+const penJujuy1 = "images/ex-pen-jujuy/ex-pen-jujuy-floor02.jpg";
+const penJujuy2 = "images/ex-pen-jujuy/ex-pen-jujuy-floor.jpg";
 const penJujuy3 = "images/ex-pen-jujuy/ex-pen-jujuy-aerialView05.jpg";
 const penJujuy4 = "images/ex-pen-jujuy/ex-pen-jujuy-aerialView.jpg";
 const penJujuy5 = "images/ex-pen-jujuy/ex-pen-jujuy-aerialView02.jpg";
@@ -212,10 +212,10 @@ const lacarCoast7 = "images/lago-lacar-coast/lacar-aerialView09.jpg"
 const lacarCoast8 = "images/lago-lacar-coast/lacar-aerialView04.jpg"
 const lacarCoast9 = "images/lago-lacar-coast/lacar-walkView01.jpg"
 const lacarCoast10 = "images/lago-lacar-coast/lacar-walkView02.jpg"
-const lacarCoast11 = "images/lago-lacar-coast/lacar-walkView07.jpg"
-const lacarCoast12 = "images/lago-lacar-coast/lacar-walkView04.jpg"
-const lacarCoast13 = "images/lago-lacar-coast/lacar-walkView03.jpg"
-const lacarCoast14 = "images/lago-lacar-coast/lacar-walkView06.jpg"
+const lacarCoast11 = "images/lago-lacar-coast/lacar-walkView04.jpg"
+const lacarCoast12 = "images/lago-lacar-coast/lacar-walkView03.jpg"
+const lacarCoast13 = "images/lago-lacar-coast/lacar-walkView06.jpg"
+const lacarCoast14 = "images/lago-lacar-coast/lacar-walkView07.jpg"
 const lacarCoast15 = "images/lago-lacar-coast/lacar-walkView05.jpg"
 const lacarCoast16 = "images/lago-lacar-coast/lacar-floor.jpg"
 const lacarCoast17 = "images/lago-lacar-coast/lacar-detail.jpg"
