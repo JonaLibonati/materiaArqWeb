@@ -979,6 +979,7 @@ b {
 	font-size: 16px;
 	letter-spacing: 2px;
 	color: #333333;
+	resize: none;
 }
 
 .contact__input:focus, 

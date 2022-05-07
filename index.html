@@ -2506,13 +2506,15 @@
 				<div class="contact__cont">
 					<form class="contact__form" action="action_page.php">
 						<div class="contact__flexItem">
+							<input type="hidden" name="_subject" value="New submission!">
+
 							<input class="contact__input" type="text" id="fname" name="firstname" placeholder="Tu nombre..">
 
 							<input class="contact__input" type="text" id="lname" name="lastname" placeholder="Tu apellido..">
 						
 							<input class="contact__input" type="email" id="eMail" name="eMail" placeholder="Tu eMail..">
 
-							<input class="contact__input" type="text" id="eMail" name="subject" placeholder="¿Cual es el asunto?">
+							<input class="contact__input" type="text" id="sject" name="subject" placeholder="¿Cual es el asunto?">
 						</div>
 						<div class="contact__flexItem contact__flexItem--second">
 							<textarea class="contact__textarea" id="message" name="message" placeholder="¿Cual es tu mensaje?"></textarea>
@@ -2603,5 +2605,7 @@
 	<script type="text/javascript" src="scripts/photos.js"></script>
 	<script type="text/javascript" src="scripts/footerCopyMail.js"></script>
 	<script type="text/javascript" src="scripts/homeCopyMail.js"></script>
-	</body>
+	<script type="text/javascript" src="scripts/form.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
 </html>
