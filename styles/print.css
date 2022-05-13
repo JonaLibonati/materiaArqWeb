@@ -57,8 +57,8 @@ a {
 	letter-spacing: 2px;
 	line-height: 1;
 	text-align: left;
-	padding-top: 5px;
-	padding-bottom: 5px;
+	padding-top: 1px;
+	padding-bottom: 1px;
 	padding-left: 10px;
 	color: #333333;
 }
@@ -102,7 +102,7 @@ a {
 
 .info__H1 {
 	margin-bottom: 0px;
-	padding-bottom: 5px;
+	padding-bottom: 30px;
 	flex-basis: 100%;
 	font-size: 20px;
 	line-height: 1;
@@ -157,7 +157,7 @@ a {
 }
 
 .info__H3--restFirst {
-	padding-top: 5px;
+	padding-top: 30px;
 }
 
 .info__p--rest {
