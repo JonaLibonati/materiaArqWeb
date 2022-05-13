@@ -15,7 +15,7 @@ form.addEventListener("submit", (e)=>{
 
 const sendContactMail = (name, surname, email, subject, message)=>{
 
-    fetch("https://formsubmit.co/ajax/info@estudiomateria.com.ar", {
+    fetch("https://formsubmit.co/ajax/ba8e7ae84c4c31236033618535691782", {
         method: "POST",
         headers: { 
             'Content-Type': 'application/json',
