@@ -43,7 +43,7 @@ function openPhoto (imgArray) {
         }
     } 
     else if (ph.webkitRequestFullscreen()) { /* Safari */
-        if (document.webkitFullscreenElement) {
+        if (!document.webkitFullscreenElement) {
             ph.webkitRequestFullscreen();
         }
     }
