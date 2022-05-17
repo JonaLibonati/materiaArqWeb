@@ -4,7 +4,6 @@ const paddingTotalHoriz = 20 + 10;
 window.onscroll = function() {scrolled()};
 
 let previousScroll = 0 
-console.log(previousScroll)
 
 function scrolled() {
 	/*Blur control on scroll*/

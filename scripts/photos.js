@@ -13,9 +13,15 @@ function closePhoto () {
     if (document.exitFullscreen) {
         document.exitFullscreen();
     }
-    if (document.webkitExitFullscreen) { /* Safari */
+    else if (document.webkitExitFullscreen) { /* Safari */
         document.webkitExitFullscreen();
     }
+    /**Removing events created in function openPhoto()"*/
+    ph__img.removeEventListener("touchstart", touchStart)
+    ph__img.removeEventListener("touchmove", touchMove)
+    ph__img.removeEventListener("touchend", touchEnd)
+    body.removeEventListener("keydown", keyEventPhoto)
+
 }
 
 /**Open Gallery */
@@ -30,7 +36,7 @@ function openPhoto (imgArray) {
     if (ph.requestFullscreen) {
         ph.requestFullscreen();
     } 
-    if (ph.webkitRequestFullscreen) { /* Safari */
+    else if (ph.webkitRequestFullscreen()) { /* Safari */
         ph.webkitRequestFullscreen();
     }
     /**open photo display*/
@@ -41,6 +47,12 @@ function openPhoto (imgArray) {
 	pj.classList.toggle("showOpa0");
 	about.classList.toggle("showOpa0");
     ph.setAttribute("status" , "open");
+    /**Adding events to create a touch gesture of "next photo" and "previous photo"*/
+    ph__img.addEventListener("touchstart", touchStart)
+    ph__img.addEventListener("touchmove", touchMove)
+    ph__img.addEventListener("touchend", touchEnd)
+    /**Adding events to listen a keydown to the gallery control"*/
+    body.addEventListener("keydown", keyEventPhoto)
 }
 
 /**Actual photo */
