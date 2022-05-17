@@ -150,23 +150,6 @@ for (i = 0; i <  pj__descrip.length; ++i) {
 	pj__chevronClose[a].addEventListener("click", function() {close(a)});
 }
 
-/*Automatic scroll*/
-/*
-function scrollUpPx (length, i) {
-	let mobile = window.matchMedia("(max-width: 999px) and (orientation: portrait)")
-	if (mobile.matches) {
-		window.scrollBy(0 , -10)
-		if (i >= length ) {
-			/*Exit*/
-		/*} else {
-			/*Repeat*//*
-			i = i + 10
-			setTimeout(scrollUpPx, 10 , length , i); 
-		}
-	}
-}
-*/
-
 function close(indexElement) {
 /*Check if pj__descrip is already close*/
 	let status = pj__descrip[indexElement].getAttribute("status")
@@ -190,8 +173,6 @@ function close(indexElement) {
 				pj__descrip[indexElement].classList.add("padding0");
 			}
 		);
-		/*Automatic scroll the element height*/
-		/*scrollUpPx(elementHeight , 0)*/
 		/*Display the open chevron*/
 		pj__chevronOpen[indexElement].classList.remove("displayNone");
 		/**Set attribute to close*/
