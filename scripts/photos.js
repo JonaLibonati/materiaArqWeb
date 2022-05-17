@@ -11,10 +11,14 @@ function closePhoto () {
     ph.setAttribute("status" , "close");
     /**Close Full screen mode*/
     if (document.exitFullscreen) {
-        document.exitFullscreen();
+        if (document.fullscreenElement) {
+            document.exitFullscreen();
+        }
     }
     else if (document.webkitExitFullscreen) { /* Safari */
-        document.webkitExitFullscreen();
+        if (document.webkitFullscreenElement) {
+            document.webkitExitFullscreen();
+        }
     }
     /**Removing events created in function openPhoto()"*/
     ph__img.removeEventListener("touchstart", touchStart)
@@ -34,10 +38,14 @@ function openPhoto (imgArray) {
     pos = 0;
     /**Full screen mode*/
     if (ph.requestFullscreen) {
-        ph.requestFullscreen();
+        if (!document.fullscreenElement) {
+            ph.requestFullscreen();
+        }
     } 
     else if (ph.webkitRequestFullscreen()) { /* Safari */
-        ph.webkitRequestFullscreen();
+        if (document.webkitFullscreenElement) {
+            ph.webkitRequestFullscreen();
+        }
     }
     /**open photo display*/
     nav.classList.toggle("displayNone");
