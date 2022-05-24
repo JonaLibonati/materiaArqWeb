@@ -84,15 +84,16 @@ function loadStart () {
 
 function loadEnd (imgElements, array) {
     for (i = 0; i <  imgElements.length; ++i) {
-        if (imgElements[i].complete == true){
-            ph__img.src = array[0];
-            ph__img.classList.remove("ph_loading")
-            console.log('cargue')
-        } 
-        else {
+        if (imgElements[i].complete == false){
             ph__img.src = "images/loading.gif"
             ph__img.classList.add("ph_loading")
             console.log('cargando')
+            
+        } 
+        else {
+            ph__img.src = array[0];
+            ph__img.classList.remove("ph_loading")
+            console.log('cargue')
         }
     }
         
