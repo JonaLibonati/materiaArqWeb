@@ -25,9 +25,11 @@ function closePhoto () {
     ph__img.removeEventListener("touchmove", touchMove)
     ph__img.removeEventListener("touchend", touchEnd)
     body.removeEventListener("keydown", keyEventPhoto)
-
-    ph__img.src = "images/loading.gif";
-    ph__img.classList.add("ph_loading")
+    /**Adding load screen"*/
+    setTimeout(function () {
+        ph__img.src = "images/loading.gif";
+        ph__img.classList.add("ph_loading")
+    },1500)
 }
 
 /**Open Gallery */
@@ -38,21 +40,16 @@ let imgFragmChild = imgFragment.appendChild(document.createElement('DIV'))
 function openPhoto (imgArray) {
     array = imgArray;
     countLoad = 0;
-    
     /**Images preload in cache*/
     for (i = 0; i <  array.length; ++i) {
         let img = document.createElement('IMG')
         img.src = imgArray[i]
         img.addEventListener("load", function() {loadEnd(imgArray)})
-        
         if (img.complete == false) {
             img.style.visibility = 'hidden'
             imgFragmChild.appendChild(img)
         }
     }
-    /**Set first image*/
-    
-    pos = 0;
     /**Full screen mode*/
     if (ph.requestFullscreen) {
         ph.requestFullscreen();
@@ -82,11 +79,12 @@ let countLoad
 function loadEnd (array) {
     ++countLoad
     if (array.length == countLoad){
-            ph__img.src = array[0];
-            ph__img.classList.remove("ph_loading")
-            console.log('Todas las imagenes cargaron')
-        } 
-    }
+        /**Set first image*/
+        pos = 0;
+        ph__img.src = array[0];
+        ph__img.classList.remove("ph_loading")
+    } 
+}
 
 /**Actual photo */
 let pos = 0;
