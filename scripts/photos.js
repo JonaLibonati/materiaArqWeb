@@ -25,27 +25,38 @@ function closePhoto () {
     ph__img.removeEventListener("touchmove", touchMove)
     ph__img.removeEventListener("touchend", touchEnd)
     body.removeEventListener("keydown", keyEventPhoto)
-
 }
 
 /**Open Gallery */
-let array = [];
+let array
+let imgFragment = document.createDocumentFragment()
+let imgFragmChild = imgFragment.appendChild(document.createElement('DIV'))
+imgFragmChild.id = 'imagePreload'
 
 function openPhoto (imgArray) {
     array = imgArray;
+    /**Images preload in cache*/
+    for (i = 0; i <  array.length; ++i) {
+        let img = document.createElement('IMG')
+        img.src = imgArray[i]
+        if (img.complete == false) {
+            img.style.visibility = 'hidden'
+            imgFragmChild.appendChild(img)
+        }
+    }
+    if (imgFragmChild.childElementCount != 0) {
+        ph.appendChild(imgFragment)
+        fragment.replaceChildren(imgFragmChild)
+    }
     /**Set first image*/
     ph__img.src = imgArray[0];
     pos = 0;
     /**Full screen mode*/
     if (ph.requestFullscreen) {
-        if (!document.fullscreenElement) {
-            ph.requestFullscreen();
-        }
+        ph.requestFullscreen();
     } 
     else if (ph.webkitRequestFullscreen()) { /* Safari */
-        if (!document.webkitFullscreenElement) {
-            ph.webkitRequestFullscreen();
-        }
+        ph.webkitRequestFullscreen();
     }
     /**open photo display*/
     nav.classList.toggle("displayNone");
