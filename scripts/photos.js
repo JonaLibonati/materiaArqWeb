@@ -25,6 +25,9 @@ function closePhoto () {
     ph__img.removeEventListener("touchmove", touchMove)
     ph__img.removeEventListener("touchend", touchEnd)
     body.removeEventListener("keydown", keyEventPhoto)
+
+    ph__img.src = "images/loading.gif";
+    ph__img.classList.add("ph_loading")
 }
 
 /**Open Gallery */
