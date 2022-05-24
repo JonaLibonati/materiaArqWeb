@@ -11,10 +11,14 @@ function closePhoto () {
     ph.setAttribute("status" , "close");
     /**Close Full screen mode*/
     if (document.exitFullscreen) {
-        document.exitFullscreen();
+        if (document.fullscreenElement) {
+            document.exitFullscreen();
+        }
     }
     else if (document.webkitExitFullscreen) { /* Safari */
-        document.webkitExitFullscreen();
+        if (document.webkitFullscreenElement) {
+            document.webkitExitFullscreen();
+        }
     }
     /**Removing events created in function openPhoto()"*/
     ph__img.removeEventListener("touchstart", touchStart)
