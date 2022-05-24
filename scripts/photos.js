@@ -34,19 +34,19 @@ let imgFragmChild = imgFragment.appendChild(document.createElement('DIV'))
 
 function openPhoto (imgArray) {
     array = imgArray;
+    imgFragmChild.replaceChildren()
+    console.log(imgFragmChild.children)
     /**Images preload in cache*/
     for (i = 0; i <  array.length; ++i) {
         let img = document.createElement('IMG')
         img.src = imgArray[i]
-        img.addEventListener("load", function() {loadScreen(img,imgArray)})
+        
         if (img.complete == false) {
             img.style.visibility = 'hidden'
             imgFragmChild.appendChild(img)
+            img.addEventListener("load", function() {loadEnd(imgFragmChild.children, imgArray)})
+            console.log(imgFragmChild.children)
         }
-    }
-    if (imgFragmChild.childElementCount != 0) {
-        ph.appendChild(imgFragment)
-        fragment.replaceChildren(imgFragmChild)
     }
     /**Set first image*/
     
@@ -76,17 +76,26 @@ function openPhoto (imgArray) {
 
 /**Load screen"*/
 
-ph.addEventListener("load", loadScreen)
-
-function loadScreen (img,array) {
+function loadStart () {
     ph__img.src = "images/loading.gif"
     ph__img.classList.add("ph_loading")
     console.log('cargando')
-    if (img.complete) {
-        ph__img.src = array[0];
-        ph__img.classList.remove("ph_loading")
-        console.log('cargue')
+}
+
+function loadEnd (imgElements, array) {
+    for (i = 0; i <  imgElements.length; ++i) {
+        if (imgElements[i].complete == true){
+            ph__img.src = array[0];
+            ph__img.classList.remove("ph_loading")
+            console.log('cargue')
+        } 
+        else {
+            ph__img.src = "images/loading.gif"
+            ph__img.classList.add("ph_loading")
+            console.log('cargando')
+        }
     }
+        
 }
 
 /**Actual photo */
