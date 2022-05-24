@@ -31,7 +31,6 @@ function closePhoto () {
 let array
 let imgFragment = document.createDocumentFragment()
 let imgFragmChild = imgFragment.appendChild(document.createElement('DIV'))
-imgFragmChild.id = 'imagePreload'
 
 function openPhoto (imgArray) {
     array = imgArray;
@@ -39,6 +38,7 @@ function openPhoto (imgArray) {
     for (i = 0; i <  array.length; ++i) {
         let img = document.createElement('IMG')
         img.src = imgArray[i]
+        img.addEventListener("load", function() {loadScreen(img,imgArray)})
         if (img.complete == false) {
             img.style.visibility = 'hidden'
             imgFragmChild.appendChild(img)
@@ -49,7 +49,7 @@ function openPhoto (imgArray) {
         fragment.replaceChildren(imgFragmChild)
     }
     /**Set first image*/
-    ph__img.src = imgArray[0];
+    
     pos = 0;
     /**Full screen mode*/
     if (ph.requestFullscreen) {
@@ -72,6 +72,21 @@ function openPhoto (imgArray) {
     ph__img.addEventListener("touchend", touchEnd)
     /**Adding events to listen a keydown to the gallery control"*/
     body.addEventListener("keydown", keyEventPhoto)
+}
+
+/**Load screen"*/
+
+ph.addEventListener("load", loadScreen)
+
+function loadScreen (img,array) {
+    ph__img.src = "images/loading.gif"
+    ph__img.classList.add("ph_loading")
+    console.log('cargando')
+    if (img.complete) {
+        ph__img.src = array[0];
+        ph__img.classList.remove("ph_loading")
+        console.log('cargue')
+    }
 }
 
 /**Actual photo */
