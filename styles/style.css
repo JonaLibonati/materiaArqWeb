@@ -752,7 +752,7 @@ b {
 
 /********************/
 .ex-pen-jujuy {
-	order: 1;
+	order: 100;
 }
 
 .pj__img--penJujuy {
@@ -760,11 +760,11 @@ b {
 }
 /********************/
 .com-riv-park {
-	order: 2;
+	order: 200;
 }
 /********************/
 .olympic-vill {
-	order: 3;	
+	order: 300;	
 }
 
 .pj__img--olympic {
@@ -772,7 +772,7 @@ b {
 }
 /********************/
 .pla-fer-cab {
-	order: 4;
+	order: 400;
 }
 
 .pj__img--plaFerCab {
@@ -781,7 +781,7 @@ b {
 }
 /********************/
 .football-museum {
-	order: 5;
+	order: 500;
 }
 
 .pj__img--football {
@@ -789,7 +789,7 @@ b {
 }
 /********************/
 .luro-terminal {
-	order: 6;
+	order: 600;
 }
 
 .pj__img--luro{
@@ -797,7 +797,7 @@ b {
 }
 /********************/
 .lacar-coast {
-	order: 7;
+	order: 700;
 }
 
 .pj__img--lacar {
@@ -805,7 +805,7 @@ b {
 }
 /********************/
 .centen-pav {
-	order: 8;
+	order: 800;
 }
 
 .pj__img--centen {
@@ -813,15 +813,23 @@ b {
 }
 /********************/
 .acindar {
-	order: 9;
+	order: 900;
 }
 
 .pj__img--acindar {
 	object-position: center;
 }
 /********************/
+.ferrocult {
+	order: 1000;
+}
+
+.pj__img--ferrocult {
+	object-position: center;
+}
+/********************/
 .chanar-park {
-	order: 10;
+	order: 1100;
 }
 
 .pj__img--chanar {
@@ -829,7 +837,7 @@ b {
 }
 /********************/
 .beraz_complex {
-	order: 11;
+	order: 1200;
 }
 
 .pj__img--berazComplex {
@@ -838,7 +846,7 @@ b {
 }
 /********************/
 .parq-patri {
-	order: 12;
+	order: 1300;
 }
 
 .pj__img--patricios{
@@ -846,11 +854,11 @@ b {
 }
 /********************/
 .educ-build {
-	order: 13;
+	order: 1400;
 }
 /********************/
 .vl-house {
-	order: 14;
+	order: 1500;
 }
 
 .pj__img--vlHouse {
@@ -859,7 +867,7 @@ b {
 }
 /********************/
 .sv-house {
-	order: 15;
+	order: 1600;
 }
 
 .pj__img--sv-house {
@@ -867,7 +875,7 @@ b {
 }
 /********************/
 .prs-build {
-	order: 16;
+	order: 1700;
 }
 
 .pj__img--prs-build {
@@ -875,7 +883,7 @@ b {
 }
 /********************/
 .ld-build {
-	order: 17;
+	order: 1800;
 }
 
 .pj__img--ld-build {
@@ -883,7 +891,7 @@ b {
 }
 /********************/
 .alsina {
-	order: 18;
+	order: 1900;
 }
 
 .pj__img--alsina {
@@ -891,7 +899,7 @@ b {
 }
 /********************/
 .brd-build {
-	order: 19;
+	order: 2000;
 }
 
 .pj__img--brd-build {
@@ -899,7 +907,7 @@ b {
 }
 /********************/
 .est-eco {
-	order: 20;
+	order: 2100;
 }
 
 .pj__img--est-eco {
@@ -907,7 +915,7 @@ b {
 }
 /********************/
 .pla-coleg {
-	order: 21;
+	order: 2200;
 }
 
 .pj__img--coleg {
@@ -916,7 +924,7 @@ b {
 }
 /********************/
 .arg-pav {
-	order: 22;
+	order: 2300;
 }
 
 .pj__img--argPav {
@@ -924,7 +932,7 @@ b {
 }
 /********************/
 .salg-coast {
-	order: 23;
+	order: 2400;
 }
 
 .pj__img--salgero{
@@ -932,7 +940,7 @@ b {
 }
 /********************/
 .marq-pav {
-	order: 24;
+	order: 2500;
 }
 
 .pj__img--marq-pav {
@@ -1370,17 +1378,17 @@ b {
 	.ex-pen-jujuy-three {
 		display: none;
 	}
-	/********************/
+	/*****************13*/
 	.com-riv-park-one,
 	.com-riv-park-three {
 		display: none;
 	}
-	/********************/
+	/*****************12*/
 	.olympic-vill-one,
 	.olympic-vill-two {
 		display: none;	
 	}
-	/********************/
+	/*****************23*/
 	.pla-fer-cab-two,
 	.pla-fer-cab-three {
 		display: none;
@@ -1411,78 +1419,84 @@ b {
 		display: none;
 	}
 	/********************/
-	.chanar-park-two,
+	.ferrocult-two,
+	.ferrocult-three {
+		display: none;
+	}
+	/********************/
+	.chanar-park-one,
 	.chanar-park-three {
 		display: none;
 	}
 	/********************/
 	.beraz_complex-one,
-	.beraz_complex-three {
+	.beraz_complex-two {
 		display: none;
 	}
 	/********************/
-	.parq-patri-one,
-	.parq-patri-two {
+	.parq-patri-two,
+	.parq-patri-three {
 		display: none;
 	}
 	/********************/
-	.educ-build-two,
+	.educ-build-one,
 	.educ-build-three {
 		display: none;
 	}
 	/********************/
 	.vl-house-one,
-	.vl-house-three {
+	.vl-house-two {
 		display: none;
 	}
 	/********************/
-	.sv-house-one,
+	.sv-house-three,
 	.sv-house-two {
 		display: none;
 	}
 	/********************/
-	.prs-build-two,
+	.prs-build-one,
 	.prs-build-three {
 		display: none;
 	}
 	/********************/
 	.ld-build-one,
-	.ld-build-three {
+	.ld-build-two {
 		display: none;
 	}
 	/********************/
-	.alsina-one,
+	.alsina-three,
 	.alsina-two {
 		display: none;
 	}
 	/********************/
-	.brd-build-two,
+	.brd-build-one,
 	.brd-build-three {
 		display: none;
 	}
 	/********************/
 	.est-eco-one,
-	.est-eco-three {
+	.est-eco-two {
 		display: none;
 	}
 	/********************/
-	.pla-coleg-one,
+	.pla-coleg-three,
 	.pla-coleg-two {
 		display: none;
 	}
 	/********************/
-	.arg-pav-two,
+	.arg-pav-one,
 	.arg-pav-three {
 		display: none;
 	}
 	/********************/
 	.salg-coast-one,
-	.salg-coast-three {
+	.salg-coast-two {
 		display: none;
 	}
 	/********************/
-	.marq-pav-one,
-	.marq-pav-two {
+	.marq-pav-three,
+	.marq-pav-two,
+	.marq-pav-one {
 		display: none;
 	}
 	/********************/
@@ -1675,63 +1689,68 @@ b {
 		display: none;
 	}
 	/********************/
-	.chanar-park-one {
+	.ferrocult-one {
 		display: none;
 	}
 	/********************/
-	.beraz_complex-two {
+	.chanar-park-two {
 		display: none;
 	}
 	/********************/
-	.parq-patri-one {
+	.beraz_complex-one {
 		display: none;
 	}
 	/********************/
-	.educ-build-two {
+	.parq-patri-two {
 		display: none;
 	}
 	/********************/
-	.vl-house-one {
+	.educ-build-one {
 		display: none;
 	}
 	/********************/
-	.sv-house-two {
+	.vl-house-two {
 		display: none;
 	}
 	/********************/
-	.prs-build-one {
+	.sv-house-one {
 		display: none;
 	}
 	/********************/
-	.ld-build-two {
+	.prs-build-two {
 		display: none;
 	}
 	/********************/
-	.alsina-one {
+	.ld-build-one {
 		display: none;
 	}
 	/********************/
-	.brd-build-two {
+	.alsina-two {
 		display: none;
 	}
 	/********************/
-	.est-eco-one {
+	.brd-build-one {
 		display: none;
 	}
 	/********************/
-	.pla-coleg-two {
+	.est-eco-two {
 		display: none;
 	}
 	/********************/
-	.arg-pav-one {
+	.pla-coleg-one {
 		display: none;
 	}
 	/********************/
-	.salg-coast-two {
+	.arg-pav-two {
 		display: none;
 	}
 	/********************/
-	.marq-pav-one {
+	.salg-coast-one {
+		display: none;
+	}
+	/********************/
+	.marq-pav-one,
+	.marq-pav-two {
 		display: none;
 	}
 	/********************/
