@@ -79,11 +79,11 @@ let countLoad
 
 function loadEnd (array) {
     ++countLoad
+    ph__percentage.innerHTML = (countLoad * 100 /array.length) + " %"
     if (array.length == countLoad){
         /**Set first image*/
         pos = 0;
         ph__img.src = array[0];
-        ph__percentage.innerHTML = countLoad * 100 /array.length + " %"
         ph__img.classList.remove("ph_loading")
         ph__percentage.classList.add("displayNone")
     } 
