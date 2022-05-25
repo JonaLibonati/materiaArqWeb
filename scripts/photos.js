@@ -79,7 +79,7 @@ let countLoad
 
 function loadEnd (array) {
     ++countLoad
-    ph__percentage.innerHTML = (countLoad * 100 /array.length) + " %"
+    ph__percentage.innerHTML = Math.round(countLoad * 100 /array.length) + " %"
     if (array.length == countLoad){
         /**Set first image*/
         pos = 0;
