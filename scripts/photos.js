@@ -29,6 +29,7 @@ function closePhoto () {
     setTimeout(function () {
         ph__img.src = "images/loading.gif";
         ph__img.classList.add("ph_loading")
+        ph__percentage.classList.remove("displayNone")
     },1500)
 }
 
@@ -82,7 +83,9 @@ function loadEnd (array) {
         /**Set first image*/
         pos = 0;
         ph__img.src = array[0];
+        ph__percentage.innerHTML = countLoad * 100 /array.length + " %"
         ph__img.classList.remove("ph_loading")
+        ph__percentage.classList.add("displayNone")
     } 
 }
 
