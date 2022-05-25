@@ -524,5 +524,24 @@ const brdBuild3 = "images/BRD-building/brd-outSide02.jpg"
 
 const brdBuild = [brdBuild0, brdBuild1, brdBuild2, brdBuild3]
 
+/**Polo ferrocultural Images Arrays */
+
+const ferrocult0 = "images/ferrocultural/1-ferrocult-aerialview01.jpg"
+const ferrocult1 = "images/ferrocultural/2-ferrocult-aerialview02.jpg"
+const ferrocult2 = "images/ferrocultural/3-ferrocult-aerialview03.jpg"
+const ferrocult3 = "images/ferrocultural/4-ferrocult-aerialview04.jpg"
+const ferrocult4 = "images/ferrocultural/5-ferrocult-aerialview05.jpg"
+const ferrocult5 = "images/ferrocultural/6-ferrocult-walkview01.jpg"
+const ferrocult6 = "images/ferrocultural/7-ferrocult-walkview02.jpg"
+const ferrocult7 = "images/ferrocultural/8-ferrocult-walkview03.jpg"
+const ferrocult8 = "images/ferrocultural/9-ferrocult-walkview04.jpg"
+const ferrocult9 = "images/ferrocultural/10-ferrocult-walkview05.jpg"
+const ferrocult10 = "images/ferrocultural/11-ferrocult-walkview06.jpg"
+const ferrocult11 = "images/ferrocultural/12-ferrocult-walkview07.jpg"
+const ferrocult12 = "images/ferrocultural/13-ferrocult-walkview08.jpg"
+const ferrocult13 = "images/ferrocultural/14-ferrocult-walkview09.jpg"
+
+const ferrocult = [ferrocult0, ferrocult1, ferrocult2, ferrocult3, ferrocult4, ferrocult5, ferrocult6, ferrocult7, ferrocult8, ferrocult9, ferrocult10, ferrocult11, ferrocult12, ferrocult13]
+
 /**Array of proyects*/
-const projects = [penJujuy, comRivPark, olympicVill, plaFerCab, footballMuseum, luroTerminal, lacarCoast, centenPav, acindar, chanarPark, berazcomplex, parqPatri, educBuild, vlHouse, svHouse, prsBuild, ldBuild, alsina, brdBuild, estEco, plaColeg, argPav, salgCoast, marqPav]
+const projects = [penJujuy, comRivPark, olympicVill, plaFerCab, footballMuseum, luroTerminal, lacarCoast, centenPav, acindar, ferrocult, chanarPark, berazcomplex, parqPatri, educBuild, vlHouse, svHouse, prsBuild, ldBuild, alsina, brdBuild, estEco, plaColeg, argPav, salgCoast, marqPav]
