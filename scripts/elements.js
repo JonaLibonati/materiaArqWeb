@@ -1,6 +1,6 @@
 const body = document.getElementsByClassName("body")[0]
 
-const screen = document.getElementsByClassName("screen")[0]
+const backOut = document.getElementsByClassName("screen")[0]
 
 const nav = document.getElementsByClassName("nav")[0]
 const nav__list = document.getElementsByClassName("nav__list")[0]
