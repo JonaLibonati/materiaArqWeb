@@ -164,14 +164,14 @@ function touchEnd () {
 for (i = 0; i <  pj__descrip.length; ++i) {	
 	let a = i
     let b = 0
-    if (a <= 23) {
+    if (a <= pj__descrip.length / 3) {
         pj__buttonPhoto [a].addEventListener("click", function() {openPhoto(projects[a])})
     }
-    if (a > 23 && a <= 47) {
+    if (a > pj__descrip.length / 3 && a <= pj__descrip.length * 2 / 3) {
         b = a - (pj__descrip.length / 3)
         pj__buttonPhoto [a].addEventListener("click", function() {openPhoto(projects[(b)])})
     }
-    if (a > 47) {
+    if (a > pj__descrip.length * 2 / 3) {
         b = a - (pj__descrip.length * 2 / 3)
         pj__buttonPhoto [a].addEventListener("click", function() {openPhoto(projects[(b)])})
     }
