@@ -1,14 +1,14 @@
-/** This code allows To duplicate the pj__flexContainer automatically */
+// This code allows To duplicate the pj__flexContainer automatically
 
-/** Get elements */
+// Get elements
 const pj__old =  document.getElementsByClassName("pj")[0]
 const pj__flexContainer__old =  document.getElementsByClassName("pj__flexContainer")
 
-/** Clone node twice */
+// Clone node twice
 const childrenCopyOne = pj__flexContainer__old[0].cloneNode(true).childNodes
 const childrenCopyTwo = pj__flexContainer__old[0].cloneNode(true).childNodes
 
-/** Createing two new flexcontainers */
+// Createing two new flexcontainers
 const flexContainerSecond = document.createElement("DIV")
 flexContainerSecond.classList.add("pj__flexContainer")
 flexContainerSecond.classList.add("pj__flexContainer--second")
@@ -17,7 +17,7 @@ const flexContainerThirth = document.createElement("DIV")
 flexContainerThirth.classList.add("pj__flexContainer")
 flexContainerThirth.classList.add("pj__flexContainer--thirth")
 
-/** Adding child from the cloned nodes to the flexcontainers */
+// Adding child from the cloned nodes to the flexcontainers 
 childrenCopyOne.forEach (child => {
     if (child.nodeType != 3) {
         oldClass = child.classList.item(2)
@@ -36,11 +36,11 @@ childrenCopyTwo.forEach (child => {
     }
 })
 
-/** Creating a fragment and adding the flexcontainers */
+// Creating a fragment and adding the flexcontainers 
 let fragment = document.createDocumentFragment()
 
 fragment.appendChild(flexContainerSecond)
 fragment.appendChild(flexContainerThirth)
 
-/** Adding the fragment to the HTMLelement */
+// Adding the fragment to the HTMLelement
 pj__old.appendChild(fragment)

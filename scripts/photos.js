@@ -1,4 +1,4 @@
-/**Close Gallery */
+//Close Gallery 
 ph__close.addEventListener("click", function() {closePhoto()})
 
 function closePhoto () {
@@ -9,23 +9,23 @@ function closePhoto () {
 	pj.classList.toggle("showOpa0");
 	about.classList.toggle("showOpa0");
     ph.setAttribute("status" , "close");
-    /**Close Full screen mode*/
+    //Close Full screen mode
     if (document.exitFullscreen) {
         if (document.fullscreenElement) {
             document.exitFullscreen();
         }
     }
-    else if (document.webkitExitFullscreen) { /* Safari */
+    else if (document.webkitExitFullscreen) { // Safari 
         if (document.webkitFullscreenElement) {
             document.webkitExitFullscreen();
         }
     }
-    /**Removing events created in function openPhoto()"*/
+    //Removing events created in function openPhoto()"
     ph__img.removeEventListener("touchstart", touchStart)
     ph__img.removeEventListener("touchmove", touchMove)
     ph__img.removeEventListener("touchend", touchEnd)
     body.removeEventListener("keydown", keyEventPhoto)
-    /**Adding load screen"*/
+    //Adding load screen"
     setTimeout(function () {
         ph__img.src = "images/loading.gif";
         ph__img.classList.add("ph_loading")
@@ -33,7 +33,7 @@ function closePhoto () {
     },1500)
 }
 
-/**Open Gallery */
+//Open Gallery 
 let array
 let imgFragment = document.createDocumentFragment()
 let imgFragmChild = imgFragment.appendChild(document.createElement('DIV'))
@@ -41,8 +41,8 @@ let imgFragmChild = imgFragment.appendChild(document.createElement('DIV'))
 function openPhoto (imgArray) {
     array = imgArray;
     countLoad = 0;
-    /**Images preload in cache*/
-    for (i = 0; i <  array.length; ++i) {
+    //Images preload in cache
+    for (i = 0; i <  imgArray.length; ++i) {
         let img = document.createElement('IMG')
         img.src = imgArray[i]
         img.addEventListener("load", function() {loadEnd(imgArray)})
@@ -51,14 +51,14 @@ function openPhoto (imgArray) {
             imgFragmChild.appendChild(img)
         }
     }
-    /**Full screen mode*/
+    //Full screen mode
     if (ph.requestFullscreen) {
         ph.requestFullscreen();
     } 
-    else if (ph.webkitRequestFullscreen()) { /* Safari */
+    else if (ph.webkitRequestFullscreen()) { // Safari 
         ph.webkitRequestFullscreen();
     }
-    /**open photo display*/
+    //open photo display
     nav.classList.toggle("displayNone");
     ph.classList.toggle("showOpa100");
     ph.classList.toggle("zIndex70");
@@ -66,22 +66,22 @@ function openPhoto (imgArray) {
 	pj.classList.toggle("showOpa0");
 	about.classList.toggle("showOpa0");
     ph.setAttribute("status" , "open");
-    /**Adding events to create a touch gesture of "next photo" and "previous photo"*/
+    //Adding events to create a touch gesture of "next photo" and "previous photo"
     ph__img.addEventListener("touchstart", touchStart)
     ph__img.addEventListener("touchmove", touchMove)
     ph__img.addEventListener("touchend", touchEnd)
-    /**Adding events to listen a keydown to the gallery control"*/
+    //Adding events to listen a keydown to the gallery control"
     body.addEventListener("keydown", keyEventPhoto)
 }
 
-/**Load screen"*/
+//Load screen"
 let countLoad
 
 function loadEnd (array) {
     ++countLoad
     ph__percentage.innerHTML = Math.round(countLoad * 100 /array.length) + " %"
     if (array.length == countLoad){
-        /**Set first image*/
+        //Set first image
         pos = 0;
         ph__img.src = array[0];
         ph__img.classList.remove("ph_loading")
@@ -89,10 +89,10 @@ function loadEnd (array) {
     } 
 }
 
-/**Actual photo */
+//Actual photo 
 let pos = 0;
 
-/**Next photo */
+//Next photo 
 ph__next.addEventListener("click", nextPhoto)
 
 function nextPhoto () {
@@ -104,7 +104,7 @@ function nextPhoto () {
     ph__img.src = array[pos];
 }
 
-/**Previus photo */
+//Previus photo 
 ph__previous.addEventListener("click", previousPhoto)
 
 function previousPhoto () {
@@ -116,7 +116,7 @@ function previousPhoto () {
     ph__img.src = array[pos];
 }
 
-/**Key control photo */
+//Key control photo 
 function keyEventPhoto(event) {
     let status = ph.getAttribute("status")
     if (status == "open") {
@@ -138,7 +138,7 @@ function keyEventPhoto(event) {
     }
 }
 
-/**Touchable slide photo */
+//Touchable slide photo 
 let touchStartX = 0
 let touchEndX = 0
 
@@ -160,24 +160,24 @@ function touchEnd () {
     }
 }
 
-/** Photo button events */
+// Photo button events 
 for (i = 0; i <  pj__descrip.length; ++i) {	
 	let a = i
     let b = 0
-    if (a <= pj__descrip.length / 3) {
+    if (a < pj__descrip.length / 3) {
         pj__buttonPhoto [a].addEventListener("click", function() {openPhoto(projects[a])})
     }
-    if (a > pj__descrip.length / 3 && a <= pj__descrip.length * 2 / 3) {
+    if (a >= pj__descrip.length / 3 && a < pj__descrip.length * 2 / 3) {
         b = a - (pj__descrip.length / 3)
         pj__buttonPhoto [a].addEventListener("click", function() {openPhoto(projects[(b)])})
     }
-    if (a > pj__descrip.length * 2 / 3) {
+    if (a >= pj__descrip.length * 2 / 3) {
         b = a - (pj__descrip.length * 2 / 3)
         pj__buttonPhoto [a].addEventListener("click", function() {openPhoto(projects[(b)])})
     }
 }
 
-/**Penintenciaria Jujuy Images Arrays */
+//Penintenciaria Jujuy Images Arrays 
 
 const penJujuy0 = "images/ex-pen-jujuy/ex-pen-jujuy-floor01.jpg";
 const penJujuy1 = "images/ex-pen-jujuy/ex-pen-jujuy-floor02.jpg";
@@ -195,7 +195,7 @@ const penJujuy12 = "images/ex-pen-jujuy/ex-pen-jujuy-walkView.jpg";
 
 const penJujuy = [penJujuy0, penJujuy1, penJujuy2, penJujuy3, penJujuy4, penJujuy5, penJujuy6, penJujuy7, penJujuy8, penJujuy9, penJujuy10, penJujuy11, penJujuy12]
 
-/**Comodoro Rivadavia Images Arrays */
+//Comodoro Rivadavia Images Arrays 
 const comRivPark0 = "images/com-riv-park/com-riv-aerialview01.jpg"
 const comRivPark1 = "images/com-riv-park/com-riv-aerialview02.jpg"
 const comRivPark2 = "images/com-riv-park/com-riv-floor01.jpg"
@@ -213,7 +213,7 @@ const comRivPark13 = "images/com-riv-park/com-riv-walkView08.jpg"
 
 const comRivPark = [comRivPark0, comRivPark1, comRivPark2, comRivPark3, comRivPark4, comRivPark5, comRivPark6, comRivPark7, comRivPark8, comRivPark9, comRivPark10, comRivPark11, comRivPark12, comRivPark13]
 
-/**Playa ferroviaria Caballito Images Arrays */
+//Playa ferroviaria Caballito Images Arrays 
 const plaFerCab0 = "images/playa-caballito/01-caballito-aerialView01.jpg"
 const plaFerCab1 = "images/playa-caballito/02-caballito-aerialView02.jpg"
 const plaFerCab2 = "images/playa-caballito/03-caballito-aerialView03.jpg"
@@ -228,7 +228,7 @@ const plaFerCab10 = "images/playa-caballito/08-caballito-walkView03.jpg"
 
 const plaFerCab = [plaFerCab0, plaFerCab1, plaFerCab2, plaFerCab3, plaFerCab4, plaFerCab5, plaFerCab6, plaFerCab7, plaFerCab8, plaFerCab9, plaFerCab10]
 
-/**Olympic village Images Arrays */
+//Olympic village Images Arrays 
 const olympicVill0 = "images/olimpic-village/olympic-walkView01.jpg"
 const olympicVill1 = "images/olimpic-village/olympic-walkView03.jpg"
 const olympicVill2 = "images/olimpic-village/olympic-walkView02.jpg"
@@ -246,7 +246,7 @@ const olympicVill13 = "images/olimpic-village/olympic-walkView13.jpg"
 
 const olympicVill = [olympicVill0, olympicVill1, olympicVill2, olympicVill3, olympicVill4, olympicVill5, olympicVill6, olympicVill7, olympicVill8, olympicVill9, olympicVill10, olympicVill11, olympicVill12, olympicVill13]
 
-/** Lacar coast Images Arrays */
+// Lacar coast Images Arrays 
 const lacarCoast0 = "images/lago-lacar-coast/lacar-aerialView01.jpg"
 const lacarCoast1 = "images/lago-lacar-coast/lacar-aerialView05.jpg"
 const lacarCoast2 = "images/lago-lacar-coast/lacar-aerialView06.jpg"
@@ -268,7 +268,7 @@ const lacarCoast17 = "images/lago-lacar-coast/lacar-detail.jpg"
 
 const lacarCoast = [lacarCoast0, lacarCoast1, lacarCoast2, lacarCoast3, lacarCoast4, lacarCoast5, lacarCoast6, lacarCoast7, lacarCoast8, lacarCoast9, lacarCoast10, lacarCoast11, lacarCoast12, lacarCoast13, lacarCoast14, lacarCoast15, lacarCoast16, lacarCoast17]
 
-/**Centenario pavilion Images Arrays */
+//Centenario pavilion Images Arrays 
 const centenPav0 = "images/centenario-pavilion/01-cent-pv-aerialView01.jpg"
 const centenPav1 = "images/centenario-pavilion/04-cent-pv-aerialView04.jpg"
 const centenPav2 = "images/centenario-pavilion/02-cent-pv-aerialView02.jpg"
@@ -282,7 +282,7 @@ const centenPav9 = "images/centenario-pavilion/07-cent-pv-walkView01.jpg"
 
 const centenPav = [centenPav0, centenPav1, centenPav2, centenPav3, centenPav4, centenPav5, centenPav6, centenPav7, centenPav8, centenPav9]
 
-/**Acindar Images Arrays */
+//Acindar Images Arrays 
 const acindar0 = "images/acindar/acindar-aerialview01.jpg"
 const acindar1 = "images/acindar/acindar-aerialview02.jpg"
 const acindar2 = "images/acindar/acindar-walkView06.jpg"
@@ -296,7 +296,7 @@ const acindar9 = "images/acindar/acindar-detail.jpg"
 
 const acindar = [acindar0, acindar1, acindar2, acindar3, acindar4, acindar5, acindar6, acindar7, acindar8, acindar9]
 
-/** Chanar park Images Arrays */
+// Chanar park Images Arrays 
 const chanarPark0 = "images/san-patricio-park/san-patricio-aerialView01.jpg"
 const chanarPark1 = "images/san-patricio-park/san-patricio-walkView04.jpg"
 const chanarPark2 = "images/san-patricio-park/san-patricio-walkView07.jpg"
@@ -311,7 +311,7 @@ const chanarPark10 = "images/san-patricio-park/san-patricio-floor02.jpg"
 
 const chanarPark = [chanarPark0, chanarPark1, chanarPark2, chanarPark3, chanarPark4, chanarPark5, chanarPark6, chanarPark7, chanarPark8, chanarPark9, chanarPark10]
 
-/**Education building Images Arrays */
+//Education building Images Arrays 
 const educBuild0 = "images/educ-fut-building/01-educ-fut-walkView01.jpg"
 const educBuild1 = "images/educ-fut-building/03-educ-fut-walkView03.jpg"
 const educBuild2 = "images/educ-fut-building/04-educ-fut-aerialView01.jpg"
@@ -324,7 +324,7 @@ const educBuild8 = "images/educ-fut-building/09-educ-fut-detail.jpg"
 
 const educBuild = [educBuild0, educBuild1, educBuild2, educBuild3, educBuild4, educBuild5, educBuild6, educBuild7, educBuild8]
 
-/**VL house Images Arrays */
+//VL house Images Arrays 
 const vlHouse0 = "images/VL-house/vl-outSide01.jpg"
 const vlHouse1 = "images/VL-house/vl-outSide02.jpg"
 const vlHouse2 = "images/VL-house/vl-outSide03.jpg"
@@ -344,7 +344,7 @@ const vlHouse14 = "images/VL-house/vl-stair02.jpg"
 
 const vlHouse = [vlHouse0, vlHouse1, vlHouse2, vlHouse3, vlHouse4, vlHouse5, vlHouse6, vlHouse7, vlHouse8, vlHouse9, vlHouse10, vlHouse11, vlHouse12, vlHouse13, vlHouse14]
 
-/**Playa Colegiales Images Arrays */
+//Playa Colegiales Images Arrays 
 const plaColeg0 = "images/playa-colegiales/00-colegiales-aerialView00.jpg"
 const plaColeg1 = "images/playa-colegiales/01-colegiales-aerialView01.jpg"
 const plaColeg2 = "images/playa-colegiales/02-colegiales-floor01.jpg"
@@ -365,7 +365,7 @@ const plaColeg16 = "images/playa-colegiales/16-colegiales-aerialView06.jpg"
 
 const plaColeg = [plaColeg0, plaColeg1, plaColeg2, plaColeg3, plaColeg4, plaColeg5, plaColeg6, plaColeg7, plaColeg8, plaColeg9, plaColeg10, plaColeg11, plaColeg12, plaColeg13, plaColeg14, plaColeg15]
 
-/**Complejo teatral Berazategui Images Arrays */
+//Complejo teatral Berazategui Images Arrays 
 const berazcomplex0 = "images/ber-teatral-complex/01-ber-teatral-walkView01.jpg"
 const berazcomplex1 = "images/ber-teatral-complex/02-ber-teatral-aerialView01.jpg"
 const berazcomplex2 = "images/ber-teatral-complex/03-ber-teatral-walkView02.jpg"
@@ -379,7 +379,7 @@ const berazcomplex9 = "images/ber-teatral-complex/10-ber-teatral-detail02.jpg"
 
 const berazcomplex = [berazcomplex0, berazcomplex1, berazcomplex2, berazcomplex3, berazcomplex4, berazcomplex5, berazcomplex6, berazcomplex7, berazcomplex8,berazcomplex9]
 
-/**Argentina pavilion Images Arrays */
+//Argentina pavilion Images Arrays 
 const argPav0 = "images/arg-pavilion/arf-pav-08.jpg"
 const argPav1 = "images/arg-pavilion/arf-pav-01.jpg" 
 const argPav2 = "images/arg-pavilion/arf-pav-02.jpg"
@@ -396,7 +396,7 @@ const argPav12 = "images/arg-pavilion/arf-pav-12.jpg"
 
 const argPav = [argPav0, argPav1, argPav2, argPav3, argPav4, argPav5, argPav6, argPav7, argPav8, argPav9, argPav10, argPav11, argPav12]
 
-/**Costa Salgero Images Arrays */
+//Costa Salgero Images Arrays 
 const salgCoast0 = "images/costa-salguero/01-cos-salg-aerialView01.jpg"
 const salgCoast1 = "images/costa-salguero/02-cos-salg-aerialView02.jpg"
 const salgCoast2 = "images/costa-salguero/03-cos-salg-aerialView03.jpg"
@@ -410,7 +410,7 @@ const salgCoast9 = "images/costa-salguero/10-cos-salg-walkView06.jpg"
 
 const salgCoast = [salgCoast0, salgCoast1, salgCoast2, salgCoast3, salgCoast4, salgCoast5, salgCoast6, salgCoast7, salgCoast8, salgCoast9]
 
-/**Espacio cultural parque patricios Images Arrays */
+//Espacio cultural parque patricios Images Arrays 
 const parqPatri0 = "images/parque-patricios/01-patricios-walkView01.jpg"
 const parqPatri1 = "images/parque-patricios/02-patricios-floor01.jpg"
 const parqPatri2 = "images/parque-patricios/03-patricios-detail.jpg"
@@ -418,7 +418,7 @@ const parqPatri3 = "images/parque-patricios/04-patricios-floor02.jpg"
 
 const parqPatri = [parqPatri0, parqPatri1, parqPatri2, parqPatri3]
 
-/**Marq pavilio Images Arrays */
+//Marq pavilio Images Arrays 
 const marqPav0= "images/marq-pavilion/01-marq-pv-walkView01.jpg"
 const marqPav1 = "images/marq-pavilion/02-marq-pv-walkView02.jpg"
 const marqPav2 = "images/marq-pavilion/03-marq-pv-walkView03.jpg"
@@ -433,7 +433,7 @@ const marqPav10 = "images/marq-pavilion/11-marq-pv-detail02.jpg"
 
 const marqPav = [marqPav0, marqPav1, marqPav2, marqPav3, marqPav4, marqPav5, marqPav6, marqPav7, marqPav8, marqPav9, marqPav10]
 
-/**Gas estation Images Arrays */
+//Gas estation Images Arrays 
 const estEco0 = "images/gas-station/01-gas-walkView01.jpg"
 const estEco1 = "images/gas-station/02-gas-walkView02.jpg"
 const estEco2 = "images/gas-station/03-gas-walkView03.jpg"
@@ -444,7 +444,7 @@ const estEco6 = "images/gas-station/05-gas-floor02.jpg"
 
 const estEco = [estEco0, estEco1, estEco2, estEco3, estEco4, estEco5, estEco6]
 
-/**Alsina building Images Arrays */
+//Alsina building Images Arrays 
 const alsina0 = "images/alsina-building/01-alsina-outSide01.jpg"
 const alsina1 = "images/alsina-building/02-alsina-outSide02.jpg"
 const alsina2 = "images/alsina-building/03-alsina-outSide03.jpg"
@@ -455,7 +455,7 @@ const alsina6 = "images/alsina-building/07-alsina-detail.jpg"
 
 const alsina = [alsina0, alsina1, alsina2, alsina3, alsina4, alsina5, alsina6]
 
-/**PRS building Images Arrays */
+//PRS building Images Arrays 
 const prsBuild0 = "images/PRS-building/01-prs-outSide01.jpg"
 const prsBuild1 = "images/PRS-building/02-prs-inSide01.jpg"
 const prsBuild2 = "images/PRS-building/03-prs-inSide02.jpg"
@@ -463,7 +463,7 @@ const prsBuild3 = "images/PRS-building/04-prs-detail.jpg"
 
 const prsBuild = [prsBuild0, prsBuild1, prsBuild2, prsBuild3]
 
-/**LD bulding Images Arrays */
+//LD bulding Images Arrays 
 const ldBuild0 = "images/LD-building/01-ld-outSide01.jpg"
 const ldBuild1 = "images/LD-building/02-ld-inSide01.jpg"
 const ldBuild2 = "images/LD-building/03-ld-inSide02.jpg"
@@ -472,7 +472,7 @@ const ldBuild4 = "images/LD-building/05-ld-detail.jpg"
 
 const ldBuild = [ldBuild0, ldBuild1, ldBuild2, ldBuild3, ldBuild4]
 
-/**SV house Images Arrays */
+//SV house Images Arrays 
 const svHouse0 = "images/SV-house/01-csv-view01.jpg"
 const svHouse1 = "images/SV-house/02-csv-view02.jpg"
 const svHouse2 = "images/SV-house/03-csv-view03.jpg"
@@ -486,7 +486,7 @@ const svHouse9 = "images/SV-house/07-csv-floor02.jpg"
 
 const svHouse = [svHouse0, svHouse1, svHouse2, svHouse3, svHouse4, svHouse5, svHouse6, svHouse7, svHouse8, svHouse9]
 
-/**Football museum Images Arrays */
+//Football museum Images Arrays 
 const footballMuseum0 = "images/football-museum/football-museum-aerialView01.jpg"
 const footballMuseum1 = "images/football-museum/football-museum-aerialView02.jpg"
 const footballMuseum2 = "images/football-museum/football-museum-aerialView04.jpg"
@@ -505,7 +505,7 @@ const footballMuseum14 = "images/football-museum/football-museum-walkView10.jpg"
 
 const footballMuseum = [footballMuseum0, footballMuseum1, footballMuseum2, footballMuseum3, footballMuseum4, footballMuseum5, footballMuseum6, footballMuseum7, footballMuseum8, footballMuseum9, footballMuseum10, footballMuseum11, footballMuseum12, footballMuseum13, footballMuseum14]
 
-/**Luro terminal Images Arrays */
+//Luro terminal Images Arrays 
 const luroTerminal0 = "images/luro-terminal/luro-terminal-aerialView02.jpg"
 const luroTerminal1 = "images/luro-terminal/luro-terminal-aerialView01.jpg"
 const luroTerminal2 = "images/luro-terminal/luro-terminal-walkView01.jpg"
@@ -519,7 +519,7 @@ const luroTerminal9 = "images/luro-terminal/luro-terminal-walkView08.jpg"
 
 const luroTerminal = [luroTerminal0, luroTerminal1, luroTerminal2, luroTerminal3, luroTerminal4, luroTerminal5, luroTerminal6, luroTerminal7, luroTerminal8, luroTerminal9]
 
-/**BRD building Images Arrays */
+//BRD building Images Arrays 
 const brdBuild0 = "images/BRD-building/brd-outSide01.jpg"
 const brdBuild1 = "images/BRD-building/brd-inSide02.jpg"
 const brdBuild2 = "images/BRD-building/brd-inSide01.jpg"
@@ -527,7 +527,7 @@ const brdBuild3 = "images/BRD-building/brd-outSide02.jpg"
 
 const brdBuild = [brdBuild0, brdBuild1, brdBuild2, brdBuild3]
 
-/**Polo ferrocultural Images Arrays */
+//Polo ferrocultural Images Arrays 
 
 const ferrocult0 = "images/ferrocultural/1-ferrocult-aerialview01.jpg"
 const ferrocult1 = "images/ferrocultural/2-ferrocult-aerialview02.jpg"
@@ -546,5 +546,5 @@ const ferrocult13 = "images/ferrocultural/14-ferrocult-walkview09.jpg"
 
 const ferrocult = [ferrocult0, ferrocult1, ferrocult2, ferrocult3, ferrocult4, ferrocult5, ferrocult6, ferrocult7, ferrocult8, ferrocult9, ferrocult10, ferrocult11, ferrocult12, ferrocult13]
 
-/**Array of proyects*/
+//Array of proyects
 const projects = [penJujuy, comRivPark, olympicVill, plaFerCab, footballMuseum, luroTerminal, lacarCoast, centenPav, acindar, ferrocult, chanarPark, berazcomplex, parqPatri, educBuild, vlHouse, svHouse, prsBuild, ldBuild, alsina, brdBuild, estEco, plaColeg, argPav, salgCoast, marqPav]

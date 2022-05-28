@@ -1,3 +1,4 @@
+//White screen during de DOM loading.
 document.addEventListener('DOMContentLoaded', screenOut)
 
 function screenOut () {
