@@ -13,23 +13,25 @@ const projectNames = ['penJujuy', 'comRivPark', 'olympicVill', 'plaFerCab', 'foo
 
 let projectIndex = projectNames.indexOf(projectValue)
 
-console.log(projectValue)
+//Control event
+addEventListener('DOMContentLoaded', shareProject)
 
-console.log(projectIndex)
+function shareProject () {
+    //Opening gallery
+    if (galleryValue == true && projectIndex >= 0) {
+        openPhoto(projects[projectIndex])
+    //Opening project description       
+    } else {
+        if (projectIndex < pj__descrip.length / 3 && projectIndex >= 0) {
+            let columnArray = [projectIndex, parseInt(projectIndex) + 25, parseInt(projectIndex) + 50]
 
-//Opening gallery
-if (galleryValue == true && projectIndex >= 0) {
-    openPhoto(projects[projectIndex])
-//Opening project description       
-} else {
-    if (projectIndex < pj__descrip.length / 3 && projectIndex >= 0) {
-        let columnArray = [projectIndex, parseInt(projectIndex) + 25, parseInt(projectIndex) + 50]
-        columnArray.forEach(element => {
-            if (window.getComputedStyle(pj__box[element]).display != 'none' && window.getComputedStyle(pj__box[element].parentNode).display != 'none') {
-                pj__box[element].scrollIntoView()
-                setTimeout(open, 1000, element)
-            }
-        });
+            columnArray.forEach(element => {
+                if (window.getComputedStyle(pj__box[element]).display != 'none' && window.getComputedStyle(pj__box[element].parentNode).display != 'none') {
+                    pj__box[element].scrollIntoView()
+                    setTimeout(open, 1000, element)
+                }
+            });
+        }
     }
 }
    

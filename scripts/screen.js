@@ -1,5 +1,5 @@
 //White screen during de DOM loading.
-document.addEventListener('DOMContentLoaded', screenOut)
+addEventListener('DOMContentLoaded', screenOut)
 
 function screenOut () {
     body.classList.remove('overFlowHidden')
