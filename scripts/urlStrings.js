@@ -14,7 +14,7 @@ const projectNames = ['penJujuy', 'comRivPark', 'olympicVill', 'plaFerCab', 'foo
 let projectIndex = projectNames.indexOf(projectValue)
 
 //Control event
-addEventListener('DOMContentLoaded', shareProject)
+addEventListener('pageshow', shareProject)
 
 function shareProject () {
     //Opening gallery
