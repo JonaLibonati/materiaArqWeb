@@ -2,11 +2,19 @@
 //Obtaining variables from the URL
 
 let path = window.location.href
-let pathString = path.split('?')
-let pathValues = pathString[1].split('&')
+let pathString
+let pathValues
+let projectValue
+let galleryValue
 
-let projectValue = pathValues[0]
-let galleryValue = stringToBool(pathValues[1])
+//Set values only when path has '?' and '&'
+if (path.includes('?') && path.includes('&')) {
+    pathString = path.split('?')
+    pathValues = pathString[1].split('&')
+
+    projectValue = pathValues[0]
+    galleryValue = stringToBool(pathValues[1])
+}
 
 //Array of proyects
 const projectNames = ['penJujuy', 'comRivPark', 'olympicVill', 'plaFerCab', 'footballMuseum', 'luroTerminal', 'lacarCoast', 'centenPav', 'acindar', 'ferrocult', 'chanarPark', 'berazcomplex', 'parqPatri', 'educBuild', 'vlHouse', 'svHouse', 'prsBuild', 'ldBuild', 'alsina', 'brdBuild', 'estEco', 'plaColeg', 'argPav', 'salgCoast', 'marqPav']
@@ -14,7 +22,7 @@ const projectNames = ['penJujuy', 'comRivPark', 'olympicVill', 'plaFerCab', 'foo
 let projectIndex = projectNames.indexOf(projectValue)
 
 //Control event
-addEventListener('pageshow', shareProject)
+addEventListener('DOMContentLoaded', shareProject)
 
 function shareProject () {
     //Opening gallery
@@ -27,11 +35,25 @@ function shareProject () {
 
             columnArray.forEach(element => {
                 if (window.getComputedStyle(pj__box[element]).display != 'none' && window.getComputedStyle(pj__box[element].parentNode).display != 'none') {
-                    pj__box[element].scrollIntoView()
-                    setTimeout(open, 1000, element)
+                    //auto scroll
+                    pj__box[element].scrollIntoView();
+                    //Open project only when is on screen
+                    OpenWhenOnScreen (element);
                 }
             });
         }
+    }
+}
+
+//Open project only when is on screen
+function OpenWhenOnScreen (indexElement) {
+    let position_pj = pj__box[indexElement].getAttribute("position");
+    console.log(position_pj)
+    if (position_pj != "onScreen") {
+        setTimeout(OpenWhenOnScreen, 100, indexElement)
+    } else {
+        setTimeout(open, 800, indexElement)
+        clearTimeout(OpenWhenOnScreen)
     }
 }
    
