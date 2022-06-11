@@ -2,42 +2,42 @@
 	font-family: "centGothicBold";
 	src: url("../fonts/centGothicBold.otf") format("truetype");
 }
-  
+
 @font-face{
 	font-family: "centGothicLigth";
 	src: url("../fonts/centGothicLigth.otf") format("truetype");
 }
-  
+
 html {
 	line-height: 1;
 	scroll-behavior: smooth;
 }
-  
+
 .body {
 	width: 100%;
 	height: 100%;
 	overflow-y: scroll;
 }
-  
+
 h1, h2, h3, h4, h5 {
 	font-family: centGothicBold;
 }
-  
+
 b {
 	font-family: centGothicBold;
 }
-  
+
   .unselectable {
 	-moz-user-select: none;
 	-webkit-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
 }
-  
+
 .letter-spacing-0 {
 	letter-spacing: 0;
 }
-  
+
 /* Scroll bar */
 /* width */
 ::-webkit-scrollbar {
@@ -79,14 +79,14 @@ b {
 	height: 45px;
 	z-index: 60;
 }
-  
+
 .nav__cont {
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	z-index: 60;
 }
-  
+
 .nav__blur {
 	position: absolute;
 	width: 100%;
@@ -95,7 +95,7 @@ b {
 	opacity: 0.7;
 	transition: opacity 0.5s;
 }
-  
+
 .nav__ic {
 	list-style: none;
 	padding-inline-start: 0;
@@ -715,7 +715,7 @@ b {
 	background-color: #e4e4e4;
 	transition: height 2s, padding-top 2s, padding-bottom 2s;
 	overflow: hidden;
-} 
+}
 
 .pj__chevronClose {
 	position: absolute;
@@ -778,7 +778,7 @@ b {
 }
 /********************/
 .olympic-vill {
-	order: 300;	
+	order: 300;
 }
 
 .pj__img--olympic {
@@ -998,7 +998,7 @@ b {
 .contact__input, .contact__textarea {
 	width: 100%; /* Full width */
 	height: 46px;
-	padding: 12px; /* Some padding */ 
+	padding: 12px; /* Some padding */
 	background-color: #fff;
 	border: 1px solid #a3a3a3; /* Gray border */
 	box-sizing: border-box; /* Make sure that padding and width stays in place */
@@ -1011,9 +1011,9 @@ b {
 	resize: none;
 }
 
-.contact__input:focus, 
+.contact__input:focus,
 .contact__textarea:focus,
-.contact__input:focus-visible, 
+.contact__input:focus-visible,
 .contact__textarea:focus-visible {
 	border: 2px solid #2B2B2B; /* Gray border */
 	border-radius: 0;
@@ -1211,7 +1211,7 @@ b {
 	right: 0;
 	margin: auto;
 	height: 50px;
-	width: 35px; 
+	width: 35px;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	background-color: #000;
@@ -1308,7 +1308,7 @@ position: relative;
 .height0 {
 	height: 0;
 	margin: 0;
-} 
+}
 
 .height100vh {
 	height: 100vh;
@@ -1323,7 +1323,7 @@ position: relative;
 }
 */
 .padding0 {
-	padding-top: 0;  
+	padding-top: 0;
 	padding-bottom: 0;
 }
 
@@ -1379,7 +1379,7 @@ position: relative;
 		margin-left: 30px;
 		float: right;
 	}
-	
+
 	.pj {
 		position: relative;
 		padding-left: 45px;
@@ -1408,7 +1408,7 @@ position: relative;
 
 	.pj__descrip {
 		max-width: 550px;
-	} 
+	}
 
 	/********************/
 	.ex-pen-jujuy-two,
@@ -1423,7 +1423,7 @@ position: relative;
 	/*****************12*/
 	.olympic-vill-one,
 	.olympic-vill-two {
-		display: none;	
+		display: none;
 	}
 	/*****************23*/
 	.pla-fer-cab-two,
@@ -1564,7 +1564,7 @@ position: relative;
 	.contact__input, .contact__textarea {
 		display: block;
 		width: 100%;
-		max-width: 600px; 
+		max-width: 600px;
 		left: 0;
 		right: 0;
 		margin-left: auto;
@@ -1586,7 +1586,7 @@ position: relative;
 	.footer__menu {
 		display: flex;
 	}
-	
+
 	.footer__item--second,
 	.footer__item--third,
 	.footer__item--fourth,
@@ -1634,7 +1634,7 @@ position: relative;
 		padding-right: 10px;
 		padding-left: 10px;
 	}
-	
+
 	.info {
 		position: relative;
 		right: 0;
@@ -1660,7 +1660,7 @@ position: relative;
 		padding-left: 45px;
 		padding-right: 45px;
 	}
-	
+
 	.pj__flexContainer {
 		display: flex;
 		max-width: 1110px;
@@ -1687,7 +1687,7 @@ position: relative;
 
 	.pj__descrip {
 		max-width: 550px;
-	} 
+	}
 
 	/********************/
 	.ex-pen-jujuy-two{
@@ -1699,7 +1699,7 @@ position: relative;
 	}
 	/********************/
 	.olympic-vill-two {
-		display: none;	
+		display: none;
 	}
 	/********************/
 	.pla-fer-cab-one {
@@ -1816,7 +1816,7 @@ position: relative;
 	.contact__input, .contact__textarea {
 		display: block;
 		width: 100%;
-		max-width: 600px; 
+		max-width: 600px;
 	}
 
 	.contact__textarea {
@@ -1833,7 +1833,7 @@ position: relative;
 	.footer__menu {
 		display: flex;
 	}
-	
+
 	.footer__item--second,
 	.footer__item--third,
 	.footer__item--fourth,
@@ -1871,7 +1871,7 @@ position: relative;
 	.noShowTablet {
 		display: none;
 	}
-	
+
 	.about__cont {
 		max-width: 650px;
 		padding-left: 50px;
@@ -1908,7 +1908,7 @@ position: relative;
 		padding-left: 50px;
 		padding-right: 50px;
 	}
-	
+
 	.pj__flexContainer {
 		max-width: 550px;
 	}
@@ -1924,7 +1924,7 @@ position: relative;
 
 	.pj__descrip {
 		max-width: 550px;
-	} 
+	}
 
 	.contact__cont {
 		max-width: 650px;
@@ -1948,18 +1948,18 @@ position: relative;
 @media (pointer: fine) {
 	figure.pj__fig:hover div.pj__blur {
 		opacity: 0.8;
-	} 
+	}
 
 	figure.pj__fig:hover figcaption.pj__textBox {
 		opacity: 0.8;
-	} 
+	}
 
 	figure.pj__fig:hover div.pj__chevronOpen {
 		height: 45px;
-	} 
+	}
 	figure.pj__fig:hover div.pj__chevronPhoto {
 		height: 45px;
-	} 
+	}
 
 	figure.pj__fig:hover p.pj__textP--chevron {
 		font-size: 16px;

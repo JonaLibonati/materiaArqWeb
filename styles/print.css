@@ -30,17 +30,17 @@ b {
 ::-webkit-scrollbar {
 	width: 8px;
   }
-  
+
   /* Track */
   ::-webkit-scrollbar-track {
 	background: #fcfcfc;
   }
-  
+
   /* Handle */
   ::-webkit-scrollbar-thumb {
 	background: #cccccc;
   }
-  
+
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
 	background: #555;
