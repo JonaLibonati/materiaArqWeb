@@ -1,37 +1,37 @@
-//This script controls the project section using URLstrings. 
+//This script controls the project section using URLstrings.
 //Obtaining variables from the URL
 
-let path = window.location.href
-let pathString
-let pathValues
-let projectValue
-let galleryValue
+let path = window.location.href;
+let pathString;
+let pathValues;
+let projectValue;
+let galleryValue;
 
 //Set values only when path has '?' and '&'
 if (path.includes('?') && path.includes('&')) {
-    pathString = path.split('?')
-    pathValues = pathString[1].split('&')
+    pathString = path.split('?');
+    pathValues = pathString[1].split('&');
 
-    projectValue = pathValues[0]
-    galleryValue = stringToBool(pathValues[1])
+    projectValue = pathValues[0];
+    galleryValue = stringToBool(pathValues[1]);
 }
 
 //Array of proyects
-const projectNames = ['penJujuy', 'comRivPark', 'olympicVill', 'plaFerCab', 'footballMuseum', 'luroTerminal', 'lacarCoast', 'centenPav', 'acindar', 'ferrocult', 'chanarPark', 'berazcomplex', 'parqPatri', 'educBuild', 'vlHouse', 'svHouse', 'prsBuild', 'ldBuild', 'alsina', 'brdBuild', 'estEco', 'plaColeg', 'argPav', 'salgCoast', 'marqPav']
+const projectNames = ['penJujuy', 'comRivPark', 'olympicVill', 'plaFerCab', 'footballMuseum', 'luroTerminal', 'lacarCoast', 'centenPav', 'acindar', 'ferrocult', 'chanarPark', 'berazcomplex', 'parqPatri', 'educBuild', 'vlHouse', 'svHouse', 'prsBuild', 'ldBuild', 'alsina', 'brdBuild', 'estEco', 'plaColeg', 'argPav', 'salgCoast', 'marqPav'];
 
-let projectIndex = projectNames.indexOf(projectValue)
+let projectIndex = projectNames.indexOf(projectValue);
 
 //Control event
-addEventListener('DOMContentLoaded', shareProject)
+addEventListener('DOMContentLoaded', shareProject);
 
 function shareProject () {
     //Opening gallery
     if (galleryValue == true && projectIndex >= 0) {
-        openPhoto(projects[projectIndex])
-    //Opening project description       
+        openPhoto(projects[projectIndex]);
+    //Opening project description
     } else {
         if (projectIndex < pj__descrip.length / 3 && projectIndex >= 0) {
-            let columnArray = [projectIndex, parseInt(projectIndex) + 25, parseInt(projectIndex) + 50]
+            let columnArray = [projectIndex, parseInt(projectIndex) + 25, parseInt(projectIndex) + 50];
 
             columnArray.forEach(element => {
                 if (window.getComputedStyle(pj__box[element]).display != 'none' && window.getComputedStyle(pj__box[element].parentNode).display != 'none') {
@@ -48,30 +48,30 @@ function shareProject () {
 //Open project only when is on screen
 function OpenWhenOnScreen (indexElement) {
     let position_pj = pj__box[indexElement].getAttribute("position");
-    console.log(position_pj)
+    console.log(position_pj);
     if (position_pj != "onScreen") {
-        setTimeout(OpenWhenOnScreen, 100, indexElement)
+        setTimeout(OpenWhenOnScreen, 100, indexElement);
     } else {
-        setTimeout(open, 800, indexElement)
-        clearTimeout(OpenWhenOnScreen)
+        setTimeout(open, 800, indexElement);
+        clearTimeout(OpenWhenOnScreen);
     }
 }
-   
+
 // Parse string to boolean
 function stringToBool (string) {
     switch(string.toLowerCase().trim()){
-        case "true": 
-        case "yes": 
-        case "1": 
+        case "true":
+        case "yes":
+        case "1":
           return true;
 
-        case "false": 
-        case "no": 
-        case "0": 
-        case null: 
+        case "false":
+        case "no":
+        case "0":
+        case null:
           return false;
 
-        default: 
+        default:
           return false;
     }
 }

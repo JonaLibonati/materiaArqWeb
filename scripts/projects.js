@@ -1,7 +1,7 @@
 const paddingTotalHoriz = 20 + 10;
 
 // Scroll Events
-window.onscroll = function() {scrolled()};
+window.onscroll = function() {scrolled()}
 
 let previousScroll = 0;
 
@@ -11,27 +11,27 @@ function scrolled() {
 	if (pointer.matches == false) {
 		for (i = 0; i <  pj__descrip.length; ++i) {
 			checkPosition(i);
-		};
-	};
+		}
+	}
 	//Close pj-descrip on scroll
 	let mobile = window.matchMedia("(max-width: 999px) and (orientation: portrait)");
 	if (mobile.matches == false) {
 		for (i = 0; i <  pj__descrip.length; ++i) {
 			checkPositionClose(i);
-		};
-	};
+		}
+	}
 	//Close nav on scroll
 	let relativeScroll = window.scrollY + positionNav;
 	let status = nav__curtain.getAttribute("status");
 	if ((relativeScroll < -180 || relativeScroll > 180) && status == "open") {
 		curtain() //curtain.js;
 		nav__curtain.setAttribute("status" , "close");
-	};
+	}
 	//Set position atribute relative to screen to all elements.
 	for (i = 0; i <  pj__descrip.length; ++i) {
 		setPositionAtribute (i);
-	};
-};
+	}
+}
 
 //Touchable Screens BLUR CONTROL
 
@@ -48,41 +48,46 @@ let limitBottom = screen.availHeight;
 function getElementStatus (indexElement) {
 	let status = pj__descrip[indexElement].getAttribute("status")
 	return status;
-};
+}
 //----Return y element center coordinate relative to the screen
 function getElementPositionY (indexElement) {
 	let position_Y = pj__textBox[indexElement].getBoundingClientRect().top + pj__textBox[indexElement].scrollHeight / 2;
 	return position_Y;
-};
+}
 
 function checkPosition (indexElement) {
 	let position_Y = getElementPositionY (indexElement);
-	//Check if pj__descrip is already open
 	let status = getElementStatus (indexElement);
+	//Check if pj__descrip is already open
 	if (status != "open") {
 		//Start blur
 		if (blurLimitTop < position_Y && position_Y < blurLimitBottom) {
-			pj__blur[indexElement].style.opacity = 0.8;
-			pj__textBox[indexElement].style.opacity = 0.8;
-			pj__chevronOpen[indexElement].style.height = "45px";
-			pj__textChevron[indexElement].style.fontSize = "16px";
+			startElementBlur (indexElement);
 		}
 		//Non display blur
 		else{
-			pj__blur[indexElement].style.opacity = null;
-			pj__textBox[indexElement].style.opacity = null;
-			pj__chevronOpen[indexElement].style.height = null;
-			pj__textChevron[indexElement].style.fontSize = null;
-		};
+			closeElementBlur (indexElement);
+		}
 	}
 	//If if pj__descrip is not oper, No display blur
 	else{
-		pj__blur[indexElement].style.opacity = null;
-		pj__textBox[indexElement].style.opacity = null;
-		pj__chevronOpen[indexElement].style.height = null;
-		pj__textChevron[indexElement].style.fontSize = null;
-	};
-};
+		closeElementBlur (indexElement);
+	}
+}
+
+function startElementBlur (indexElement) {
+	pj__blur[indexElement].style.opacity = 0.8;
+	pj__textBox[indexElement].style.opacity = 0.8;
+	pj__chevronOpen[indexElement].style.height = "45px";
+	pj__textChevron[indexElement].style.fontSize = "16px";
+}
+
+function closeElementBlur (indexElement) {
+	pj__blur[indexElement].style.opacity = null;
+	pj__textBox[indexElement].style.opacity = null;
+	pj__chevronOpen[indexElement].style.height = null;
+	pj__textChevron[indexElement].style.fontSize = null;
+}
 
 //Close pj-descrip on scroll
 
@@ -99,8 +104,8 @@ function checkPositionClose (indexElement) {
 		pj__box[indexElement].setAttribute("position", "onScreen");
 	} else {
 		pj__box[indexElement].setAttribute("position", "outScreen");
-	};
-};
+	}
+}
 
 //Set position atribute relative to screen.
 function setPositionAtribute (indexElement) {
@@ -110,8 +115,8 @@ function setPositionAtribute (indexElement) {
 		pj__box[indexElement].setAttribute("position", "onScreen");
 	} else {
 		pj__box[indexElement].setAttribute("position", "outScreen");
-	};
-};
+	}
+}
 
 //pj-descrip CURTAIN CONTROL
 //********************* OPEN **********************
@@ -119,7 +124,7 @@ function setPositionAtribute (indexElement) {
 for (i = 0; i <  pj__descrip.length; ++i) {
 	let a = i;
 	pj__textBox[a].addEventListener("click", function() {open(a)});
-};
+}
 
 function open(indexElement) {
 	//Check if pj__descrip is already open
@@ -130,8 +135,8 @@ function open(indexElement) {
 			let status = pj__descrip[i].getAttribute("status");
 			if (status == "open") {
 				close(i);
-			};
-		};
+			}
+		}
 		//Hide the open chevron
 		pj__chevronOpen[indexElement].classList.add("displayNone");
 		//Remove padding0 and font-size0 class
@@ -163,16 +168,13 @@ function open(indexElement) {
 					pj__descrip[indexElement].removeEventListener("transitionend", arguments.callee);
 				}
 			)
-		};
+		}
 		//Set attribute to open
 		pj__descrip[indexElement].setAttribute("status" , "open");
 		//Non display blur
-		pj__blur[indexElement].style.opacity = null;
-		pj__textBox[indexElement].style.opacity = null;
-		pj__chevronOpen[indexElement].style.height = null;
-		pj__textChevron[indexElement].style.fontSize = null;
-	};
-};
+		closeElementBlur (indexElement);
+	}
+}
 
 //******************* CLOSE *********************
 // close events
@@ -204,10 +206,10 @@ function close(indexElement) {
 				//Add padding0 class
 				pj__descrip[indexElement].classList.add("padding0");
 			}
-		);
+		)
 		//Display the open chevron
 		pj__chevronOpen[indexElement].classList.remove("displayNone");
 		//Set attribute to close
 		pj__descrip[indexElement].setAttribute("status" , "close");
-	};
-};
+	}
+}
