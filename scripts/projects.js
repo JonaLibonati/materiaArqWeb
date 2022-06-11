@@ -1,174 +1,202 @@
 const paddingTotalHoriz = 20 + 10;
 
-// Scroll Events 
+// Scroll Events
 window.onscroll = function() {scrolled()};
 
-let previousScroll = 0 
+let previousScroll = 0;
 
 function scrolled() {
 	//Blur control on scroll
-	let pointer = window.matchMedia("(pointer: fine)")
+	let pointer = window.matchMedia("(pointer: fine)");
 	if (pointer.matches == false) {
 		for (i = 0; i <  pj__descrip.length; ++i) {
-			checkPosition(i)
-		}
-	}
+			checkPosition(i);
+		};
+	};
 	//Close pj-descrip on scroll
-	let mobile = window.matchMedia("(max-width: 999px) and (orientation: portrait)")
+	let mobile = window.matchMedia("(max-width: 999px) and (orientation: portrait)");
 	if (mobile.matches == false) {
 		for (i = 0; i <  pj__descrip.length; ++i) {
-			checkPositionClose(i)
-		}
-	}
+			checkPositionClose(i);
+		};
+	};
 	//Close nav on scroll
-	let relativeScroll = window.scrollY + positionNav
-	let status = nav__curtain.getAttribute("status")
+	let relativeScroll = window.scrollY + positionNav;
+	let status = nav__curtain.getAttribute("status");
 	if ((relativeScroll < -180 || relativeScroll > 180) && status == "open") {
-		curtain() //curtain.js
-		nav__curtain.setAttribute("status" , "close")
-	}
-}
+		curtain() //curtain.js;
+		nav__curtain.setAttribute("status" , "close");
+	};
+	//Set position atribute relative to screen to all elements.
+	for (i = 0; i <  pj__descrip.length; ++i) {
+		setPositionAtribute (i);
+	};
+};
+
 //Touchable Screens BLUR CONTROL
-function checkPosition (indexElement) {
-	//Check if pj__descrip is already open
+
+//Positions Variables
+//----Return top limit blur active area relative to the screen
+let blurLimitTop = (screen.availHeight - screen.availHeight * 0.29) / 2 ;
+//----Return bottom limit blur active area relative to the screen
+let blurLimitBottom = screen.availHeight - (screen.availHeight - screen.availHeight * 0.29) / 2 ;
+//----Return top limit to close
+let limitTop = -400 * 0.25;
+//----Return bottom limit to close
+let limitBottom = screen.availHeight;
+//----Return status atribute
+function getElementStatus (indexElement) {
 	let status = pj__descrip[indexElement].getAttribute("status")
-	if (status != "open") { 
-		//Return y element center coordinate relative to the screen  
-		position_Y = pj__textBox[indexElement].getBoundingClientRect().top + pj__textBox[indexElement].scrollHeight / 2;
-		//Return top limit active area relative to the screen  
-		limitTop = (screen.availHeight - screen.availHeight * 0.29) / 2 ;
-		//Return bottom limit active area relative to the screen  
-		limitBottom = screen.availHeight - (screen.availHeight - screen.availHeight * 0.29) / 2 ;
-		//Start blur 
-		if (limitTop < position_Y && position_Y < limitBottom) {
+	return status;
+};
+//----Return y element center coordinate relative to the screen
+function getElementPositionY (indexElement) {
+	let position_Y = pj__textBox[indexElement].getBoundingClientRect().top + pj__textBox[indexElement].scrollHeight / 2;
+	return position_Y;
+};
+
+function checkPosition (indexElement) {
+	let position_Y = getElementPositionY (indexElement);
+	//Check if pj__descrip is already open
+	let status = getElementStatus (indexElement);
+	if (status != "open") {
+		//Start blur
+		if (blurLimitTop < position_Y && position_Y < blurLimitBottom) {
 			pj__blur[indexElement].style.opacity = 0.8;
 			pj__textBox[indexElement].style.opacity = 0.8;
 			pj__chevronOpen[indexElement].style.height = "45px";
 			pj__textChevron[indexElement].style.fontSize = "16px";
 		}
-		//Non display blur 
+		//Non display blur
 		else{
 			pj__blur[indexElement].style.opacity = null;
 			pj__textBox[indexElement].style.opacity = null;
 			pj__chevronOpen[indexElement].style.height = null;
 			pj__textChevron[indexElement].style.fontSize = null;
-		}
+		};
 	}
-	//If if pj__descrip is not oper, No display blur 
+	//If if pj__descrip is not oper, No display blur
 	else{
 		pj__blur[indexElement].style.opacity = null;
 		pj__textBox[indexElement].style.opacity = null;
 		pj__chevronOpen[indexElement].style.height = null;
 		pj__textChevron[indexElement].style.fontSize = null;
-	}
-}
+	};
+};
 
 //Close pj-descrip on scroll
+
 function checkPositionClose (indexElement) {
-	let status = pj__descrip[indexElement].getAttribute("status")
-	//Return y element center coordinate relative to the screen  
-	position_Y = pj__textBox[indexElement].getBoundingClientRect().top + pj__textBox[indexElement].scrollHeight / 2;
-	//Return top limit active area relative to the screen  
-	limitTop = -400 * 0.25;
-	//Return bottom limit active area relative to the screen  
-	limitBottom = screen.availHeight;
+	let status = getElementStatus (indexElement);
+	let position_Y = getElementPositionY (indexElement);
 	//Check if pj__descrip is open
-	if (status == "open") { 
+	if (status == "open") {
 		//Close
 		if (limitTop > position_Y || position_Y > limitBottom) {
 			close(indexElement);
-		}
+		};
 	} else if (limitTop < position_Y && position_Y < limitBottom) {
 		pj__box[indexElement].setAttribute("position", "onScreen");
 	} else {
 		pj__box[indexElement].setAttribute("position", "outScreen");
-	}
-}
+	};
+};
+
+//Set position atribute relative to screen.
+function setPositionAtribute (indexElement) {
+	let position_Y = getElementPositionY (indexElement);
+	//Check if pj__descrip is open
+	if (limitTop < position_Y && position_Y < limitBottom) {
+		pj__box[indexElement].setAttribute("position", "onScreen");
+	} else {
+		pj__box[indexElement].setAttribute("position", "outScreen");
+	};
+};
 
 //pj-descrip CURTAIN CONTROL
 //********************* OPEN **********************
 //Open events
-for (i = 0; i <  pj__descrip.length; ++i) {	
-	let a = i
+for (i = 0; i <  pj__descrip.length; ++i) {
+	let a = i;
 	pj__textBox[a].addEventListener("click", function() {open(a)});
-}
+};
 
 function open(indexElement) {
 	//Check if pj__descrip is already open
-	let status = pj__descrip[indexElement].getAttribute("status")
-	if (status != "open") {    
+	let status = getElementStatus (indexElement);
+	if (status != "open") {
 		//Close the open pj__descrips
 		for (i = 0; i <  pj__descrip.length; ++i) {
-			let status = pj__descrip[i].getAttribute("status")
+			let status = pj__descrip[i].getAttribute("status");
 			if (status == "open") {
-				close(i)
-			}
-		}
+				close(i);
+			};
+		};
 		//Hide the open chevron
 		pj__chevronOpen[indexElement].classList.add("displayNone");
 		//Remove padding0 and font-size0 class
 		pj__descrip[indexElement].classList.remove("padding0");
-		//If there is only one column 
-		let mobile = window.matchMedia("(max-width: 999px) and (orientation: portrait)")
+		//If there is only one column
+		let mobile = window.matchMedia("(max-width: 999px) and (orientation: portrait)");
 		if (mobile.matches) {
-			//Determinate the element height 
+			//Determinate the element height
 			let elementHeight = pj__descrip[indexElement].scrollHeight;
 			//Overwrite height values passing from 0 to element height
 			pj__descrip[indexElement].style.height = elementHeight + paddingTotalHoriz + "px";
 			//When the transition end, overwrite values passing from element height to "auto"
-			pj__descrip[indexElement].addEventListener("transitionend", 
+			pj__descrip[indexElement].addEventListener("transitionend",
 				function transListener() {
 					pj__descrip[indexElement].style.height = "auto";
-					pj__chevronClose[indexElement].style.height = "40px"
-					pj__descrip[indexElement].removeEventListener("transitionend", arguments.callee);
-				}
-			);
-		} 
-		//If there are two or more columns
-		else {
-			//Overwrite height values passing from 0 to element height
-			pj__descrip[indexElement].style.height = "400px" 
-			//When the transition end
-			pj__descrip[indexElement].addEventListener("transitionend", 
-				function transListener() {
-					pj__chevronClose[indexElement].style.height = "40px"
+					pj__chevronClose[indexElement].style.height = "40px";
 					pj__descrip[indexElement].removeEventListener("transitionend", arguments.callee);
 				}
 			)
 		}
+		//If there are two or more columns
+		else {
+			//Overwrite height values passing from 0 to element height
+			pj__descrip[indexElement].style.height = "400px";
+			//When the transition end
+			pj__descrip[indexElement].addEventListener("transitionend",
+				function transListener() {
+					pj__chevronClose[indexElement].style.height = "40px";
+					pj__descrip[indexElement].removeEventListener("transitionend", arguments.callee);
+				}
+			)
+		};
 		//Set attribute to open
-		pj__descrip[indexElement].setAttribute("status" , "open")
-		//Non display blur 
+		pj__descrip[indexElement].setAttribute("status" , "open");
+		//Non display blur
 		pj__blur[indexElement].style.opacity = null;
 		pj__textBox[indexElement].style.opacity = null;
 		pj__chevronOpen[indexElement].style.height = null;
 		pj__textChevron[indexElement].style.fontSize = null;
-	}
-}
+	};
+};
 
 //******************* CLOSE *********************
-// close events 
+// close events
 
-for (i = 0; i <  pj__descrip.length; ++i) {	
-	let a = i
+for (i = 0; i <  pj__descrip.length; ++i) {
+	let a = i;
 	pj__chevronClose[a].addEventListener("click", function() {close(a)});
-}
+};
 
 function close(indexElement) {
 //Check if pj__descrip is already close
-	let status = pj__descrip[indexElement].getAttribute("status")
+	let status = getElementStatus (indexElement);
 	if (status != "close") {
 		//Set the chevronClose height to null
-		pj__chevronClose[indexElement].style.height = null
-		//Determinate the element height 
+		pj__chevronClose[indexElement].style.height = null;
+		//Determinate the element height
 		let elementHeight = pj__descrip[indexElement].scrollHeight;
 		//Suspend transition
 		pj__descrip[indexElement].style.transition = "none";
 		//Overwrite height values passing from auto to element height
 		pj__descrip[indexElement].style.height = elementHeight + "px";
-		
+
 		requestAnimationFrame (
-			function () {	
+			function () {
 				//Active transition
 				pj__descrip[indexElement].style.transition = null;
 				//Overwrite height values passing from element height to 0
@@ -180,6 +208,6 @@ function close(indexElement) {
 		//Display the open chevron
 		pj__chevronOpen[indexElement].classList.remove("displayNone");
 		//Set attribute to close
-		pj__descrip[indexElement].setAttribute("status" , "close")
-	}
-}
+		pj__descrip[indexElement].setAttribute("status" , "close");
+	};
+};
