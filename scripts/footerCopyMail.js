@@ -1,3 +1,5 @@
+"use strict";
+
 footer__mail.addEventListener("click", copy);
 
 function copy () {

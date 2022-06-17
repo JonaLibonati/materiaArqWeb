@@ -1,3 +1,5 @@
+"use strict";
+
 const paddingTotalHoriz = 20 + 10;
 
 // Scroll Events
@@ -9,14 +11,14 @@ function scrolled() {
 	//Blur control on scroll
 	let pointer = window.matchMedia("(pointer: fine)");
 	if (pointer.matches == false) {
-		for (i = 0; i <  pj__descrip.length; ++i) {
+		for (let i = 0; i <  pj__descrip.length; ++i) {
 			checkPosition(i);
 		}
 	}
 	//Close pj-descrip on scroll
 	let mobile = window.matchMedia("(max-width: 999px) and (orientation: portrait)");
 	if (mobile.matches == false) {
-		for (i = 0; i <  pj__descrip.length; ++i) {
+		for (let i = 0; i <  pj__descrip.length; ++i) {
 			checkPositionClose(i);
 		}
 	}
@@ -28,7 +30,7 @@ function scrolled() {
 		nav__curtain.setAttribute("status" , "close");
 	}
 	//Set position atribute relative to screen to all elements.
-	for (i = 0; i <  pj__descrip.length; ++i) {
+	for (let i = 0; i <  pj__descrip.length; ++i) {
 		setPositionAtribute (i);
 	}
 }
@@ -121,7 +123,7 @@ function setPositionAtribute (indexElement) {
 //pj-descrip CURTAIN CONTROL
 //********************* OPEN **********************
 //Open events
-for (i = 0; i <  pj__descrip.length; ++i) {
+for (let i = 0; i <  pj__descrip.length; ++i) {
 	let a = i;
 	pj__textBox[a].addEventListener("click", function() {open(a)});
 }
@@ -131,7 +133,7 @@ function open(indexElement) {
 	let status = getElementStatus (indexElement);
 	if (status != "open") {
 		//Close the open pj__descrips
-		for (i = 0; i <  pj__descrip.length; ++i) {
+		for (let i = 0; i <  pj__descrip.length; ++i) {
 			let status = pj__descrip[i].getAttribute("status");
 			if (status == "open") {
 				close(i);
@@ -179,7 +181,7 @@ function open(indexElement) {
 //******************* CLOSE *********************
 // close events
 
-for (i = 0; i <  pj__descrip.length; ++i) {
+for (let i = 0; i <  pj__descrip.length; ++i) {
 	let a = i;
 	pj__chevronClose[a].addEventListener("click", function() {close(a)});
 };

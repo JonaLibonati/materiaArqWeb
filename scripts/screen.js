@@ -1,3 +1,5 @@
+"use strict";
+
 //White screen during de DOM loading.
 addEventListener('DOMContentLoaded', screenOut);
 

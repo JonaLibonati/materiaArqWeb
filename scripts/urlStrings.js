@@ -1,3 +1,5 @@
+"use strict";
+
 //This script controls the project section using URLstrings.
 //Obtaining variables from the URL
 

@@ -1,3 +1,5 @@
+"use strict";
+
 let positionNav = 0;
 
 function curtain() {

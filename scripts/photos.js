@@ -1,3 +1,5 @@
+"use strict";
+
 //Close Gallery
 ph__close.addEventListener("click", function() {closePhoto()})
 
@@ -42,7 +44,7 @@ function openPhoto (imgArray) {
     array = imgArray;
     countLoad = 0;
     //Images preload in cache
-    for (i = 0; i <  imgArray.length; ++i) {
+    for (let  i = 0; i <  imgArray.length; ++i) {
         let img = document.createElement('IMG');
         img.src = imgArray[i]
         img.addEventListener("load", function() {loadEnd(imgArray)});
@@ -161,7 +163,7 @@ function touchEnd () {
 }
 
 // Photo button events
-for (i = 0; i <  pj__descrip.length; ++i) {
+for (let  i = 0; i <  pj__descrip.length; ++i) {
 	let a = i;
     let b = 0;
     if (a < pj__descrip.length / 3) {

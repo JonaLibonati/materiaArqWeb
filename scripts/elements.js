@@ -1,3 +1,5 @@
+"use strict";
+
 const body = document.getElementsByClassName("body")[0];
 
 const backOut = document.getElementsByClassName("screen")[0];

@@ -1,3 +1,5 @@
+"use strict";
+
 const form = document.querySelector(".contact__form");
 
 form.addEventListener("submit", (e)=>{
@@ -17,7 +19,7 @@ const sendContactMail = (name, surname, email, subject, message)=>{
 
     fetch("https://formsubmit.co/ajax/ba8e7ae84c4c31236033618535691782", {
         method: "POST",
-        headers: { 
+        headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json'
         },
@@ -30,9 +32,9 @@ const sendContactMail = (name, surname, email, subject, message)=>{
         })
     })
         .then(response => {
-
+            console.log(response);
             alert("El mensaje se ha enviado correctamente")
-            
+
             document.getElementById("fname").value = "";
             document.getElementById("lname").value = "";
             document.getElementById("eMail").value = "";

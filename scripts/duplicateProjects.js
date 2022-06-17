@@ -1,3 +1,5 @@
+"use strict";
+
 // This code allows To duplicate the pj__flexContainer automatically
 
 // Get elements
@@ -20,8 +22,8 @@ flexContainerThirth.classList.add("pj__flexContainer--thirth");
 // Adding child from the cloned nodes to the flexcontainers
 childrenCopyOne.forEach (child => {
     if (child.nodeType != 3) {
-        oldClass = child.classList.item(2);
-        newClass = child.classList.item(2).substring(0, oldClass.length-3) + "two";
+        let oldClass = child.classList.item(2);
+        let newClass = child.classList.item(2).substring(0, oldClass.length-3) + "two";
         child.classList.replace(oldClass,newClass);
         flexContainerSecond.appendChild(child);
     }
@@ -29,8 +31,8 @@ childrenCopyOne.forEach (child => {
 
 childrenCopyTwo.forEach (child => {
     if (child.nodeType != 3) {
-        oldClass = child.classList.item(2);
-        newClass = child.classList.item(2).substring(0, oldClass.length-3) + "three";
+        let oldClass = child.classList.item(2);
+        let newClass = child.classList.item(2).substring(0, oldClass.length-3) + "three";
         child.classList.replace(oldClass,newClass);
         flexContainerThirth.appendChild(child);
     }
