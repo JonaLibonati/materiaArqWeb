@@ -144,7 +144,7 @@ function open(indexElement) {
 		//Remove padding0 and font-size0 class
 		pj__descrip[indexElement].classList.remove("padding0");
 		//If there is only one column
-		let mobile = window.matchMedia("(max-width: 999px) and (orientation: portrait)");
+		let mobile = window.matchMedia("(max-width: 949px) and (orientation: portrait)");
 		if (mobile.matches) {
 			//Determinate the element height
 			let elementHeight = pj__descrip[indexElement].scrollHeight;
@@ -155,7 +155,7 @@ function open(indexElement) {
 				function transListener() {
 					pj__descrip[indexElement].style.height = "auto";
 					pj__chevronClose[indexElement].style.height = "40px";
-					pj__descrip[indexElement].removeEventListener("transitionend", arguments.callee);
+					pj__descrip[indexElement].removeEventListener("transitionend", transListener);
 				}
 			)
 		}
@@ -167,7 +167,7 @@ function open(indexElement) {
 			pj__descrip[indexElement].addEventListener("transitionend",
 				function transListener() {
 					pj__chevronClose[indexElement].style.height = "40px";
-					pj__descrip[indexElement].removeEventListener("transitionend", arguments.callee);
+					pj__descrip[indexElement].removeEventListener("transitionend", transListener);
 				}
 			)
 		}
