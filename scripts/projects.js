@@ -2,6 +2,30 @@
 
 const paddingTotalHoriz = 20 + 10;
 
+// Hover Events
+for (let i = 0; i <  pj__fig.length; ++i) {
+	let a = i;
+	pj__fig[a].addEventListener("mouseenter", function() {
+		let pointer = window.matchMedia("(pointer: fine)");
+		let status = getElementStatus (a);
+		if (pointer.matches && status != "open") {
+			startElementBlur (a);
+		}
+	});
+}
+
+for (let i = 0; i <  pj__fig.length; ++i) {
+	let a = i;
+	pj__fig[a].addEventListener("mouseleave", function() {
+		let pointer = window.matchMedia("(pointer: fine)");
+		if (pointer.matches) {
+			closeElementBlur (a);
+		}
+	});
+}
+
+
+
 // Scroll Events
 window.onscroll = function() {scrolled()}
 
@@ -82,7 +106,6 @@ function startElementBlur (indexElement) {
 	pj__textBox[indexElement].style.opacity = 0.8;
 	pj__chevronOpen[indexElement].style.height = "45px";
 	pj__textChevron[indexElement].style.fontSize = "16px";
-	pj__shareCircle[indexElement].style.opacity = 0;
 }
 
 function closeElementBlur (indexElement) {
@@ -90,7 +113,6 @@ function closeElementBlur (indexElement) {
 	pj__textBox[indexElement].style.opacity = null;
 	pj__chevronOpen[indexElement].style.height = null;
 	pj__textChevron[indexElement].style.fontSize = null;
-	pj__shareCircle[indexElement].style.opacity = null;
 }
 
 //Close pj-descrip on scroll
@@ -157,6 +179,8 @@ function open(indexElement) {
 				function transListener() {
 					pj__descrip[indexElement].style.height = "auto";
 					pj__chevronClose[indexElement].style.height = "40px";
+					pj__shareCircle[indexElement].style.opacity = 0.8;
+					pj__shareIcon[indexElement].style.opacity = 1;
 					pj__descrip[indexElement].removeEventListener("transitionend", transListener);
 				}
 			)
@@ -169,6 +193,8 @@ function open(indexElement) {
 			pj__descrip[indexElement].addEventListener("transitionend",
 				function transListener() {
 					pj__chevronClose[indexElement].style.height = "40px";
+					pj__shareCircle[indexElement].style.opacity = 0.8;
+					pj__shareIcon[indexElement].style.opacity = 1;
 					pj__descrip[indexElement].removeEventListener("transitionend", transListener);
 				}
 			)
@@ -194,6 +220,9 @@ function close(indexElement) {
 	if (status != "close") {
 		//Set the chevronClose height to null
 		pj__chevronClose[indexElement].style.height = null;
+		//Hide the share circle
+		pj__shareCircle[indexElement].style.opacity = null;
+		pj__shareIcon[indexElement].style.opacity = null;
 		//Determinate the element height
 		let elementHeight = pj__descrip[indexElement].scrollHeight;
 		//Suspend transition

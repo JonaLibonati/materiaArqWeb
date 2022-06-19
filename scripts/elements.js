@@ -20,6 +20,7 @@ const about = document.getElementsByClassName("about")[0];
 
 const pj = document.getElementsByClassName("pj")[0];
 const pj__box = document.getElementsByClassName("pj__box");
+const pj__fig = document.getElementsByClassName("pj__fig");
 const pj__blur = document.getElementsByClassName("pj__blur");
 const pj__shareCircle = document.getElementsByClassName("pj__shareCircle");
 const pj__shareIcon = document.getElementsByClassName("pj__shareIcon");
