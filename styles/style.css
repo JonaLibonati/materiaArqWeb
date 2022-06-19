@@ -621,14 +621,43 @@ b {
 	transition: opacity 0.7s;
 }
 
-.pj__link {
+.pj__share {
 	position: absolute;
+	width: 75px;
+	height: 75px;
 	top: 0;
+	right: 0;
+	z-index: 20;
+}
+
+.pj__shareCircle {
+	position: absolute;
+	background-color: #2B2B2B;
+	opacity: 0.8;
+	height: 46px;
+	width: 46px;
+	padding: 10px;
+	border-radius: 23px;
 	left: 0;
-	width: 100%;
-	height: 0;
-	z-index: 15;
-	transition: height 0.71s;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	transition: opacity 0.7s;
+	transition-timing-function: ease-in;
+}
+
+.pj__shareIcon {
+	position: absolute;
+	opacity: 1;
+	color: #e4e4e4;
+	height: 25px;
+	width: 25px;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
 }
 
 .pj__textBox {
@@ -1948,6 +1977,10 @@ position: relative;
 @media (pointer: fine) {
 	figure.pj__fig:hover div.pj__blur {
 		opacity: 0.8;
+	}
+
+	figure.pj__fig:hover div.pj__shareCircle {
+		opacity: 0;
 	}
 
 	figure.pj__fig:hover figcaption.pj__textBox {

@@ -82,6 +82,7 @@ function startElementBlur (indexElement) {
 	pj__textBox[indexElement].style.opacity = 0.8;
 	pj__chevronOpen[indexElement].style.height = "45px";
 	pj__textChevron[indexElement].style.fontSize = "16px";
+	pj__shareCircle[indexElement].style.opacity = 0;
 }
 
 function closeElementBlur (indexElement) {
@@ -89,6 +90,7 @@ function closeElementBlur (indexElement) {
 	pj__textBox[indexElement].style.opacity = null;
 	pj__chevronOpen[indexElement].style.height = null;
 	pj__textChevron[indexElement].style.fontSize = null;
+	pj__shareCircle[indexElement].style.opacity = null;
 }
 
 //Close pj-descrip on scroll
