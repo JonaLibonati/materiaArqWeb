@@ -165,6 +165,9 @@ function open(indexElement) {
 		}
 		//Hide the open chevron
 		pj__chevronOpen[indexElement].classList.add("displayNone");
+		//Display share button
+		pj__shareCircle[indexElement].style.opacity = 0.8;
+		pj__shareIcon[indexElement].style.opacity = 1;
 		//Remove padding0 and font-size0 class
 		pj__descrip[indexElement].classList.remove("padding0");
 		//If there is only one column
@@ -179,8 +182,6 @@ function open(indexElement) {
 				function transListener() {
 					pj__descrip[indexElement].style.height = "auto";
 					pj__chevronClose[indexElement].style.height = "40px";
-					pj__shareCircle[indexElement].style.opacity = 0.8;
-					pj__shareIcon[indexElement].style.opacity = 1;
 					pj__descrip[indexElement].removeEventListener("transitionend", transListener);
 				}
 			)
@@ -193,8 +194,6 @@ function open(indexElement) {
 			pj__descrip[indexElement].addEventListener("transitionend",
 				function transListener() {
 					pj__chevronClose[indexElement].style.height = "40px";
-					pj__shareCircle[indexElement].style.opacity = 0.8;
-					pj__shareIcon[indexElement].style.opacity = 1;
 					pj__descrip[indexElement].removeEventListener("transitionend", transListener);
 				}
 			)
