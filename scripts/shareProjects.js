@@ -44,7 +44,6 @@ async function shareProject (shareData) {
         await navigator.share(shareData);
     } catch(e) {
         console.log(e);
-        alert('Ha sucedido un error al intentar comparir el proyecto:');
     }
 }
 
