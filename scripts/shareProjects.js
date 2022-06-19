@@ -139,13 +139,13 @@ const ldBuildData = {
     url:"https://www.estudiomateria.com.ar/proyectos/edificioLD.html"
 }
 const alsinaData = {
-    title:"",
-    text:"Conocé el proyecto ",
+    title:"materia | edificio Alsina",
+    text:"Conocé el proyecto Edificio Alsina",
     url:"https://www.estudiomateria.com.ar/proyectos/edificioAlsina.html"
 }
 const brdBuildData = {
-    title:"materia | edificio Alsina",
-    text:"Conocé el proyecto Edificio Alsina",
+    title:"materia | edificio BRD",
+    text:"Conocé el proyecto Edificio BRD",
     url:"https://www.estudiomateria.com.ar/proyectos/edificioBRD.html"
 }
 const estEcoData = {
