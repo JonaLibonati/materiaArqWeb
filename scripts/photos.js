@@ -547,5 +547,18 @@ const ferrocult13 = "images/ferrocultural/14-ferrocult-walkview09.jpg";
 
 const ferrocult = [ferrocult0, ferrocult1, ferrocult2, ferrocult3, ferrocult4, ferrocult5, ferrocult6, ferrocult7, ferrocult8, ferrocult9, ferrocult10, ferrocult11, ferrocult12, ferrocult13];
 
+//Jockey Club
+
+const jockeyClub0 = "images/jockey-club/1-jockey-club.jpg";
+const jockeyClub1 = "images/jockey-club/2-jockey-club.jpg";
+const jockeyClub2 = "images/jockey-club/3-jockey-club.jpg";
+const jockeyClub3 = "images/jockey-club/4-jockey-club.jpg";
+const jockeyClub4 = "images/jockey-club/5-jockey-club.jpg";
+const jockeyClub5 = "images/jockey-club/6-jockey-club.jpg";
+const jockeyClub6 = "images/jockey-club/7-jockey-club.jpg";
+const jockeyClub7 = "images/jockey-club/8-jockey-club.jpg";
+
+const jockeyClub = [jockeyClub0, jockeyClub1, jockeyClub2, jockeyClub3, jockeyClub4, jockeyClub5, jockeyClub6, jockeyClub7]
+
 //Array of proyects
-const projects = [penJujuy, comRivPark, olympicVill, plaFerCab, footballMuseum, luroTerminal, lacarCoast, centenPav, acindar, ferrocult, chanarPark, berazcomplex, parqPatri, educBuild, vlHouse, svHouse, prsBuild, ldBuild, alsina, brdBuild, estEco, plaColeg, argPav, salgCoast, marqPav];
+const projects = [penJujuy, comRivPark, olympicVill, plaFerCab, footballMuseum, luroTerminal, lacarCoast, centenPav, jockeyClub, acindar, ferrocult, chanarPark, berazcomplex, parqPatri, educBuild, vlHouse, svHouse, prsBuild, ldBuild, alsina, brdBuild, estEco, plaColeg, argPav, salgCoast, marqPav];

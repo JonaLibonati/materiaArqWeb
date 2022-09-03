@@ -19,7 +19,7 @@ if (path.includes('?') && path.includes('&')) {
 }
 
 //Array of proyects
-const projectNames = ['penJujuy', 'comRivPark', 'olympicVill', 'plaFerCab', 'footballMuseum', 'luroTerminal', 'lacarCoast', 'centenPav', 'acindar', 'ferrocult', 'chanarPark', 'berazcomplex', 'parqPatri', 'educBuild', 'vlHouse', 'svHouse', 'prsBuild', 'ldBuild', 'alsina', 'brdBuild', 'estEco', 'plaColeg', 'argPav', 'salgCoast', 'marqPav'];
+const projectNames = ['penJujuy', 'comRivPark', 'olympicVill', 'plaFerCab', 'footballMuseum', 'luroTerminal', 'lacarCoast', 'centenPav', 'jockeyClub', 'acindar', 'ferrocult', 'chanarPark', 'berazcomplex', 'parqPatri', 'educBuild', 'vlHouse', 'svHouse', 'prsBuild', 'ldBuild', 'alsina', 'brdBuild', 'estEco', 'plaColeg', 'argPav', 'salgCoast', 'marqPav'];
 
 let projectIndex = projectNames.indexOf(projectValue);
 

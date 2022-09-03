@@ -857,6 +857,14 @@ b {
 	object-position: center;
 }
 /********************/
+.jockey-club {
+	order: 850;
+}
+
+.pj__img--jockey {
+	object-position: right;
+}
+/********************/
 .acindar {
 	order: 900;
 }
@@ -1482,83 +1490,89 @@ position: relative;
 		display: none;
 	}
 	/********************/
-	.acindar-one,
-	.acindar-two {
+	.jockey-club-one,
+	.jockey-club-two {
 		display: none;
 	}
 	/********************/
-	.ferrocult-two,
+	.acindar-two,
+	.acindar-three {
+		display: none;
+	}
+	/********************/
+	.ferrocult-one,
 	.ferrocult-three {
 		display: none;
 	}
 	/********************/
 	.chanar-park-one,
-	.chanar-park-three {
+	.chanar-park-two {
 		display: none;
 	}
 	/********************/
-	.beraz_complex-one,
-	.beraz_complex-two {
+	.beraz_complex-two,
+	.beraz_complex-three {
 		display: none;
 	}
 	/********************/
-	.parq-patri-two,
+	.parq-patri-one,
 	.parq-patri-three {
 		display: none;
 	}
 	/********************/
 	.educ-build-one,
-	.educ-build-three {
+	.educ-build-two {
 		display: none;
 	}
 	/********************/
-	.vl-house-one,
+	.vl-house-three,
 	.vl-house-two {
 		display: none;
 	}
 	/********************/
-	.sv-house-three,
-	.sv-house-two {
+	.sv-house-one,
+	.sv-house-three {
 		display: none;
 	}
 	/********************/
 	.prs-build-one,
-	.prs-build-three {
+	.prs-build-two {
 		display: none;
 	}
 	/********************/
-	.ld-build-one,
+	.ld-build-three,
 	.ld-build-two {
 		display: none;
 	}
 	/********************/
-	.alsina-three,
-	.alsina-two {
+	.alsina-one,
+	.alsina-three {
 		display: none;
 	}
 	/********************/
 	.brd-build-one,
-	.brd-build-three {
+	.brd-build-two {
 		display: none;
 	}
 	/********************/
-	.est-eco-one,
+	.est-eco-three,
 	.est-eco-two {
 		display: none;
 	}
 	/********************/
-	.pla-coleg-three,
-	.pla-coleg-two {
+	.pla-coleg-one,
+	.pla-coleg-three {
 		display: none;
 	}
 	/********************/
 	.arg-pav-one,
-	.arg-pav-three {
+	.arg-pav-two {
 		display: none;
 	}
 	/********************/
-	.salg-coast-one,
-	.salg-coast-two {
+	.salg-coast-three,
+	.salg-coast-two,
+	.salg-coast-one {
 		display: none;
 	}
 	/********************/
@@ -1753,72 +1767,75 @@ position: relative;
 		display: none;
 	}
 	/********************/
-	.acindar-two {
+	.jockey-club-two {
 		display: none;
 	}
 	/********************/
-	.ferrocult-one {
+	.acindar-one {
 		display: none;
 	}
 	/********************/
-	.chanar-park-two {
+	.ferrocult-two {
 		display: none;
 	}
 	/********************/
-	.beraz_complex-one {
+	.chanar-park-one {
 		display: none;
 	}
 	/********************/
-	.parq-patri-two {
+	.beraz_complex-two {
 		display: none;
 	}
 	/********************/
-	.educ-build-one {
+	.parq-patri-one {
 		display: none;
 	}
 	/********************/
-	.vl-house-two {
+	.educ-build-two {
 		display: none;
 	}
 	/********************/
-	.sv-house-one {
+	.vl-house-one {
 		display: none;
 	}
 	/********************/
-	.prs-build-two {
+	.sv-house-two {
 		display: none;
 	}
 	/********************/
-	.ld-build-one {
+	.prs-build-one {
 		display: none;
 	}
 	/********************/
-	.alsina-two {
+	.ld-build-two {
 		display: none;
 	}
 	/********************/
-	.brd-build-one {
+	.alsina-one {
 		display: none;
 	}
 	/********************/
-	.est-eco-two {
+	.brd-build-two {
 		display: none;
 	}
 	/********************/
-	.pla-coleg-one {
+	.est-eco-one {
 		display: none;
 	}
 	/********************/
-	.arg-pav-two {
+	.pla-coleg-two {
 		display: none;
 	}
 	/********************/
-	.salg-coast-one {
+	.arg-pav-one {
 		display: none;
 	}
 	/********************/
-	.marq-pav-one,
-	.marq-pav-two {
+	.salg-coast-two {
+		display: none;
+	}
+	/********************/
+	.marq-pav-one {
 		display: none;
 	}
 	/********************/
