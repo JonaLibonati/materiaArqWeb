@@ -33,7 +33,7 @@ function shareProject () {
     //Opening project description
     } else {
         if (projectIndex < pj__descrip.length / 3 && projectIndex >= 0) {
-            let columnArray = [projectIndex, parseInt(projectIndex) + 25, parseInt(projectIndex) + 50];
+            let columnArray = [projectIndex, parseInt(projectIndex) + projectNames.length, parseInt(projectIndex) + (2 * projectNames.length)];
 
             columnArray.forEach(element => {
                 if (window.getComputedStyle(pj__box[element]).display != 'none' && window.getComputedStyle(pj__box[element].parentNode).display != 'none') {
