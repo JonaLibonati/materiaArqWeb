@@ -560,5 +560,21 @@ const jockeyClub7 = "images/jockey-club/8-jockey-club.jpg";
 
 const jockeyClub = [jockeyClub0, jockeyClub1, jockeyClub2, jockeyClub3, jockeyClub4, jockeyClub5, jockeyClub6, jockeyClub7]
 
+//Los Reartes Boul.
+
+const reartesBoul0 = "images/los-reartes-boul/1-los-reartes-boul.jpg";
+const reartesBoul1 = "images/los-reartes-boul/2-los-reartes-boul.jpg";
+const reartesBoul2 = "images/los-reartes-boul/3-los-reartes-boul.jpg";
+const reartesBoul3 = "images/los-reartes-boul/4-los-reartes-boul.jpg";
+const reartesBoul4 = "images/los-reartes-boul/5-los-reartes-boul.jpg";
+const reartesBoul5 = "images/los-reartes-boul/6-los-reartes-boul.jpg";
+const reartesBoul6 = "images/los-reartes-boul/7-los-reartes-boul.jpg";
+const reartesBoul7 = "images/los-reartes-boul/8-los-reartes-boul.jpg";
+const reartesBoul8 = "images/los-reartes-boul/9-los-reartes-boul.jpg";
+const reartesBoul9 = "images/los-reartes-boul/10-los-reartes-boul.jpg";
+
+
+const reartesBoul = [reartesBoul0, reartesBoul1, reartesBoul2, reartesBoul3, reartesBoul4, reartesBoul5, reartesBoul6, reartesBoul7, reartesBoul8, reartesBoul9]
+
 //Array of proyects
-const projects = [penJujuy, comRivPark, olympicVill, plaFerCab, footballMuseum, luroTerminal, lacarCoast, centenPav, jockeyClub, acindar, ferrocult, chanarPark, berazcomplex, parqPatri, educBuild, vlHouse, svHouse, prsBuild, ldBuild, alsina, brdBuild, estEco, plaColeg, argPav, salgCoast, marqPav];
+const projects = [penJujuy, comRivPark, olympicVill, plaFerCab, reartesBoul, footballMuseum, luroTerminal, lacarCoast, centenPav, jockeyClub, acindar, ferrocult, chanarPark, berazcomplex, parqPatri, educBuild, vlHouse, svHouse, prsBuild, ldBuild, alsina, brdBuild, estEco, plaColeg, argPav, salgCoast, marqPav];
