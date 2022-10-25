@@ -185,4 +185,4 @@ const marqPavData = {
 }
 
 
-const shareDataArray = [penJujuyData, comRivParkData, olympicVillData, plaFerCabData, losReartesBoul, footballMuseumData, luroTerminalData, lacarCoastData, centenPavData, jockeyData, acindarData, ferrocultData, chanarParkData, berazcomplexData, parqPatriData, educBuildData, vlHouseData, svHouseData, prsBuildData, ldBuildData, alsinaData, brdBuildData, estEcoData, plaColegData, argPavData, salgCoastData, marqPavData];
+const shareDataArray = [penJujuyData, comRivParkData, olympicVillData, plaFerCabData, losReartesBoulData, footballMuseumData, luroTerminalData, lacarCoastData, centenPavData, jockeyData, acindarData, ferrocultData, chanarParkData, berazcomplexData, parqPatriData, educBuildData, vlHouseData, svHouseData, prsBuildData, ldBuildData, alsinaData, brdBuildData, estEcoData, plaColegData, argPavData, salgCoastData, marqPavData];
