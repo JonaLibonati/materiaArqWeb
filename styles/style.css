@@ -507,6 +507,10 @@ b {
 	padding-bottom: 20px;
 }
 
+.info__p--complem {
+	text-align: left;
+}
+
 .info__p--list {
 	text-align: left;
 }
