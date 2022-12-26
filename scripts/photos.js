@@ -576,5 +576,23 @@ const reartesBoul9 = "images/los-reartes-boul/10-los-reartes-boul.jpg";
 
 const reartesBoul = [reartesBoul0, reartesBoul1, reartesBoul2, reartesBoul3, reartesBoul4, reartesBoul5, reartesBoul6, reartesBoul7, reartesBoul8, reartesBoul9]
 
+//UCC Polo.
+
+const uccPolo0 = "images/UCC-polo/1-ucc-polo.jpg";
+const uccPolo1 = "images/UCC-polo/2-ucc-polo.jpg";
+const uccPolo2 = "images/UCC-polo/3-ucc-polo.jpg";
+const uccPolo3 = "images/UCC-polo/4-ucc-polo.jpg";
+const uccPolo4 = "images/UCC-polo/5-ucc-polo.jpg";
+const uccPolo5 = "images/UCC-polo/6-ucc-polo.jpg";
+const uccPolo6 = "images/UCC-polo/7-ucc-polo.jpg";
+const uccPolo7 = "images/UCC-polo/8-ucc-polo.jpg";
+const uccPolo8 = "images/UCC-polo/9-ucc-polo.jpg";
+const uccPolo9 = "images/UCC-polo/10-ucc-polo.jpg";
+const uccPolo10 = "images/UCC-polo/11-ucc-polo.jpg";
+const uccPolo11 = "images/UCC-polo/12-ucc-polo.jpg";
+const uccPolo12 = "images/UCC-polo/13-ucc-polo.jpg";
+
+const uccPolo = [uccPolo0, uccPolo1, uccPolo2, uccPolo3, uccPolo4, uccPolo5, uccPolo6, uccPolo7, uccPolo8, uccPolo9, uccPolo10, uccPolo11, uccPolo12]
+
 //Array of proyects
-const projects = [penJujuy, comRivPark, olympicVill, plaFerCab, reartesBoul, footballMuseum, luroTerminal, lacarCoast, centenPav, jockeyClub, acindar, ferrocult, chanarPark, berazcomplex, parqPatri, educBuild, vlHouse, svHouse, prsBuild, ldBuild, alsina, brdBuild, estEco, plaColeg, argPav, salgCoast, marqPav];
+const projects = [penJujuy, comRivPark, olympicVill, plaFerCab, reartesBoul, footballMuseum, luroTerminal, lacarCoast, centenPav, uccPolo, jockeyClub, acindar, ferrocult, chanarPark, berazcomplex, parqPatri, educBuild, vlHouse, svHouse, prsBuild, ldBuild, alsina, brdBuild, estEco, plaColeg, argPav, salgCoast, marqPav];

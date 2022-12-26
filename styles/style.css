@@ -865,6 +865,14 @@ b {
 	object-position: center;
 }
 /********************/
+.ucc-polo {
+	order: 825;
+}
+
+.pj__img--ucc {
+	object-position: center;
+}
+/********************/
 .jockey-club {
 	order: 850;
 }
@@ -1397,7 +1405,7 @@ position: relative;
 	}
 
 	.about__cont {
-		max-width: 1700px;
+		max-width: 1300px;
 		padding-left: 50px;
 		padding-right: 50px;
 	}
@@ -1503,93 +1511,99 @@ position: relative;
 		display: none;
 	}
 	/********************/
-	.jockey-club-two,
+	.ucc-polo-two,
+	.ucc-polo-three {
+		display: none;
+	}
+	/********************/
+	.jockey-club-one,
 	.jockey-club-three {
 		display: none;
 	}
 	/********************/
 	.acindar-one,
-	.acindar-three {
+	.acindar-two {
 		display: none;
 	}
 	/********************/
-	.ferrocult-one,
-	.ferrocult-two {
+	.ferrocult-two,
+	.ferrocult-three {
 		display: none;
 	}
 	/********************/
-	.chanar-park-two,
+	.chanar-park-one,
 	.chanar-park-three {
 		display: none;
 	}
 	/********************/
 	.beraz_complex-one,
-	.beraz_complex-three {
+	.beraz_complex-two {
 		display: none;
 	}
 	/********************/
-	.parq-patri-one,
-	.parq-patri-two {
+	.parq-patri-two,
+	.parq-patri-three {
 		display: none;
 	}
 	/********************/
-	.educ-build-two,
+	.educ-build-one,
 	.educ-build-three {
 		display: none;
 	}
 	/********************/
 	.vl-house-one,
-	.vl-house-three {
+	.vl-house-two {
 		display: none;
 	}
 	/********************/
-	.sv-house-one,
-	.sv-house-two {
+	.sv-house-two,
+	.sv-house-three {
 		display: none;
 	}
 	/********************/
-	.prs-build-two,
+	.prs-build-one,
 	.prs-build-three {
 		display: none;
 	}
 	/********************/
 	.ld-build-one,
-	.ld-build-three {
+	.ld-build-two {
 		display: none;
 	}
 	/********************/
-	.alsina-one,
-	.alsina-two {
+	.alsina-two,
+	.alsina-three {
 		display: none;
 	}
 	/********************/
-	.brd-build-two,
+	.brd-build-one,
 	.brd-build-three {
 		display: none;
 	}
 	/********************/
 	.est-eco-one,
-	.est-eco-three {
+	.est-eco-two {
 		display: none;
 	}
 	/********************/
-	.pla-coleg-one,
-	.pla-coleg-two {
+	.pla-coleg-two,
+	.pla-coleg-three {
 		display: none;
 	}
 	/********************/
-	.arg-pav-two,
+	.arg-pav-one,
 	.arg-pav-three {
 		display: none;
 	}
 	/********************/
-	.salg-coast-three,
-	.salg-coast-one {
+	.salg-coast-one,
+	.salg-coast-two {
 		display: none;
 	}
 	/********************/
+	.marq-pav-one,
 	.marq-pav-two,
-	.marq-pav-one {
+	.marq-pav-three {
 		display: none;
 	}
 	/********************/
@@ -1681,7 +1695,7 @@ position: relative;
 	}
 
 	.about__cont {
-		max-width: 1200px;
+		max-width: 1000px;
 		padding-left: 50px;
 		padding-right: 50px;
 	}
@@ -1782,76 +1796,79 @@ position: relative;
 		display: none;
 	}
 	/********************/
-	.jockey-club-one {
+	.ucc-polo-one {
 		display: none;
 	}
 	/********************/
-	.acindar-two {
+	.jockey-club-two {
 		display: none;
 	}
 	/********************/
-	.ferrocult-one {
+	.acindar-one {
 		display: none;
 	}
 	/********************/
-	.chanar-park-two {
+	.ferrocult-two {
 		display: none;
 	}
 	/********************/
-	.beraz_complex-one {
+	.chanar-park-one {
 		display: none;
 	}
 	/********************/
-	.parq-patri-two {
+	.beraz_complex-two {
 		display: none;
 	}
 	/********************/
-	.educ-build-one {
+	.parq-patri-one {
 		display: none;
 	}
 	/********************/
-	.vl-house-two {
+	.educ-build-two {
 		display: none;
 	}
 	/********************/
-	.sv-house-one {
+	.vl-house-one {
 		display: none;
 	}
 	/********************/
-	.prs-build-two {
+	.sv-house-two {
 		display: none;
 	}
 	/********************/
-	.ld-build-one {
+	.prs-build-one {
 		display: none;
 	}
 	/********************/
-	.alsina-two {
+	.ld-build-two {
 		display: none;
 	}
 	/********************/
-	.brd-build-one {
+	.alsina-one {
 		display: none;
 	}
 	/********************/
-	.est-eco-two {
+	.brd-build-two {
 		display: none;
 	}
 	/********************/
-	.pla-coleg-one {
+	.est-eco-one {
 		display: none;
 	}
 	/********************/
-	.arg-pav-two {
+	.pla-coleg-two {
 		display: none;
 	}
 	/********************/
-	.salg-coast-one {
+	.arg-pav-one {
 		display: none;
 	}
 	/********************/
-	.marq-pav-one,
-	.marq-pav-two {
+	.salg-coast-two {
+		display: none;
+	}
+	/********************/
+	.marq-pav-one {
 		display: none;
 	}
 	/********************/
@@ -2000,6 +2017,22 @@ position: relative;
 @media only screen and (orientation: portrait) and (max-width: 599px) {
 	.noShowMobile {
 		display: none;
+	}
+}
+
+@media only screen and (orientation: portrait) and (max-width: 420px) {
+	.noShowMobile {
+		display: none;
+	}
+
+	.about__cont {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.about__slogan {
+		padding-left: 0;
+		padding-right: 0;
 	}
 }
 

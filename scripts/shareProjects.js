@@ -93,6 +93,11 @@ const centenPavData = {
     text:"Conocé el proyecto Pabellon centenario",
     url:"https://www.estudiomateria.com.ar/proyectos/pabCentenario/index.html"
 }
+const uccPoloData = {
+    title:"materia | index.html",
+    text:"Conocé el proyecto Polo de investigacion UCC",
+    url:"https://www.estudiomateria.com.ar/proyectos/uccPolo/index.html"
+}
 const jockeyData = {
     title:"materia | jockey club Córdoba ",
     text:"Conocé el proyecto Jockey Club Córdoba",
@@ -185,4 +190,4 @@ const marqPavData = {
 }
 
 
-const shareDataArray = [penJujuyData, comRivParkData, olympicVillData, plaFerCabData, losReartesBoulData, footballMuseumData, luroTerminalData, lacarCoastData, centenPavData, jockeyData, acindarData, ferrocultData, chanarParkData, berazcomplexData, parqPatriData, educBuildData, vlHouseData, svHouseData, prsBuildData, ldBuildData, alsinaData, brdBuildData, estEcoData, plaColegData, argPavData, salgCoastData, marqPavData];
+const shareDataArray = [penJujuyData, comRivParkData, olympicVillData, plaFerCabData, losReartesBoulData, footballMuseumData, luroTerminalData, lacarCoastData, centenPavData, uccPoloData, jockeyData, acindarData, ferrocultData, chanarParkData, berazcomplexData, parqPatriData, educBuildData, vlHouseData, svHouseData, prsBuildData, ldBuildData, alsinaData, brdBuildData, estEcoData, plaColegData, argPavData, salgCoastData, marqPavData];
