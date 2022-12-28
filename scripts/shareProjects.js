@@ -95,7 +95,7 @@ const centenPavData = {
 }
 const uccPoloData = {
     title:"materia | index.html",
-    text:"Conocé el proyecto Polo de investigacion UCC",
+    text:"Conocé el proyecto Polo de innovación UCC",
     url:"https://www.estudiomateria.com.ar/proyectos/uccPolo/index.html"
 }
 const jockeyData = {
