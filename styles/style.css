@@ -632,6 +632,7 @@ b {
 	top: 0;
 	right: 0;
 	z-index: 20;
+	cursor: pointer;
 }
 
 .pj__shareCircle {
