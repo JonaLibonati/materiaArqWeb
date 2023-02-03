@@ -613,32 +613,32 @@ b {
 }
 
 .post__img.post__img--1 {
-	background-image: url("../images/post/EPJ1.jpeg");
+	background-image: url("../images/post/EPJ1.jpg");
 	order: 1;
 }
 
 .post__img.post__img--2 {
-	background-image: url("../images/post/CLL1.jpeg");
+	background-image: url("../images/post/CLL1.jpg");
 	order: 2;
 }
 
 .post__img.post__img--3 {
-	background-image: url("../images/post/PCCR1.jpeg");
+	background-image: url("../images/post/PCCR1.jpg");
 	order: 5;
 }
 
 .post__img.post__img--4 {
-	background-image: url("../images/post/PMF1.jpeg");
+	background-image: url("../images/post/PMF1.jpg");
 	order: 3;
 }
 
 .post__img.post__img--5 {
-	background-image: url("../images/post/PFC1.jpeg");
+	background-image: url("../images/post/PFC1.jpg");
 	order: 6;
 }
 
 .post__img.post__img--6 {
-	background-image: url("../images/post/PTEFA1.jpeg");
+	background-image: url("../images/post/PTEFA1.jpg");
 	order: 4;
 }
 
