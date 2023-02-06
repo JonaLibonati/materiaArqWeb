@@ -863,7 +863,7 @@ b {
 	margin: auto;
 	padding-left: 20px;
 	padding-right: 20px;
-	/*You must set up the padding in project.js*/
+	/*You should set up the padding in project.js*/
 	padding-top: 20px;
 	padding-bottom: 10px;
 	background-color: #e4e4e4;

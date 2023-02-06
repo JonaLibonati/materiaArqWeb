@@ -37,25 +37,12 @@ function shareProject () {
 
             columnArray.forEach(element => {
                 if (window.getComputedStyle(pj__box[element]).display != 'none' && window.getComputedStyle(pj__box[element].parentNode).display != 'none') {
-                    //auto scroll
                     pj__box[element].scrollIntoView();
-                    //Open project only when is on screen
-                    OpenWhenOnScreen (element);
+                    //auto scroll an Open project only when is on screen
+                    openWhenOnScreen (element);
                 }
             });
         }
-    }
-}
-
-//Open project only when is on screen
-function OpenWhenOnScreen (indexElement) {
-    let position_pj = pj__box[indexElement].getAttribute("position");
-    console.log(position_pj);
-    if (position_pj != "onScreen") {
-        setTimeout(OpenWhenOnScreen, 100, indexElement);
-    } else {
-        setTimeout(open, 800, indexElement);
-        clearTimeout(OpenWhenOnScreen);
     }
 }
 

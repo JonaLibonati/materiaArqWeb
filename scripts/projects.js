@@ -149,20 +149,29 @@ function setPositionAtribute (indexElement) {
 //Open events
 for (let i = 0; i <  pj__descrip.length; ++i) {
 	let a = i;
-	pj__textBox[a].addEventListener("click", function() {open(a)});
+	pj__textBox[a].addEventListener("click", function() {
+		//Close the open pj__descrips
+		let anyisopen;
+		for (let i = 0; i <  pj__descrip.length; ++i) {
+			let status = pj__descrip[i].getAttribute("status");
+			if (status == "open") {
+				anyisopen = true;
+				close(i);
+			}
+		}
+		if (anyisopen) {
+			setTimeout(() => {
+				pj__box[a].scrollIntoView();
+			}, 1000);
+		} else {pj__box[a].scrollIntoView();}
+		openWhenOnScreen(a);
+	});
 }
 
 function open(indexElement) {
 	//Check if pj__descrip is already open
 	let status = getElementStatus (indexElement);
 	if (status != "open") {
-		//Close the open pj__descrips
-		for (let i = 0; i <  pj__descrip.length; ++i) {
-			let status = pj__descrip[i].getAttribute("status");
-			if (status == "open") {
-				close(i);
-			}
-		}
 		//Hide the open chevron
 		pj__chevronOpen[indexElement].classList.add("displayNone");
 		//Display share button
@@ -205,6 +214,18 @@ function open(indexElement) {
 	}
 }
 
+//Open project only when is on screen
+function openWhenOnScreen (indexElement) {
+    let position_pj = pj__box[indexElement].getAttribute("position");
+    console.log(position_pj);
+    if (position_pj != "onScreen") {
+        setTimeout(openWhenOnScreen, 100, indexElement);
+    } else {
+        setTimeout(open, 800, indexElement);
+        clearTimeout(openWhenOnScreen);
+    }
+}
+
 //******************* CLOSE *********************
 // close events
 
@@ -232,13 +253,14 @@ function close(indexElement) {
 		requestAnimationFrame (
 			function () {
 				//Active transition
-				pj__descrip[indexElement].style.transition = null;
+				pj__descrip[indexElement].style.transition = "height 1s, padding-top 1s, padding-bottom 1s;";
 				//Overwrite height values passing from element height to 0
 				pj__descrip[indexElement].style.height = 0 + "px";
 				//Add padding0 class
 				pj__descrip[indexElement].classList.add("padding0");
 			}
 		)
+		pj__descrip[indexElement].style.transition = null;
 		//Display the open chevron
 		pj__chevronOpen[indexElement].classList.remove("displayNone");
 		//Set attribute to close
