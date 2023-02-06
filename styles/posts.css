@@ -5,6 +5,60 @@
     display: block;
 }
 
+.post__img.post__img--1 {
+	order: 0;
+}
+
+.post__img.post__img--2 {
+	order: 300;
+}
+
+.post__img.post__img--3 {
+	order: 100;
+}
+
+.post__img.post__img--4 {
+	order: 400;
+}
+
+.post__img.post__img--5 {
+	order: 200;
+}
+
+.post__img.post__img--6 {
+	order: 500;
+}
+
+.post__img.post__img--7 {
+	background-image: url("../images/post/PFCUL1.jpg");
+	order: 1000;
+}
+
+.post__img.post__img--8 {
+	background-image: url("../images/post/PMF1.jpg");
+	order: 600;
+}
+
+.post__img.post__img--9 {
+	background-image: url("../images/post/RANKING1.jpg");
+	order: 900;
+}
+
+.post__img.post__img--10 {
+	background-image: url("../images/post/TPL1.jpg");
+	order: 700;
+}
+
+.post__img.post__img--11 {
+	background-image: url("../images/post/UCC1.jpg");
+	order: 800;
+}
+
+.post__img.post__img--12 {
+	background-image: url("../images/post/VOL4.jpg");
+	order: 150;
+}
+
 .post {
     padding-top: 100px;
     padding-left: 20px;
@@ -89,11 +143,11 @@
     }
 }
 
-@media only screen and (min-width: 1500px) {
+/* @media only screen and (min-width: 1500px) {
     .post__back {
         width: 1165px;
     }
-}
+} */
 
 @media only screen and (min-width: 1700px) {
     .post__back {
