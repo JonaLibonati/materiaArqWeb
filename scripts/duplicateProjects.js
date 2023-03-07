@@ -14,10 +14,12 @@ const childrenCopyTwo = pj__flexContainer__old[0].cloneNode(true).childNodes;
 const flexContainerSecond = document.createElement("DIV");
 flexContainerSecond.classList.add("pj__flexContainer");
 flexContainerSecond.classList.add("pj__flexContainer--second");
+flexContainerSecond.setAttribute('column', '2');
 
 const flexContainerThirth = document.createElement("DIV");
 flexContainerThirth.classList.add("pj__flexContainer");
 flexContainerThirth.classList.add("pj__flexContainer--thirth");
+flexContainerSecond.setAttribute('column', '3');
 
 // Adding child from the cloned nodes to the flexcontainers
 childrenCopyOne.forEach (child => {
