@@ -19,7 +19,7 @@ flexContainerSecond.setAttribute('column', '2');
 const flexContainerThirth = document.createElement("DIV");
 flexContainerThirth.classList.add("pj__flexContainer");
 flexContainerThirth.classList.add("pj__flexContainer--thirth");
-flexContainerSecond.setAttribute('column', '3');
+flexContainerThirth.setAttribute('column', '3');
 
 // Adding child from the cloned nodes to the flexcontainers
 childrenCopyOne.forEach (child => {

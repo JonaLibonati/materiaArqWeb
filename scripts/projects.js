@@ -72,9 +72,15 @@ let limitBottom = screen.availHeight;
 for (let i = 0; i <  pj__descrip.length; ++i) {
 	setPositionAtribute (i);
 }
+//----Set column atribute during first render.
+let columnNumber;
+for (let i = 0; i <  pj__descrip.length; ++i) {
+	columnNumber = pj__box[i].parentElement.getAttribute("column");
+	pj__box[i].setAttribute("column", columnNumber)
+}
 //----Return status atribute
 function getElementStatus (indexElement) {
-	let status = pj__descrip[indexElement].getAttribute("status")
+	let status = pj__descrip[indexElement].getAttribute("status");
 	return status;
 }
 //----Return y element center coordinate relative to the screen
@@ -147,49 +153,20 @@ function setPositionAtribute (indexElement) {
 //Open events
 for (let i = 0; i <  pj__descrip.length; ++i) {
 	let a = i;
-
-	pj__textBox[a].addEventListener("click", async function() {
-		let statusElement = pj__descrip[a].getAttribute("status");
-
-		for (let i = 0; i <  pj__descrip.length; ++i) {
-			if (i != a) {
-				pj__box[i].setAttribute("canclick", 'false');
-			}
-		}
-
-		let canClick = pj__box[a].getAttribute("canclick");
-		if (statusElement == 'close' && canClick == "true") {
-			let elementsOpen = [];
-			let status;
-			//Close the open pj__descrips
-			for (let i = 0; i <  pj__descrip.length; ++i) {
-				status = pj__descrip[i].getAttribute("status");
-
-				if (status == "open") {
-					elementsOpen.push(i);
-				}
-			}
-
-			for (let i of elementsOpen) {
-				await close(i);
-			}
-
-			pj__box[a].scrollIntoView();
-			openWhenOnScreen(a);
-
-			for (let i = 0; i <  pj__descrip.length; ++i) {
-				if (i != a) {
-					pj__box[i].setAttribute("canclick", 'true');
-				}
-			}
-		}
-	});
+	pj__textBox[a].addEventListener("click", function() {open(a)});
 }
 
 function open(indexElement) {
 	//Check if pj__descrip is already open
 	let status = getElementStatus (indexElement);
 	if (status != "open") {
+		//Close the open pj__descrips
+		for (let i = 0; i <  pj__descrip.length; ++i) {
+			let status = pj__descrip[i].getAttribute("status");
+			if (status == "open") {
+				close(i);
+			}
+		}
 		//Hide the open chevron
 		pj__chevronOpen[indexElement].classList.add("displayNone");
 		//Display share button
@@ -232,18 +209,20 @@ function open(indexElement) {
 	}
 }
 
-//Open project only when is on screen
 function openWhenOnScreen (indexElement) {
-    let position_pj = pj__box[indexElement].getAttribute("position");
+    /* await isOnScreen(pj__box[indexElement]);
+	open(indexElement); */
+	let position_pj = pj__box[indexElement].getAttribute("position");
     console.log(position_pj);
     if (position_pj != "onScreen") {
+		console.log("no")
         setTimeout(openWhenOnScreen, 100, indexElement);
     } else {
-        setTimeout(open, 100, indexElement);
+		console.log("yes")
+        setTimeout(open, 800, indexElement);
         clearTimeout(openWhenOnScreen);
     }
 }
-
 //******************* CLOSE *********************
 // close events
 
@@ -282,17 +261,23 @@ async function close(indexElement) {
 		//Display the open chevron
 		pj__chevronOpen[indexElement].classList.remove("displayNone");
 		//Set attribute to close
-		await transitionEnd(pj__descrip[indexElement])
 		pj__descrip[indexElement].setAttribute("status" , "close");
 		//
 	}
 }
 
-
-async function transitionEnd(element) {
+/* async function delay(milisec) {
 	await new Promise((resolve) => {
-		//element.removeEventListener("transitionend", resolve);
-		element.addEventListener("transitionend", resolve);
+		setTimeout(resolve, milisec);
 	})
 }
 
+async function isOnScreen(element) {
+	let position_pj = element.getAttribute("position");
+	await new Promise((resolve) => {
+		while (position_pj != "onScreen") {
+			setTimeout(()=>{position_pj = element.getAttribute("position");}, 100);
+		}
+		resolve();
+	})
+} */

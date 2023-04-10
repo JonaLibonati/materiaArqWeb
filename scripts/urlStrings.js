@@ -35,11 +35,11 @@ function shareProject () {
         if (projectIndex < pj__descrip.length / 3 && projectIndex >= 0) {
             let columnArray = [projectIndex, parseInt(projectIndex) + projectNames.length, parseInt(projectIndex) + (2 * projectNames.length)];
 
-            columnArray.forEach(element => {
+            columnArray.forEach(async (element) => {
                 if (window.getComputedStyle(pj__box[element]).display != 'none' && window.getComputedStyle(pj__box[element].parentNode).display != 'none') {
                     pj__box[element].scrollIntoView();
                     //auto scroll an Open project only when is on screen
-                    openWhenOnScreen (element);
+                    await openWhenOnScreen(element);
                 }
             });
         }

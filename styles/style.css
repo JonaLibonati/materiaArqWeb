@@ -17,6 +17,7 @@ html {
 	width: 100%;
 	height: 100%;
 	overflow-y: scroll;
+	scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5 {
@@ -618,6 +619,10 @@ b {
 	order: 1;
 }
 
+.post__img.post__img--1-b {
+	background-image: url("../images/post/EPJ2.jpg");
+}
+
 .post__img.post__img--2 {
 	background-image: url("../images/post/CLL1.jpg");
 	order: 2;
@@ -628,6 +633,10 @@ b {
 	order: 5;
 }
 
+.post__img.post__img--3-b {
+	background-image: url("../images/post/PCCR2.jpg");
+}
+
 .post__img.post__img--4 {
 	background-image: url("../images/post/PMF1.jpg");
 	order: 3;
@@ -636,6 +645,10 @@ b {
 .post__img.post__img--5 {
 	background-image: url("../images/post/PFC1.jpg");
 	order: 6;
+}
+
+.post__img.post__img--5-b {
+	background-image: url("../images/post/PFC2.jpg");
 }
 
 .post__img.post__img--6 {
@@ -868,7 +881,7 @@ b {
 	padding-top: 20px;
 	padding-bottom: 10px;
 	background-color: #e4e4e4;
-	transition: height 0.8s, padding-top 0.8s, padding-bottom 0.8s;
+	transition: height 1s, padding-top 1s, padding-bottom 1s;
 	overflow: hidden;
 }
 
@@ -878,7 +891,7 @@ b {
 	height: 0px;
 	bottom: 10px;
 	cursor: pointer;
-	transition: height 2s;
+	transition: height 0.3s;
 }
 
 .pj__buttonPhoto {
@@ -902,7 +915,7 @@ b {
 	padding-bottom: 5px;
 	bottom: 10px;
 	cursor: pointer;
-	transition: height 0.71s;
+	transition: height 0.3s;
 	z-index: 10;
 }
 
