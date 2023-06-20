@@ -962,6 +962,14 @@ b {
 	min-height: 240px;
 }
 /********************/
+.ambiental-sur {
+	order: 425;
+}
+
+.pj__img--ambiental {
+	object-position: center;
+}
+/********************/
 .los-reartes-boul {
 	order: 450;
 }
@@ -1647,118 +1655,124 @@ position: relative;
 		display: none;
 	}
 	/********************/
+	.ambiental-sur-one,
+	.ambiental-sur-three {
+		display: none;
+	}
+	/********************/
 	.los-reartes-boul-one,
-	.los-reartes-boul-three {
+	.los-reartes-boul-two {
 		display: none;
 	}
 	/********************/
 	.football-museum-one,
-	.football-museum-two {
+	.football-museum-three {
 		display: none;
 	}
 	/********************/
-	.luro-terminal-two,
-	.luro-terminal-three {
+	.luro-terminal-one,
+	.luro-terminal-two {
 		display: none;
 	}
 	/********************/
-	.lacar-coast-one,
+	.lacar-coast-two,
 	.lacar-coast-three {
 		display: none;
 	}
 	/********************/
 	.centen-pav-one,
-	.centen-pav-two {
+	.centen-pav-three {
 		display: none;
 	}
 	/********************/
-	.ucc-polo-two,
-	.ucc-polo-three {
+	.ucc-polo-one,
+	.ucc-polo-two {
 		display: none;
 	}
 	/********************/
-	.jockey-club-one,
+	.jockey-club-two,
 	.jockey-club-three {
 		display: none;
 	}
 	/********************/
 	.acindar-one,
-	.acindar-two {
+	.acindar-three {
 		display: none;
 	}
 	/********************/
-	.ferrocult-two,
-	.ferrocult-three {
+	.ferrocult-one,
+	.ferrocult-two {
 		display: none;
 	}
 	/********************/
-	.chanar-park-one,
+	.chanar-park-two,
 	.chanar-park-three {
 		display: none;
 	}
 	/********************/
 	.beraz_complex-one,
-	.beraz_complex-two {
+	.beraz_complex-three {
 		display: none;
 	}
 	/********************/
-	.parq-patri-two,
-	.parq-patri-three {
+	.parq-patri-one,
+	.parq-patri-two {
 		display: none;
 	}
 	/********************/
-	.educ-build-one,
+	.educ-build-two,
 	.educ-build-three {
 		display: none;
 	}
 	/********************/
 	.vl-house-one,
-	.vl-house-two {
+	.vl-house-three {
 		display: none;
 	}
 	/********************/
-	.sv-house-two,
-	.sv-house-three {
+	.sv-house-one,
+	.sv-house-two {
 		display: none;
 	}
 	/********************/
-	.prs-build-one,
+	.prs-build-two,
 	.prs-build-three {
 		display: none;
 	}
 	/********************/
 	.ld-build-one,
-	.ld-build-two {
+	.ld-build-three {
 		display: none;
 	}
 	/********************/
-	.alsina-two,
-	.alsina-three {
+	.alsina-one,
+	.alsina-two {
 		display: none;
 	}
 	/********************/
-	.brd-build-one,
+	.brd-build-two,
 	.brd-build-three {
 		display: none;
 	}
 	/********************/
 	.est-eco-one,
-	.est-eco-two {
+	.est-eco-three {
 		display: none;
 	}
 	/********************/
-	.pla-coleg-two,
-	.pla-coleg-three {
+	.pla-coleg-one,
+	.pla-coleg-two {
 		display: none;
 	}
 	/********************/
-	.arg-pav-one,
+	.arg-pav-two,
 	.arg-pav-three {
 		display: none;
 	}
 	/********************/
 	.salg-coast-one,
-	.salg-coast-two {
+	.salg-coast-two,
+	.salg-coast-three {
 		display: none;
 	}
 	/********************/
@@ -1966,99 +1980,104 @@ position: relative;
 		display: none;
 	}
 	/********************/
-	.los-reartes-boul-two {
+	.ambiental-sur-two {
 		display: none;
 	}
 	/********************/
-	.football-museum-one {
+	.los-reartes-boul-one {
 		display: none;
 	}
 	/********************/
-	.luro-terminal-two {
+	.football-museum-two {
 		display: none;
 	}
 	/********************/
-	.lacar-coast-one {
+	.luro-terminal-one {
 		display: none;
 	}
 	/********************/
-	.centen-pav-two {
+	.lacar-coast-two {
 		display: none;
 	}
 	/********************/
-	.ucc-polo-one {
+	.centen-pav-one {
 		display: none;
 	}
 	/********************/
-	.jockey-club-two {
+	.ucc-polo-two {
 		display: none;
 	}
 	/********************/
-	.acindar-one {
+	.jockey-club-one {
 		display: none;
 	}
 	/********************/
-	.ferrocult-two {
+	.acindar-two {
 		display: none;
 	}
 	/********************/
-	.chanar-park-one {
+	.ferrocult-one {
 		display: none;
 	}
 	/********************/
-	.beraz_complex-two {
+	.chanar-park-two {
 		display: none;
 	}
 	/********************/
-	.parq-patri-one {
+	.beraz_complex-one {
 		display: none;
 	}
 	/********************/
-	.educ-build-two {
+	.parq-patri-two {
 		display: none;
 	}
 	/********************/
-	.vl-house-one {
+	.educ-build-one {
 		display: none;
 	}
 	/********************/
-	.sv-house-two {
+	.vl-house-two {
 		display: none;
 	}
 	/********************/
-	.prs-build-one {
+	.sv-house-one {
 		display: none;
 	}
 	/********************/
-	.ld-build-two {
+	.prs-build-two {
 		display: none;
 	}
 	/********************/
-	.alsina-one {
+	.ld-build-one {
 		display: none;
 	}
 	/********************/
-	.brd-build-two {
+	.alsina-two {
 		display: none;
 	}
 	/********************/
-	.est-eco-one {
+	.brd-build-one {
 		display: none;
 	}
 	/********************/
-	.pla-coleg-two {
+	.est-eco-two {
 		display: none;
 	}
 	/********************/
-	.arg-pav-one {
+	.pla-coleg-one {
 		display: none;
 	}
 	/********************/
-	.salg-coast-two {
+	.arg-pav-two {
 		display: none;
 	}
 	/********************/
-	.marq-pav-one {
+	.salg-coast-one {
+		display: none;
+	}
+	/********************/
+	.marq-pav-one,
+	.marq-pav-two {
 		display: none;
 	}
 	/********************/

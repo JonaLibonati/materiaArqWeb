@@ -68,6 +68,11 @@ const plaFerCabData = {
     text:"Conocé el proyecto Playa ferroviaria Caballito",
     url:"https://www.estudiomateria.com.ar/proyectos/playaFerCaballito/index.html"
 }
+const ambientalSurData = {
+    title:"materia | Parque Ambiental Sur",
+    text:"Conocé el proyecto Parque Ambiental Sur",
+    url:"https://www.estudiomateria.com.ar/proyectos/ambientalSur/index.html"
+}
 const losReartesBoulData = {
     title:"materia | Ordenamiento Bv. Los Reartes",
     text:"Conocé el proyecto Ordenamiento Bv. Los Reartes",
@@ -190,4 +195,4 @@ const marqPavData = {
 }
 
 
-const shareDataArray = [penJujuyData, comRivParkData, olympicVillData, plaFerCabData, losReartesBoulData, footballMuseumData, luroTerminalData, lacarCoastData, centenPavData, uccPoloData, jockeyData, acindarData, ferrocultData, chanarParkData, berazcomplexData, parqPatriData, educBuildData, vlHouseData, svHouseData, prsBuildData, ldBuildData, alsinaData, brdBuildData, estEcoData, plaColegData, argPavData, salgCoastData, marqPavData];
+const shareDataArray = [penJujuyData, comRivParkData, olympicVillData, plaFerCabData, ambientalSurData, losReartesBoulData, footballMuseumData, luroTerminalData, lacarCoastData, centenPavData, uccPoloData, jockeyData, acindarData, ferrocultData, chanarParkData, berazcomplexData, parqPatriData, educBuildData, vlHouseData, svHouseData, prsBuildData, ldBuildData, alsinaData, brdBuildData, estEcoData, plaColegData, argPavData, salgCoastData, marqPavData];

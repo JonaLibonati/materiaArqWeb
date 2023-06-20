@@ -594,5 +594,16 @@ const uccPolo12 = "images/UCC-polo/13-ucc-polo.jpg";
 
 const uccPolo = [uccPolo0, uccPolo1, uccPolo2, uccPolo3, uccPolo4, uccPolo5, uccPolo6, uccPolo7, uccPolo8, uccPolo9, uccPolo10, uccPolo11, uccPolo12]
 
+//Ambiental Sur Park
+const ambientalSur0 = "images/parque-ambiental-sur/1-ambiental-sur.jpg";
+const ambientalSur1 = "images/parque-ambiental-sur/2-ambiental-sur.jpg";
+const ambientalSur2 = "images/parque-ambiental-sur/3-ambiental-sur.jpg";
+const ambientalSur3 = "images/parque-ambiental-sur/4-ambiental-sur.jpg";
+const ambientalSur4 = "images/parque-ambiental-sur/5-ambiental-sur.jpg";
+const ambientalSur5 = "images/parque-ambiental-sur/6-ambiental-sur.jpg";
+const ambientalSur6 = "images/parque-ambiental-sur/7-ambiental-sur.jpg";
+
+const ambientalSur = [ambientalSur0, ambientalSur1, ambientalSur2, ambientalSur3, ambientalSur4, ambientalSur5, ambientalSur6];
+
 //Array of proyects
-const projects = [penJujuy, comRivPark, olympicVill, plaFerCab, reartesBoul, footballMuseum, luroTerminal, lacarCoast, centenPav, uccPolo, jockeyClub, acindar, ferrocult, chanarPark, berazcomplex, parqPatri, educBuild, vlHouse, svHouse, prsBuild, ldBuild, alsina, brdBuild, estEco, plaColeg, argPav, salgCoast, marqPav];
+const projects = [penJujuy, comRivPark, olympicVill, plaFerCab, ambientalSur, reartesBoul, footballMuseum, luroTerminal, lacarCoast, centenPav, uccPolo, jockeyClub, acindar, ferrocult, chanarPark, berazcomplex, parqPatri, educBuild, vlHouse, svHouse, prsBuild, ldBuild, alsina, brdBuild, estEco, plaColeg, argPav, salgCoast, marqPav];
